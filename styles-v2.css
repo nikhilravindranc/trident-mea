@@ -36,6 +36,31 @@ body {
   color: var(--body); background: var(--bg); overflow-x: hidden;
   -webkit-font-smoothing: antialiased; text-rendering: optimizeLegibility;
 }
+
+/* ============================================================
+   SVG PATTERN LIBRARY — reusable background patterns
+   Topographic contours, wavy flows, organic blobs
+============================================================ */
+svg[data-pattern="wavy"] { display: none; }
+svg[data-pattern="topo"] { display: none; }
+
+/* Wavy flow pattern — soft organic curves (light sections) */
+[data-pattern-bg="wavy"] {
+  background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 800" preserveAspectRatio="none"><defs><linearGradient id="wavyGrad" x1="0" y1="0" x2="100" y2="100"><stop offset="0%" stop-color="rgba(0,156,217,0.06)"/><stop offset="100%" stop-color="rgba(0,156,217,0.02)"/></linearGradient></defs><path d="M0,200 Q300,100 600,150 T1200,200 L1200,0 L0,0 Z" fill="url(%23wavyGrad)" stroke="none"/><path d="M0,400 Q300,300 600,350 T1200,400 L1200,250 Q600,300 0,250 Z" fill="rgba(0,48,96,0.03)" stroke="none"/><path d="M0,650 Q400,550 800,600 T1200,650 L1200,500 Q600,550 0,500 Z" fill="url(%23wavyGrad)" stroke="none"/></svg>');
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  position: relative;
+}
+
+/* Topographic contour pattern — tech-forward flow lines (dark sections) */
+[data-pattern-bg="topo"] {
+  background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 800"><defs><linearGradient id="topoGrad" x1="0" y1="0" x2="100" y2="100"><stop offset="0%" stop-color="rgba(0,156,217,0.12)"/><stop offset="100%" stop-color="rgba(0,156,217,0.04)"/></linearGradient></defs><g stroke="url(%23topoGrad)" stroke-width="1.5" fill="none" stroke-linecap="round"><path d="M50,100 Q300,80 550,120 T1150,100"/><path d="M40,160 Q280,130 520,180 T1160,160"/><path d="M30,220 Q260,180 490,240 T1170,220"/><path d="M60,280 Q320,240 560,300 T1140,280"/><path d="M20,340 Q270,300 520,360 T1180,340"/><path d="M80,400 Q310,360 550,420 T1120,400"/><path d="M40,460 Q290,420 530,480 T1160,460"/><path d="M70,520 Q330,480 570,540 T1130,520"/><path d="M30,580 Q260,540 490,600 T1170,580"/><path d="M50,640 Q300,600 550,660 T1150,640"/><path d="M60,700 Q310,660 560,720 T1140,700"/><path d="M40,760 Q280,720 520,780 T1160,760"/></g></svg>');
+  background-size: 100% 100%;
+  background-repeat: repeat;
+  background-attachment: fixed;
+  position: relative;
+}
 img { max-width: 100%; display: block; }
 a { color: inherit; text-decoration: none; }
 button { font-family: inherit; cursor: pointer; border: none; background: none; }
@@ -454,10 +479,21 @@ body.menu-open .mobile-panel { transform: none; visibility: visible; }
    Applied sparingly so it reads as intentional, not noisy.
 ============================================================ */
 
-/* About / Approach — dot-grid (top-right) + soft glow (bottom-left) */
-.approach { position: relative; overflow: hidden; }
-.approach > .wrap { position: relative; z-index: 1; }
-.approach::before { content: ""; position: absolute; z-index: 0; pointer-events: none;
+/* About / Approach — wavy organic pattern + dot-grid accent + glows */
+.approach { position: relative; overflow: hidden; background: var(--bg-soft); }
+.approach::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+  background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 800" preserveAspectRatio="none"><defs><linearGradient id="wavyGrad1" x1="0" y1="0" x2="100" y2="100"><stop offset="0%%" stop-color="rgba(0,156,217,0.05)"/><stop offset="100%%" stop-color="rgba(0,156,217,0.01)"/></linearGradient></defs><path d="M0,150 Q300,80 600,130 T1200,150 L1200,0 L0,0 Z" fill="url(%23wavyGrad1)"/><path d="M0,350 Q250,250 500,320 T1200,350 L1200,200 Q600,280 0,200 Z" fill="rgba(0,48,96,0.02)"/><path d="M0,550 Q350,450 700,520 T1200,550 L1200,400 Q600,480 0,400 Z" fill="url(%23wavyGrad1)"/></svg>');
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
+  pointer-events: none;
+}
+.approach > .wrap { position: relative; z-index: 2; }
+/* Dot-grid accent in top-right corner (uses ::before's space, so we add it as a separate layer */
+.approach > .wrap::before { content: ""; position: absolute; z-index: 0; pointer-events: none;
   top: 70px; right: -30px; width: 250px; height: 250px;
   background-image: radial-gradient(var(--cyan) 1.4px, transparent 1.4px); background-size: 18px 18px; opacity: .10;
   -webkit-mask-image: radial-gradient(circle at 72% 28%, #000, transparent 70%); mask-image: radial-gradient(circle at 72% 28%, #000, transparent 70%); }
@@ -465,14 +501,24 @@ body.menu-open .mobile-panel { transform: none; visibility: visible; }
   left: -150px; bottom: -120px; width: 440px; height: 440px; border-radius: 50%;
   background: radial-gradient(circle, rgba(0,156,217,.08), transparent 64%); }
 
-/* Solutions — soft glow behind the spotlight card */
+/* Solutions — topographic pattern + glow */
 .solutions { position: relative; overflow: hidden; }
 .solutions > .wrap { position: relative; z-index: 1; }
-.solutions::before { content: ""; position: absolute; z-index: 0; pointer-events: none;
+.solutions::before { content: ""; position: absolute; z-index: 0; pointer-events: none; inset: 0;
+  background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 800"><defs><linearGradient id="topoGrad1" x1="0" y1="0" x2="100" y2="100"><stop offset="0%%" stop-color="rgba(0,156,217,0.08)"/><stop offset="100%%" stop-color="rgba(0,156,217,0.02)"/></linearGradient></defs><g stroke="url(%23topoGrad1)" stroke-width="1.2" fill="none" stroke-linecap="round" opacity="0.6"><path d="M0,80 Q250,60 500,100 T1200,80"/><path d="M0,140 Q280,110 560,160 T1200,140"/><path d="M0,200 Q300,170 600,220 T1200,200"/><path d="M0,260 Q270,230 540,280 T1200,260"/><path d="M0,320 Q320,290 640,340 T1200,320"/><path d="M0,380 Q260,350 520,400 T1200,380"/><path d="M0,440 Q300,410 600,460 T1200,440"/><path d="M0,500 Q280,470 560,520 T1200,500"/><path d="M0,560 Q310,530 620,580 T1200,560"/><path d="M0,620 Q270,590 540,640 T1200,620"/><path d="M0,680 Q300,650 600,700 T1200,680"/><path d="M0,740 Q280,710 560,760 T1200,740"/></g></svg>');
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
+}
+.solutions::after { content: ""; position: absolute; z-index: 0; pointer-events: none;
   right: -170px; top: 180px; width: 500px; height: 500px; border-radius: 50%;
   background: radial-gradient(circle, rgba(0,156,217,.07), transparent 65%); }
 
-/* Industries — faint concentric "signal" rings (single focal accent) */
+/* Industries — topographic contour pattern + signal rings */
+.industries::before { content: ""; position: absolute; z-index: 0; pointer-events: none; inset: 0;
+  background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 800"><defs><linearGradient id="topoGrad2" x1="0" y1="0" x2="100" y2="100"><stop offset="0%%" stop-color="rgba(0,156,217,0.06)"/><stop offset="100%%" stop-color="rgba(0,156,217,0.01)"/></linearGradient></defs><g stroke="url(%23topoGrad2)" stroke-width="1.3" fill="none" stroke-linecap="round" opacity="0.5"><path d="M-200,150 Q200,120 500,170 T1400,150"/><path d="M-200,220 Q180,190 480,240 T1400,220"/><path d="M-200,290 Q220,260 520,310 T1400,290"/><path d="M-200,360 Q190,330 490,380 T1400,360"/><path d="M-200,430 Q230,400 530,450 T1400,430"/><path d="M-200,500 Q200,470 500,520 T1400,500"/><path d="M-200,570 Q210,540 510,590 T1400,570"/><path d="M-200,640 Q190,610 490,660 T1400,640"/><path d="M-200,710 Q220,680 520,730 T1400,710"/></g></svg>');
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
+}
 .industries::after { content: ""; position: absolute; z-index: 0; pointer-events: none;
   right: -190px; top: 50%; transform: translateY(-50%); width: 580px; height: 580px; border-radius: 50%;
   background:
@@ -481,7 +527,13 @@ body.menu-open .mobile-panel { transform: none; visibility: visible; }
     radial-gradient(circle, transparent 0 60%, rgba(0,48,96,.045) 60% 60.6%, transparent 61%);
   -webkit-mask-image: radial-gradient(circle, #000 60%, transparent 72%); mask-image: radial-gradient(circle, #000 60%, transparent 72%); }
 
-/* CTA card — soft glow (top-right) + dot-grid (bottom-left) inside the band */
+/* CTA card — wavy pattern overlay + glows + dot-grid */
+.cta { position: relative; }
+.cta::before { content: ""; position: absolute; z-index: 0; pointer-events: none; inset: 0;
+  background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 500" preserveAspectRatio="none"><defs><linearGradient id="ctaWave" x1="0" y1="0" x2="100" y2="100"><stop offset="0%%" stop-color="rgba(0,156,217,0.04)"/><stop offset="100%%" stop-color="rgba(0,156,217,0.01)"/></linearGradient></defs><path d="M0,100 Q300,50 600,100 T1200,100 L1200,0 L0,0 Z" fill="url(%23ctaWave)"/><path d="M0,250 Q250,200 500,250 T1200,250 L1200,150 Q600,200 0,150 Z" fill="rgba(0,48,96,0.02)"/><path d="M0,400 Q350,350 700,400 T1200,400 L1200,300 Q600,350 0,300 Z" fill="url(%23ctaWave)"/></svg>');
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
+}
 .cta-inner > * { position: relative; z-index: 1; }
 .cta-inner::before { content: ""; position: absolute; z-index: 0; pointer-events: none;
   right: -70px; top: -70px; width: 340px; height: 340px; border-radius: 50%;
@@ -532,9 +584,21 @@ body.menu-open .mobile-panel { transform: none; visibility: visible; }
   .footer-grid { grid-template-columns: 1fr 1fr; }
   .footer .f-brand { grid-column: span 2; }
 }
+@media (max-width: 860px) {
+  /* Simplify patterns on tablet */
+  .approach::before { opacity: 0.5; }
+  .approach > .wrap::before { opacity: 0.6; }
+  .solutions::before { opacity: 0.4; }
+  .industries::before { opacity: 0.4; }
+  .cta::before { opacity: 0.5; }
+}
+
 @media (max-width: 560px) {
-  /* keep soft glows, drop denser patterns so mobile stays clean */
-  .approach::before, .industries::after, .cta-inner::after { display: none; }
+  /* Hide complex patterns on mobile for performance */
+  .approach::before, .approach > .wrap::before, .solutions::before, .industries::before, .cta::before,
+  .industries::after, .cta-inner::after { display: none; }
+  /* Keep only subtle glows */
+  .approach::after, .cta-inner::before { opacity: 0.6; }
   .fourcol, .sectors-grid, .partner-top, .partner-grid { grid-template-columns: 1fr 1fr; }
   .sectors-shape { display: none; }
   .statrow { grid-template-columns: 1fr; gap: 6px; padding: 22px 0; }
