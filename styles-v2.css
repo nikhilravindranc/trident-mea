@@ -423,9 +423,20 @@ body.menu-open .mobile-panel { transform: none; visibility: visible; }
 .sector p { font-size: 14.5px; color: var(--muted); line-height: 1.55; max-width: 250px; }
 
 /* ============================================================
-   PARTNERS (refined tiers, light)
+   PARTNERS (refined tiers, light + network mesh pattern)
 ============================================================ */
-.partners { background: #fff; }
+.partners { position: relative; overflow: hidden; background: #fff; }
+.partners::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+  pointer-events: none;
+  background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 900"><defs><linearGradient id="networkGrad" x1="0" y1="0" x2="100" y2="100"><stop offset="0%%" stop-color="rgba(0,156,217,0.04)"/><stop offset="100%%" stop-color="rgba(0,156,217,0.01)"/></linearGradient></defs><g stroke="url(%23networkGrad)" stroke-width="0.8" fill="none" opacity="0.6"><circle cx="150" cy="200" r="2" fill="rgba(0,156,217,0.15)"/><circle cx="350" cy="180" r="2" fill="rgba(0,156,217,0.15)"/><circle cx="600" cy="220" r="2" fill="rgba(0,156,217,0.15)"/><circle cx="850" cy="190" r="2" fill="rgba(0,156,217,0.15)"/><circle cx="1050" cy="210" r="2" fill="rgba(0,156,217,0.15)"/><circle cx="200" cy="450" r="2" fill="rgba(0,156,217,0.15)"/><circle cx="450" cy="420" r="2" fill="rgba(0,156,217,0.15)"/><circle cx="700" cy="460" r="2" fill="rgba(0,156,217,0.15)"/><circle cx="950" cy="440" r="2" fill="rgba(0,156,217,0.15)"/><circle cx="1100" cy="450" r="2" fill="rgba(0,156,217,0.15)"/><circle cx="100" cy="700" r="2" fill="rgba(0,156,217,0.15)"/><circle cx="400" cy="720" r="2" fill="rgba(0,156,217,0.15)"/><circle cx="650" cy="700" r="2" fill="rgba(0,156,217,0.15)"/><circle cx="900" cy="730" r="2" fill="rgba(0,156,217,0.15)"/><circle cx="1150" cy="710" r="2" fill="rgba(0,156,217,0.15)"/><line x1="150" y1="200" x2="350" y2="180"/><line x1="350" y1="180" x2="600" y2="220"/><line x1="600" y1="220" x2="850" y2="190"/><line x1="850" y1="190" x2="1050" y2="210"/><line x1="150" y1="200" x2="200" y2="450"/><line x1="350" y1="180" x2="450" y2="420"/><line x1="600" y1="220" x2="700" y2="460"/><line x1="850" y1="190" x2="950" y2="440"/><line x1="1050" y1="210" x2="1100" y2="450"/><line x1="200" y1="450" x2="450" y2="420"/><line x1="450" y1="420" x2="700" y2="460"/><line x1="700" y1="460" x2="950" y2="440"/><line x1="950" y1="440" x2="1100" y2="450"/><line x1="200" y1="450" x2="400" y2="720"/><line x1="450" y1="420" x2="650" y2="700"/><line x1="700" y1="460" x2="900" y2="730"/><line x1="950" y1="440" x2="1150" y2="710"/><line x1="100" y1="700" x2="400" y2="720"/><line x1="400" y1="720" x2="650" y2="700"/><line x1="650" y1="700" x2="900" y2="730"/><line x1="900" y1="730" x2="1150" y2="710"/></g></svg>');
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
+}
+.partners > .wrap { position: relative; z-index: 1; }
 .tier-label { display: flex; align-items: center; gap: 16px; margin: 48px 0 22px; }
 .tier-label span { font-size: 12.5px; font-weight: 600; letter-spacing: 2px; text-transform: uppercase; color: var(--muted); white-space: nowrap; }
 .tier-label::after { content: ""; flex: 1; height: 1px; background: var(--hair); }
@@ -590,12 +601,13 @@ body.menu-open .mobile-panel { transform: none; visibility: visible; }
   .approach > .wrap::before { opacity: 0.6; }
   .solutions::before { opacity: 0.4; }
   .industries::before { opacity: 0.4; }
+  .partners::before { opacity: 0.5; }
   .cta::before { opacity: 0.5; }
 }
 
 @media (max-width: 560px) {
   /* Hide complex patterns on mobile for performance */
-  .approach::before, .approach > .wrap::before, .solutions::before, .industries::before, .cta::before,
+  .approach::before, .approach > .wrap::before, .solutions::before, .industries::before, .partners::before, .cta::before,
   .industries::after, .cta-inner::after { display: none; }
   /* Keep only subtle glows */
   .approach::after, .cta-inner::before { opacity: 0.6; }
