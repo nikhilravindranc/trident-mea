@@ -185,6 +185,27 @@ body.menu-open .mobile-panel { transform: none; visibility: visible; }
 .hero::before { content: ""; position: absolute; z-index: 0; top: -120px; right: -80px; width: 620px; height: 620px;
   pointer-events: none; border-radius: 50%;
   background: radial-gradient(circle, rgba(0,156,217,.10), rgba(0,156,217,.04) 42%, transparent 68%); }
+
+/* subtle grid pattern on left side */
+.hero::after { content: ""; position: absolute; z-index: 0; pointer-events: none;
+  left: 0; top: 0; width: 45%; height: 100%;
+  background-image:
+    linear-gradient(90deg, rgba(0,156,217,0.08) 1px, transparent 1px),
+    linear-gradient(0deg, rgba(0,156,217,0.08) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(0,156,217,0.04) 1px, transparent 1px),
+    linear-gradient(0deg, rgba(0,156,217,0.04) 1px, transparent 1px);
+  background-size:
+    80px 80px,
+    80px 80px,
+    40px 40px,
+    40px 40px;
+  background-position:
+    0 0,
+    0 0,
+    0 0,
+    0 0;
+  -webkit-mask-image: linear-gradient(90deg, #000 0%, #000 40%, transparent 100%);
+  mask-image: linear-gradient(90deg, #000 0%, #000 40%, transparent 100%); }
 .hero-grid { display: grid; grid-template-columns: 1.02fr .98fr; gap: 50px; align-items: center; min-height: 480px; position: relative; z-index: 1; }
 .hero-copy { position: relative; z-index: 2; }
 .hero-copy h1 { margin-bottom: 24px; }
