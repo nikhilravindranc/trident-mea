@@ -432,8 +432,14 @@ body.menu-open .mobile-panel { transform: none; visibility: visible; }
   inset: 0;
   z-index: 0;
   pointer-events: none;
-  background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 800" preserveAspectRatio="none"><defs><linearGradient id="partnerWave" x1="0" y1="0" x2="100" y2="100"><stop offset="0%%" stop-color="rgba(0,156,217,0.14)"/><stop offset="50%%" stop-color="rgba(0,156,217,0.08)"/><stop offset="100%%" stop-color="rgba(0,48,96,0.06)"/></linearGradient><linearGradient id="partnerAccent" x1="0" y1="0" x2="100" y2="100"><stop offset="0%%" stop-color="rgba(0,156,217,0.12)"/><stop offset="100%%" stop-color="rgba(0,156,217,0.03)"/></linearGradient></defs><path d="M0,80 Q300,40 600,90 T1200,80 L1200,0 L0,0 Z" fill="url(%23partnerWave)"/><path d="M0,200 Q280,150 560,210 T1200,200 L1200,120 Q600,180 0,120 Z" fill="url(%23partnerAccent)"/><path d="M0,350 Q320,300 640,360 T1200,350 L1200,250 Q600,320 0,250 Z" fill="url(%23partnerWave)"/><path d="M0,500 Q300,450 600,520 T1200,500 L1200,400 Q600,480 0,400 Z" fill="url(%23partnerAccent)"/><path d="M0,650 Q280,600 560,720 T1200,650 L1200,580 Q600,640 0,580 Z" fill="url(%23partnerWave)"/><path d="M0,800 Q300,750 600,800 L1200,800 L1200,740 Q600,780 0,740 Z" fill="url(%23partnerAccent)" opacity="0.8"/></g></svg>');
-  background-size: 100% 100%;
+  background:
+    linear-gradient(135deg, rgba(0,156,217,0.12) 0%, rgba(0,156,217,0.05) 35%, transparent 50%),
+    linear-gradient(-45deg, transparent 40%, rgba(0,48,96,0.08) 60%, transparent 80%),
+    linear-gradient(180deg, rgba(0,156,217,0.10) 0%, transparent 30%, rgba(0,156,217,0.08) 70%, transparent 100%);
+  background-size:
+    100% 100%,
+    100% 100%,
+    100% 100%;
   background-repeat: no-repeat;
 }
 .partners > .wrap { position: relative; z-index: 1; }
