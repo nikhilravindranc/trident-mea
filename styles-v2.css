@@ -263,6 +263,32 @@ body.menu-open .mobile-panel { transform: none; visibility: visible; }
 .hcard p { font-size: 14px; color: var(--muted); line-height: 1.5; }
 
 /* ============================================================
+   PAGE HERO — reusable compact header for sub-pages
+============================================================ */
+.page-hero { position: relative; overflow: hidden; padding: 150px 0 60px;
+  background: linear-gradient(180deg,#ffffff 0%,#ffffff 34%,#f4f9fd 100%); text-align: center; }
+.page-hero > .wrap { position: relative; z-index: 1; }
+.page-hero .ph-inner { max-width: 760px; margin: 0 auto; }
+.page-hero h1 { margin-bottom: 20px; }
+.page-hero .lead { color: var(--muted); max-width: 620px; margin: 0 auto; }
+.page-hero .crumbs { display: inline-flex; align-items: center; gap: 8px; margin-bottom: 22px;
+  font-size: 13px; font-weight: 500; color: var(--muted); }
+.page-hero .crumbs a { color: var(--cyan); transition: color .25s var(--ease); }
+.page-hero .crumbs a:hover { color: var(--primary-blue); }
+.page-hero .crumbs svg { width: 14px; height: 14px; opacity: .5; }
+/* soft ambient blob + faint grid, echoing the home hero */
+.page-hero::before { content: ""; position: absolute; z-index: 0; pointer-events: none;
+  top: -160px; left: 50%; transform: translateX(-50%); width: 720px; height: 520px; border-radius: 50%;
+  background: radial-gradient(circle, rgba(0,156,217,.10), rgba(0,156,217,.03) 45%, transparent 70%); }
+.page-hero::after { content: ""; position: absolute; z-index: 0; pointer-events: none; inset: 0;
+  background-image:
+    linear-gradient(90deg, rgba(0,156,217,0.05) 1px, transparent 1px),
+    linear-gradient(0deg, rgba(0,156,217,0.05) 1px, transparent 1px);
+  background-size: 64px 64px, 64px 64px;
+  -webkit-mask-image: radial-gradient(circle at 50% 0%, #000, transparent 72%);
+  mask-image: radial-gradient(circle at 50% 0%, #000, transparent 72%); }
+
+/* ============================================================
    APPROACH (media + text, then 4 line-icon columns)
 ============================================================ */
 .approach { background: var(--bg-soft); }
