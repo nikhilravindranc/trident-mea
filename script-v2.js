@@ -167,6 +167,7 @@
         '<div class="spot-badge"><b>' + t.badge[0] + '<span>' + t.badge[1] + '</span></b><i>' + t.badge[2] + '</i></div>' +
       '</div></div>';
     var stage = document.getElementById("tabStage");
+    if (!stage) return;
     stage.innerHTML = html;
   }
 
@@ -178,7 +179,7 @@
       renderTab(parseInt(b.getAttribute("data-tab"), 10));
     });
   });
-  renderTab(0);
+  if (document.getElementById("tabStage")) renderTab(0);
 
   /* ---------- Sticky nav ---------- */
   var nav = document.getElementById("nav");
