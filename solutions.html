@@ -5,7 +5,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Solutions — Trident MEA Technologies</title>
 <meta name="description" content="End-to-end technology solutions from Trident MEA — Healthcare, Hospitality, IT Infrastructure, and Unified Communications, built on integrated infrastructure, communication, security, and software.">
-<link rel="stylesheet" href="styles-v2.css?v=3">
+<link rel="stylesheet" href="styles-v2.css?v=4">
 </head>
 <body>
 
@@ -80,6 +80,19 @@
 
 <main id="top">
 
+<!-- shared gradient defs for dual-material icons -->
+<svg width="0" height="0" style="position:absolute" aria-hidden="true"><defs>
+  <linearGradient id="tgSolid" x1="0" y1="0" x2="0.4" y2="1">
+    <stop offset="0" stop-color="#1bb6ec"/><stop offset="0.5" stop-color="#009cd9"/><stop offset="1" stop-color="#003060"/>
+  </linearGradient>
+  <linearGradient id="tgGlass" x1="0.1" y1="0" x2="0.6" y2="1">
+    <stop offset="0" stop-color="#ffffff" stop-opacity="0.95"/><stop offset="0.55" stop-color="#dceaf5" stop-opacity="0.82"/><stop offset="1" stop-color="#bcd2e6" stop-opacity="0.78"/>
+  </linearGradient>
+  <linearGradient id="tgEdge" x1="0" y1="0" x2="0.5" y2="1">
+    <stop offset="0" stop-color="#ffffff" stop-opacity="0.95"/><stop offset="1" stop-color="#a9c2d8" stop-opacity="0.55"/>
+  </linearGradient>
+</defs></svg>
+
 <!-- ============ PAGE HERO ============ -->
 <section class="page-hero">
   <div class="wrap">
@@ -123,7 +136,7 @@
 
       <!-- Healthcare -->
       <article class="sol-card reveal" id="healthcare">
-        <div class="sc-ic"><svg viewBox="0 0 24 24" fill="none"><path d="M3 12h3l2-5 4 10 2-5h7" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
+        <div class="dm-ic" data-ic="healthcare"></div>
         <h3>Healthcare Solutions</h3>
         <p>Reliable, secure, and compliant technology systems designed to support critical healthcare operations, patient experience, and data protection.</p>
         <span class="sc-foc">Key Focus Areas</span>
@@ -140,7 +153,7 @@
 
       <!-- Hospitality -->
       <article class="sol-card reveal d1" id="hospitality">
-        <div class="sc-ic"><svg viewBox="0 0 24 24" fill="none"><path d="M5 21V10l7-5 7 5v11" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"/><path d="M9 21v-5h6v5" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
+        <div class="dm-ic" data-ic="hospitality"></div>
         <h3>Hospitality Solutions</h3>
         <p>Integrated technology solutions that enhance guest experience, streamline operations, and support modern hospitality environments.</p>
         <span class="sc-foc">Key Focus Areas</span>
@@ -157,7 +170,7 @@
 
       <!-- IT Infrastructure -->
       <article class="sol-card reveal" id="infrastructure">
-        <div class="sc-ic"><svg viewBox="0 0 24 24" fill="none"><rect x="3" y="4" width="18" height="6" rx="1.5" stroke="currentColor"/><rect x="3" y="14" width="18" height="6" rx="1.5" stroke="currentColor"/><path d="M7 7h.01M7 17h.01" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg></div>
+        <div class="dm-ic" data-ic="infrastructure"></div>
         <h3>IT Infrastructure Solutions</h3>
         <p>Secure, scalable, and high-performance infrastructure solutions that form the backbone of your business operations.</p>
         <span class="sc-foc">Key Focus Areas</span>
@@ -174,7 +187,7 @@
 
       <!-- Unified Communications & Contact Center -->
       <article class="sol-card reveal d1" id="communications">
-        <div class="sc-ic"><svg viewBox="0 0 24 24" fill="none"><path d="M4 12a8 8 0 0 1 16 0v5a3 3 0 0 1-3 3h-2" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"/><rect x="3" y="12" width="4" height="6" rx="1.5" stroke="currentColor"/><rect x="17" y="12" width="4" height="6" rx="1.5" stroke="currentColor"/></svg></div>
+        <div class="dm-ic" data-ic="communications"></div>
         <h3>Unified Communications &amp; Contact Center</h3>
         <p>Seamless communication ecosystems that connect teams and customers across channels, devices, and locations.</p>
         <span class="sc-foc">Key Focus Areas</span>
@@ -204,37 +217,37 @@
 
     <div class="caps-grid">
       <div class="cap-item reveal">
-        <div class="cap-ic"><svg viewBox="0 0 24 24" fill="none"><path d="M4 12a8 8 0 0 1 16 0v5a3 3 0 0 1-3 3h-2" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"/><rect x="3" y="12" width="4" height="6" rx="1.5" stroke="currentColor"/><rect x="17" y="12" width="4" height="6" rx="1.5" stroke="currentColor"/></svg></div>
+        <div class="dm-ic" data-ic="uc"></div>
         <h4>Unified Communications &amp; Collaboration</h4>
         <p>Seamless communication across teams, locations, and devices.</p>
       </div>
       <div class="cap-item reveal d1">
-        <div class="cap-ic"><svg viewBox="0 0 24 24" fill="none"><path d="M21 12a8.5 8.5 0 0 1-12.3 7.6L3 21l1.4-5.7A8.5 8.5 0 1 1 21 12Z" stroke="currentColor" stroke-linejoin="round"/><path d="M9 11h6M9 14h4" stroke="currentColor" stroke-linecap="round"/></svg></div>
+        <div class="dm-ic" data-ic="contact"></div>
         <h4>Contact Center Solutions</h4>
         <p>Consistent, scalable customer experience across every interaction.</p>
       </div>
       <div class="cap-item reveal d2">
-        <div class="cap-ic"><svg viewBox="0 0 24 24" fill="none"><rect x="3" y="4" width="18" height="6" rx="1.5" stroke="currentColor"/><rect x="3" y="14" width="18" height="6" rx="1.5" stroke="currentColor"/><path d="M7 7h.01M7 17h.01" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg></div>
+        <div class="dm-ic" data-ic="infra"></div>
         <h4>IT Infrastructure</h4>
         <p>Secure, resilient systems built to support business growth.</p>
       </div>
       <div class="cap-item reveal">
-        <div class="cap-ic"><svg viewBox="0 0 24 24" fill="none"><path d="M13 2L4 14h7l-1 8 9-12h-7l2-8Z" stroke="currentColor" stroke-linejoin="round"/></svg></div>
+        <div class="dm-ic" data-ic="elv"></div>
         <h4>ELV Systems</h4>
         <p>Integrated low-voltage systems for smarter, more efficient environments.</p>
       </div>
       <div class="cap-item reveal d1">
-        <div class="cap-ic"><svg viewBox="0 0 24 24" fill="none"><rect x="3" y="4" width="18" height="13" rx="2" stroke="currentColor"/><path d="M8 21h8M12 17v4" stroke="currentColor" stroke-linecap="round"/><path d="M10.5 8.7l4 2.3-4 2.3z" stroke="currentColor" stroke-linejoin="round"/></svg></div>
+        <div class="dm-ic" data-ic="av"></div>
         <h4>Audio Visual Solutions</h4>
         <p>Reliable communication through intelligent AV integration.</p>
       </div>
       <div class="cap-item reveal d2">
-        <div class="cap-ic"><svg viewBox="0 0 24 24" fill="none"><path d="M12 3l8 4v5c0 4.5-3.4 7.6-8 9-4.6-1.4-8-4.5-8-9V7l8-4Z" stroke="currentColor" stroke-linejoin="round"/><path d="M9 12l2 2 4-4" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
+        <div class="dm-ic" data-ic="security"></div>
         <h4>Information Security</h4>
         <p>Protect your systems, data, and operations from evolving threats.</p>
       </div>
       <div class="cap-item reveal">
-        <div class="cap-ic"><svg viewBox="0 0 24 24" fill="none"><path d="M8 9l-3 3 3 3M16 9l3 3-3 3M13 6l-2 12" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
+        <div class="dm-ic" data-ic="software"></div>
         <h4>Software Solutions</h4>
         <p>Custom-built applications aligned with your workflows and business needs.</p>
       </div>
@@ -314,5 +327,32 @@
 </footer>
 
 <script src="script-v2.js?v=3"></script>
+<script>
+/* dual-material icons — same solid+glass treatment as the home page */
+(function () {
+  var P = {
+    healthcare: ["M32 50 C14 38 9 27 17 20 C23 15 30 18 32 23 C34 18 41 15 47 20 C55 27 50 38 32 50 Z"],
+    hospitality: ["M32 14 L52 31 V51 H12 V31 Z"],
+    infrastructure: ["M13 15 H51 a3 3 0 0 1 3 3 V27 a3 3 0 0 1 -3 3 H13 a3 3 0 0 1 -3 -3 V18 a3 3 0 0 1 3 -3 Z","M13 34 H51 a3 3 0 0 1 3 3 V46 a3 3 0 0 1 -3 3 H13 a3 3 0 0 1 -3 -3 V37 a3 3 0 0 1 3 -3 Z"],
+    communications: ["M14 14 H50 a5 5 0 0 1 5 5 V37 a5 5 0 0 1 -5 5 H32 L21 52 V42 H14 a5 5 0 0 1 -5 -5 V19 a5 5 0 0 1 5 -5 Z"],
+    uc: ["M26 13 H51 a3 3 0 0 1 3 3 V41 a3 3 0 0 1 -3 3 H26 a3 3 0 0 1 -3 -3 V16 a3 3 0 0 1 3 -3 Z","M13 22 H38 a3 3 0 0 1 3 3 V50 a3 3 0 0 1 -3 3 H13 a3 3 0 0 1 -3 -3 V25 a3 3 0 0 1 3 -3 Z"],
+    contact: ["M14 14 H50 a5 5 0 0 1 5 5 V37 a5 5 0 0 1 -5 5 H32 L21 52 V42 H14 a5 5 0 0 1 -5 -5 V19 a5 5 0 0 1 5 -5 Z"],
+    infra: ["M13 15 H51 a3 3 0 0 1 3 3 V27 a3 3 0 0 1 -3 3 H13 a3 3 0 0 1 -3 -3 V18 a3 3 0 0 1 3 -3 Z","M13 34 H51 a3 3 0 0 1 3 3 V46 a3 3 0 0 1 -3 3 H13 a3 3 0 0 1 -3 -3 V37 a3 3 0 0 1 3 -3 Z"],
+    elv: ["M36 8 L16 36 H29 L26 56 L48 26 H34 Z"],
+    av: ["M8 14 H56 a3 3 0 0 1 3 3 V40 a3 3 0 0 1 -3 3 H8 a3 3 0 0 1 -3 -3 V17 a3 3 0 0 1 3 -3 Z","M26 46 H38 L40 53 H24 Z","M27 22 L41 28.5 L27 35 Z"],
+    security: ["M32 9 L53 17 V31 C53 43 44 51 32 55 C20 51 11 43 11 31 V17 Z","M24 31 L29 36 L40 25 L43.5 28.5 L29 43 L20.5 34.5 Z"],
+    software: ["M23 18 L9 32 L23 46 L28 41 L19 32 L28 23 Z","M41 18 L55 32 L41 46 L36 41 L45 32 L36 23 Z"]
+  };
+  function icon(paths) {
+    var solid = paths.map(function (d) { return '<path d="' + d + '" fill="url(#tgSolid)"/>'; }).join("");
+    var glass = paths.map(function (d) { return '<path d="' + d + '" fill="url(#tgGlass)" stroke="url(#tgEdge)" stroke-width="1.4" stroke-linejoin="round"/>'; }).join("");
+    return '<svg viewBox="0 0 64 64" fill="none"><g class="sic-solid" transform="translate(6,-4)">' + solid + '</g><g class="sic-glass">' + glass + '</g></svg>';
+  }
+  document.querySelectorAll("[data-ic]").forEach(function (el) {
+    var k = el.getAttribute("data-ic");
+    if (P[k]) el.innerHTML = icon(P[k]);
+  });
+})();
+</script>
 </body>
 </html>
