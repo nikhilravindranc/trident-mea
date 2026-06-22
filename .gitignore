@@ -1,0 +1,51 @@
+# Build and deployment
+*.py
+*.pyc
+__pycache__/
+.env
+.env.local
+
+# Package managers
+node_modules/
+package-lock.json
+package.json
+bun.lock
+
+# IDE and editor
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+.DS_Store
+
+# Local development
+.claude/
+.cursor/
+.windsurf/
+
+# Old/test files
+*-old.html
+*-new.html
+index-[0-9].html
+index-[0-9]-*.html
+header.html
+footer.html
+header.css
+footer.css
+*.docx
+*.xlsx
+*.zip
+
+# Build artifacts
+dist/
+build/
+.next/
+
+# Ignore old page versions (keep only current)
+healthcare-solutions.html
+industries.html
+clients.html
+careers.html
+partners.html
+contact.html
