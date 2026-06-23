@@ -322,12 +322,12 @@ body.menu-open .mobile-panel { transform: none; visibility: visible; }
     radial-gradient(circle, transparent 0 54%, rgba(0,156,217,.065) 54% 54.8%, transparent 55%),
     radial-gradient(circle, transparent 0 68%, rgba(0,48,96,.05) 68% 68.8%, transparent 69%);
   -webkit-mask-image: radial-gradient(circle, #000 60%, transparent 75%); mask-image: radial-gradient(circle, #000 60%, transparent 75%); }
-/* faint static medical "plus" tile pattern, fading toward the centre so it stays behind the copy */
-.health-deco .h-crosses { position: absolute; inset: 0;
-  background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="96" height="96" viewBox="0 0 96 96"><g fill="none" stroke="rgba(0,156,217,0.45)" stroke-width="1.8" stroke-linecap="round"><path d="M22 14v14M15 21h14"/><path d="M74 64v14M67 71h14"/></g></svg>');
-  background-size: 96px 96px; opacity: .34;
-  -webkit-mask-image: radial-gradient(circle at 50% 42%, transparent 0 40%, #000 82%); mask-image: radial-gradient(circle at 50% 42%, transparent 0 40%, #000 82%); }
-@media (max-width: 860px) { .health-deco .h-rings { opacity: .5; } .health-deco .h-crosses { opacity: .24; } }
+/* two single, oversized medical-cross accents tucked in corners — sparse, not tiled */
+.health-deco .h-cross { position: absolute; opacity: .14; }
+.health-deco .h-cross svg { width: 100%; height: 100%; stroke: var(--cyan); }
+.health-deco .h-cross-a { top: 36px; left: 6%; width: 46px; height: 46px; }
+.health-deco .h-cross-b { bottom: 54px; right: 10%; width: 34px; height: 34px; }
+@media (max-width: 860px) { .health-deco .h-rings { opacity: .5; } .health-deco .h-cross { opacity: .1; } }
 @media (max-width: 560px) { .health-deco { display: none; } }
 
 /* ============================================================
