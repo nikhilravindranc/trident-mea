@@ -340,9 +340,9 @@ body.menu-open .mobile-panel { transform: none; visibility: visible; }
 /* ============================================================
    DROPDOWN STYLING
 ============================================================ */
-.dropdown-divider { height: 1px; background: var(--hair-2); margin: 12px 0; }
+.dropdown-divider { height: 1px; background: var(--hair-2); margin: 12px 0; grid-column: 1 / -1; }
 .drop-action { display: block; padding: 14px 18px; text-align: center; color: var(--cyan); font-weight: 600;
-  font-size: 14px; width: 100%; box-sizing: border-box; transition: background .2s var(--ease), color .2s var(--ease); }
+  font-size: 14px; grid-column: 1 / -1; transition: background .2s var(--ease), color .2s var(--ease); }
 .drop-action svg { width: 16px; height: 16px; margin-left: 8px; vertical-align: middle; }
 .drop-action:hover { background: var(--bg-soft); color: var(--primary-blue); }
 
