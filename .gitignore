@@ -43,7 +43,6 @@ build/
 .next/
 
 # Ignore old page versions (keep only current)
-healthcare-solutions.html
 industries.html
 clients.html
 careers.html
