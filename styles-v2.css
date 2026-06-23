@@ -687,15 +687,15 @@ body.menu-open .mobile-panel { transform: none; visibility: visible; }
   background-image: radial-gradient(var(--cyan) 1.5px, transparent 1.5px); background-size: 19px 19px; opacity: .14;
   -webkit-mask-image: linear-gradient(40deg, #000, transparent 70%); mask-image: linear-gradient(40deg, #000, transparent 70%); }
 
-/* Solutions intro ("From Infrastructure to Customer Experience") — wavy pattern + dot-grid + glow */
+/* Solutions intro ("From Infrastructure to Customer Experience") — soft glows + dot-grid */
 .sol-intro { position: relative; overflow: hidden; }
 .sol-intro > .wrap { position: relative; z-index: 1; }
-.sol-intro::before { content: ""; position: absolute; z-index: 0; pointer-events: none; inset: 0;
-  background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 700" preserveAspectRatio="none"><defs><linearGradient id="siWave" x1="0" y1="0" x2="100" y2="100"><stop offset="0%%" stop-color="rgba(0,156,217,0.05)"/><stop offset="100%%" stop-color="rgba(0,156,217,0.01)"/></linearGradient></defs><path d="M0,120 Q300,60 600,110 T1200,120 L1200,0 L0,0 Z" fill="url(%23siWave)"/><path d="M0,560 Q300,610 600,570 T1200,560 L1200,700 L0,700 Z" fill="rgba(0,48,96,0.025)"/></svg>');
-  background-size: 100% 100%; background-repeat: no-repeat; }
+.sol-intro::before { content: ""; position: absolute; z-index: 0; pointer-events: none;
+  left: -120px; top: -160px; width: 460px; height: 460px; border-radius: 50%;
+  background: radial-gradient(circle, rgba(0,156,217,.07), transparent 68%); }
 .sol-intro::after { content: ""; position: absolute; z-index: 0; pointer-events: none;
-  right: -160px; bottom: -140px; width: 420px; height: 420px; border-radius: 50%;
-  background: radial-gradient(circle, rgba(0,156,217,.08), transparent 65%); }
+  right: -160px; bottom: -180px; width: 420px; height: 420px; border-radius: 50%;
+  background: radial-gradient(circle, rgba(0,48,96,.06), transparent 65%); }
 .sol-intro .si-head { position: relative; }
 .sol-intro .si-head::before { content: ""; position: absolute; z-index: -1; pointer-events: none;
   top: -26px; left: -36px; width: 200px; height: 200px;
@@ -776,10 +776,10 @@ body.menu-open .mobile-panel { transform: none; visibility: visible; }
   /* Hide complex patterns on mobile for performance */
   .approach::before, .approach > .wrap::before, .solutions::before, .industries::before, .partners::before, .cta::before,
   .industries::after, .cta-inner::after,
-  .sol-intro::before, .sol-intro .si-head::before, .caps::before, .caps::after { display: none; }
+  .sol-intro .si-head::before, .caps::before, .caps::after { display: none; }
   /* Keep only subtle glows */
   .approach::after, .cta-inner::before { opacity: 0.6; }
-  .sol-intro::after { opacity: 0.6; }
+  .sol-intro::before, .sol-intro::after { opacity: 0.6; }
   .fourcol, .sectors-grid, .partner-top, .partner-grid { grid-template-columns: 1fr 1fr; }
   .sectors-shape { display: none; }
   .statrow { grid-template-columns: 1fr; gap: 6px; padding: 22px 0; }
