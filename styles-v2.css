@@ -486,11 +486,9 @@ body.menu-open .mobile-panel { transform: none; visibility: visible; }
    SOLUTIONS (tabbed spotlight + more capabilities)
 ============================================================ */
 .solutions { background: #fff; }
-.tabs { display: flex; flex-wrap: nowrap; justify-content: center; gap: 4px; margin: 44px auto 0; max-width: 100%; border-bottom: 1px solid var(--hair);
-  overflow-x: auto; -webkit-overflow-scrolling: touch; scrollbar-width: thin; }
-.tabs::-webkit-scrollbar { height: 4px; }
-.tabs::-webkit-scrollbar-thumb { background: var(--hair-2); border-radius: 4px; }
-.tab { padding: 16px 14px; font-size: 15px; font-weight: 500; color: var(--muted); position: relative; white-space: nowrap; flex: 0 0 auto; transition: color .25s var(--ease); }
+.tabs { display: flex; flex-wrap: nowrap; justify-content: center; gap: 2px; margin: 44px auto 0; max-width: 100%; border-bottom: 1px solid var(--hair);
+  overflow: hidden; }
+.tab { padding: 16px 10px; font-size: 14px; font-weight: 500; color: var(--muted); position: relative; white-space: nowrap; flex: 0 1 auto; transition: color .25s var(--ease); }
 .tab::after { content: ""; position: absolute; left: 0; right: 0; bottom: -1px; height: 2px; background: var(--cyan); transform: scaleX(0); transition: transform .3s var(--ease); }
 .tab:hover { color: var(--ink); }
 .tab.active { color: var(--ink); font-weight: 600; }
