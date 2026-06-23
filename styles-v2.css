@@ -687,6 +687,34 @@ body.menu-open .mobile-panel { transform: none; visibility: visible; }
   background-image: radial-gradient(var(--cyan) 1.5px, transparent 1.5px); background-size: 19px 19px; opacity: .14;
   -webkit-mask-image: linear-gradient(40deg, #000, transparent 70%); mask-image: linear-gradient(40deg, #000, transparent 70%); }
 
+/* Solutions intro ("From Infrastructure to Customer Experience") — wavy pattern + dot-grid + glow */
+.sol-intro { position: relative; overflow: hidden; }
+.sol-intro > .wrap { position: relative; z-index: 1; }
+.sol-intro::before { content: ""; position: absolute; z-index: 0; pointer-events: none; inset: 0;
+  background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 700" preserveAspectRatio="none"><defs><linearGradient id="siWave" x1="0" y1="0" x2="100" y2="100"><stop offset="0%%" stop-color="rgba(0,156,217,0.05)"/><stop offset="100%%" stop-color="rgba(0,156,217,0.01)"/></linearGradient></defs><path d="M0,120 Q300,60 600,110 T1200,120 L1200,0 L0,0 Z" fill="url(%23siWave)"/><path d="M0,560 Q300,610 600,570 T1200,560 L1200,700 L0,700 Z" fill="rgba(0,48,96,0.025)"/></svg>');
+  background-size: 100% 100%; background-repeat: no-repeat; }
+.sol-intro::after { content: ""; position: absolute; z-index: 0; pointer-events: none;
+  right: -160px; bottom: -140px; width: 420px; height: 420px; border-radius: 50%;
+  background: radial-gradient(circle, rgba(0,156,217,.08), transparent 65%); }
+.sol-intro .si-head { position: relative; }
+.sol-intro .si-head::before { content: ""; position: absolute; z-index: -1; pointer-events: none;
+  top: -26px; left: -36px; width: 200px; height: 200px;
+  background-image: radial-gradient(var(--cyan) 1.4px, transparent 1.4px); background-size: 17px 17px; opacity: .12;
+  -webkit-mask-image: radial-gradient(circle at 30% 30%, #000, transparent 70%); mask-image: radial-gradient(circle at 30% 30%, #000, transparent 70%); }
+
+/* Core Capabilities — topographic contours + signal glow */
+.caps { position: relative; overflow: hidden; }
+.caps > .wrap { position: relative; z-index: 1; }
+.caps::before { content: ""; position: absolute; z-index: 0; pointer-events: none; inset: 0;
+  background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 800"><defs><linearGradient id="capsTopo" x1="0" y1="0" x2="100" y2="100"><stop offset="0%%" stop-color="rgba(0,156,217,0.06)"/><stop offset="100%%" stop-color="rgba(0,156,217,0.01)"/></linearGradient></defs><g stroke="url(%23capsTopo)" stroke-width="1.2" fill="none" stroke-linecap="round" opacity="0.55"><path d="M-200,90 Q200,60 500,110 T1400,90"/><path d="M-200,160 Q180,130 480,180 T1400,160"/><path d="M-200,650 Q220,620 520,670 T1400,650"/><path d="M-200,720 Q190,690 490,740 T1400,720"/></g></svg>');
+  background-size: 100% 100%; background-repeat: no-repeat; }
+.caps::after { content: ""; position: absolute; z-index: 0; pointer-events: none;
+  left: -190px; top: 45%; transform: translateY(-50%); width: 520px; height: 520px; border-radius: 50%;
+  background:
+    radial-gradient(circle, transparent 0 36%, rgba(0,156,217,.06) 36% 36.7%, transparent 37%),
+    radial-gradient(circle, transparent 0 48%, rgba(0,48,96,.05) 48% 48.6%, transparent 49%);
+  -webkit-mask-image: radial-gradient(circle, #000 60%, transparent 72%); mask-image: radial-gradient(circle, #000 60%, transparent 72%); }
+
 /* ============================================================
    Reveal
 ============================================================ */
@@ -739,14 +767,19 @@ body.menu-open .mobile-panel { transform: none; visibility: visible; }
   .ph-pane { opacity: .6; }
   .ph-p1, .ph-p2 { left: -2%; }
   .ph-p3, .ph-p4 { right: -2%; }
+  .sol-intro::before { opacity: 0.5; }
+  .sol-intro .si-head::before { opacity: 0.6; }
+  .caps::before { opacity: 0.4; }
 }
 
 @media (max-width: 560px) {
   /* Hide complex patterns on mobile for performance */
   .approach::before, .approach > .wrap::before, .solutions::before, .industries::before, .partners::before, .cta::before,
-  .industries::after, .cta-inner::after { display: none; }
+  .industries::after, .cta-inner::after,
+  .sol-intro::before, .sol-intro .si-head::before, .caps::before, .caps::after { display: none; }
   /* Keep only subtle glows */
   .approach::after, .cta-inner::before { opacity: 0.6; }
+  .sol-intro::after { opacity: 0.6; }
   .fourcol, .sectors-grid, .partner-top, .partner-grid { grid-template-columns: 1fr 1fr; }
   .sectors-shape { display: none; }
   .statrow { grid-template-columns: 1fr; gap: 6px; padding: 22px 0; }
