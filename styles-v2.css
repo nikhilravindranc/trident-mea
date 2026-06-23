@@ -269,7 +269,7 @@ body.menu-open .mobile-panel { transform: none; visibility: visible; }
   background: linear-gradient(180deg,#ffffff 0%,#ffffff 34%,#f4f9fd 100%); text-align: center; }
 .page-hero > .wrap { position: relative; z-index: 1; }
 .page-hero .ph-inner { max-width: 760px; margin: 0 auto; }
-.page-hero h1 { margin-bottom: 20px; }
+.page-hero h1 { margin-bottom: 20px; font-size: clamp(32px,4vw,52px); }
 .page-hero .lead { color: var(--muted); max-width: 620px; margin: 0 auto; }
 .page-hero .crumbs { display: inline-flex; align-items: center; gap: 8px; margin-bottom: 22px;
   font-size: 13px; font-weight: 500; color: var(--muted); }
