@@ -314,11 +314,21 @@ body.menu-open .mobile-panel { transform: none; visibility: visible; }
 ============================================================ */
 /* intro (heading left, body right) */
 .sol-intro { background: #fff; }
-.sol-intro .si-grid { display: grid; grid-template-columns: 1fr 1.1fr; gap: clamp(32px,6vw,72px); align-items: start; }
+.sol-intro .si-grid { display: grid; grid-template-columns: 1fr 1.1fr; gap: clamp(32px,6vw,72px); align-items: start; position: relative; }
 .sol-intro .si-head h2 { margin-top: 6px; }
 .sol-intro .si-body { display: grid; gap: 18px; }
 .sol-intro .si-body p { color: var(--muted); font-size: clamp(16px,1.6vw,18px); line-height: 1.65; }
 .sol-intro .si-body p strong { color: var(--body); font-weight: 600; }
+/* connecting divider between heading and body columns */
+.sol-intro .si-grid::before { content: ""; position: absolute; top: 6px; bottom: 6px; left: calc(50% - 0.5px);
+  width: 1px; background: linear-gradient(180deg, transparent, var(--hair-2) 18%, var(--hair-2) 82%, transparent); }
+/* icon tag pills reinforcing infrastructure / communication / security / software */
+.si-tags { display: flex; flex-wrap: wrap; gap: 10px; margin-top: 6px; }
+.si-tag { display: inline-flex; align-items: center; gap: 8px; padding: 9px 16px 9px 13px; border-radius: 999px;
+  font-size: 13.5px; font-weight: 600; color: var(--ink); background: var(--bg-soft); border: 1px solid var(--hair-2);
+  transition: border-color .25s var(--ease), background .25s var(--ease), transform .25s var(--ease); }
+.si-tag:hover { border-color: rgba(0,156,217,.4); background: #fff; transform: translateY(-2px); }
+.si-tag svg { width: 16px; height: 16px; color: var(--cyan); flex-shrink: 0; }
 
 /* solutions listing grid (4 industry cards) */
 .sol-listing { background: var(--bg-soft); }
@@ -351,6 +361,7 @@ body.menu-open .mobile-panel { transform: none; visibility: visible; }
 
 @media (max-width: 860px) {
   .sol-intro .si-grid { grid-template-columns: 1fr; gap: 22px; }
+  .sol-intro .si-grid::before { display: none; }
   .sol-grid { grid-template-columns: 1fr; }
   .caps-grid { grid-template-columns: 1fr 1fr; }
 }
