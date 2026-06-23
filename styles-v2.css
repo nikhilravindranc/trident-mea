@@ -328,8 +328,21 @@ body.menu-open .mobile-panel { transform: none; visibility: visible; }
   background: linear-gradient(180deg, rgba(255,255,255,.84) 0%, rgba(96,180,220,.66) 42%, rgba(0,95,155,.58) 100%); }
 .health-deco .h-petal:nth-child(6) { transform: rotate(56deg);
   background: linear-gradient(180deg, rgba(255,255,255,.8) 0%, rgba(60,150,200,.6) 42%, rgba(0,60,120,.6) 100%); }
-@media (max-width: 1040px) { .health-deco .h-fan { transform: scale(.8); top: 0; } }
-@media (max-width: 860px) { .health-deco .h-fan { transform: scale(.62); } }
+
+/* bottom-left glass-cross badge — same layered-glass material as the fan, balances the composition */
+.health-deco .h-badge { position: absolute; bottom: -26px; left: 4%; width: 132px; height: 132px; }
+.health-deco .h-tile { position: absolute; width: 98px; height: 98px; border-radius: 26px;
+  border: 1px solid rgba(255,255,255,.65); box-shadow: 10px 14px 26px rgba(0,48,96,.10); }
+.health-deco .h-tile-1 { left: 28px; top: 8px; transform: rotate(-10deg);
+  background: linear-gradient(135deg, rgba(255,255,255,.78) 0%, rgba(0,130,190,.42) 100%); }
+.health-deco .h-tile-2 { left: 4px; top: 28px; transform: rotate(11deg);
+  background: linear-gradient(135deg, rgba(255,255,255,.9) 0%, rgba(173,221,245,.6) 55%, rgba(0,156,217,.42) 100%); }
+.health-deco .h-tile-2 .h-plus { position: absolute; left: 50%; top: 50%; width: 38px; height: 38px; margin: -19px 0 0 -19px; }
+.health-deco .h-tile-2 .h-plus::before, .health-deco .h-tile-2 .h-plus::after { content: ""; position: absolute; background: rgba(255,255,255,.85); border-radius: 3px; }
+.health-deco .h-tile-2 .h-plus::before { left: 16px; top: 0; width: 6px; height: 38px; }
+.health-deco .h-tile-2 .h-plus::after { left: 0; top: 16px; width: 38px; height: 6px; }
+@media (max-width: 1040px) { .health-deco .h-fan { transform: scale(.8); top: 0; } .health-deco .h-badge { transform: scale(.82); bottom: -36px; } }
+@media (max-width: 860px) { .health-deco .h-fan { transform: scale(.62); } .health-deco .h-badge { transform: scale(.6); bottom: -42px; } }
 @media (max-width: 560px) { .health-deco { display: none; } }
 
 /* ============================================================
