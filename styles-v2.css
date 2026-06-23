@@ -338,6 +338,11 @@ body.menu-open .mobile-panel { transform: none; visibility: visible; }
 }
 
 /* ============================================================
+   CENTER ACTION (button alignment)
+============================================================ */
+.center-action { display: flex; justify-content: center; margin-top: clamp(32px,5vw,60px); }
+
+/* ============================================================
    APPROACH (media + text, then 4 line-icon columns)
 ============================================================ */
 .approach { background: var(--bg-soft); }
