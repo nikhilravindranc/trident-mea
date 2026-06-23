@@ -521,13 +521,6 @@ body.menu-open .mobile-panel { transform: none; visibility: visible; }
 .spot .spot-badge b { font-size: 24px; font-weight: 600; } .spot .spot-badge b span { color: #6fd0f5; }
 .spot .spot-badge i { display: block; font-style: normal; font-size: 12px; color: rgba(255,255,255,.7); }
 
-.more-caps { display: grid; grid-template-columns: repeat(3,1fr); gap: 0; margin-top: clamp(56px,7vw,84px); padding-top: 16px; border-top: 1px solid var(--hair); }
-.mcap { padding: 34px 28px 30px 0; display: flex; align-items: flex-start; gap: 18px; }
-.mcap + .mcap { padding-left: 30px; border-left: 1px solid var(--hair); }
-.mcap .mc-text { padding-top: 6px; }
-.mcap h4 { color: var(--ink); margin-bottom: 6px; }
-.mcap p { font-size: 14.5px; color: var(--muted); line-height: 1.5; }
-
 /* dual-material icon (shared, compact) */
 .dm-ic { position: relative; width: 66px; height: 66px; flex-shrink: 0; }
 .dm-ic::before { content: ""; position: absolute; width: 116px; height: 116px; left: 46%; top: 44%; transform: translate(-50%,-50%); border-radius: 50%;
@@ -535,8 +528,6 @@ body.menu-open .mobile-panel { transform: none; visibility: visible; }
 .dm-ic svg { position: relative; z-index: 1; width: 100%; height: 100%; overflow: visible; transition: transform .42s var(--ease); }
 .dm-ic .sic-glass { filter: drop-shadow(0 10px 14px rgba(0,48,96,.16)); }
 .dm-ic .sic-solid { filter: drop-shadow(0 6px 12px rgba(0,156,217,.45)); }
-.mcap:hover .dm-ic svg { transform: translateY(-4px); }
-.mcap:hover .dm-ic::before { background: radial-gradient(circle, rgba(0,156,217,.38), rgba(0,48,96,.07) 54%, transparent 74%); }
 
 /* ============================================================
    INDUSTRIES / SECTORS (dual-material 3D icons, spotlight glow)
@@ -762,8 +753,6 @@ body.menu-open .mobile-panel { transform: none; visibility: visible; }
   .hero-cards { grid-template-columns: 1fr; }
   .hcard, .hcard + .hcard { padding: 24px 0; border-left: none; border-top: 1px solid var(--hair); }
   .hcard::before { display: none; }
-  .more-caps { grid-template-columns: 1fr; }
-  .mcap, .mcap + .mcap { padding: 24px 0; border-left: none; border-top: 1px solid var(--hair); }
   .footer-grid { grid-template-columns: 1fr 1fr; }
   .footer .f-brand { grid-column: span 2; }
 }

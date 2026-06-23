@@ -63,22 +63,6 @@
       '<h3>' + s.t + '</h3><p>' + s.d + '</p></article>';
   }).join("");
 
-  /* ---------- More capabilities (dual-material, compact) ---------- */
-  var MORECAPS = [
-    { t: "ELV Systems", d: "Integrated low-voltage systems for smarter, more efficient environments.",
-      p: ["M36 8 L16 36 H29 L26 56 L48 26 H34 Z"] },
-    { t: "Audio Visual Solutions", d: "Reliable communication through intelligent AV integration.",
-      p: ["M8 14 H56 a3 3 0 0 1 3 3 V40 a3 3 0 0 1 -3 3 H8 a3 3 0 0 1 -3 -3 V17 a3 3 0 0 1 3 -3 Z","M26 46 H38 L40 53 H24 Z","M27 22 L41 28.5 L27 35 Z"] },
-    { t: "Software Solutions", d: "Custom-built applications aligned with your workflows and business needs.",
-      p: ["M23 18 L9 32 L23 46 L28 41 L19 32 L28 23 Z","M41 18 L55 32 L41 46 L36 41 L45 32 L36 23 Z"] }
-  ];
-  var mcaps = document.getElementById("moreCaps");
-  if (mcaps) mcaps.innerHTML = MORECAPS.map(function (m) {
-    return '<div class="mcap reveal">' +
-      '<div class="dm-ic">' + sectorIcon(m.p) + '</div>' +
-      '<div class="mc-text"><h4>' + m.t + '</h4><p>' + m.d + '</p></div></div>';
-  }).join("");
-
   /* ---------- Who We Are — 4 dual-material columns ---------- */
   var FOURCOL = [
     { t: "Integrate", d: "We unify complex technologies into cohesive, reliable systems.",
@@ -102,6 +86,9 @@
   var chatIcon  = '<svg viewBox="0 0 24 24" fill="none"><path d="M21 12a8.5 8.5 0 0 1-12.3 7.6L3 21l1.4-5.7A8.5 8.5 0 1 1 21 12Z" stroke="currentColor" stroke-linejoin="round"/><path d="M9 11h6M9 14h4" stroke="currentColor" stroke-linecap="round"/></svg>';
   var serverIcon= '<svg viewBox="0 0 24 24" fill="none"><rect x="3" y="4" width="18" height="6" rx="1.5" stroke="currentColor"/><rect x="3" y="14" width="18" height="6" rx="1.5" stroke="currentColor"/><path d="M7 7h.01M7 17h.01" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>';
   var shieldIcon= '<svg viewBox="0 0 24 24" fill="none"><path d="M12 3l8 4v5c0 4.5-3.4 7.6-8 9-4.6-1.4-8-4.5-8-9V7l8-4Z" stroke="currentColor" stroke-linejoin="round"/><path d="M9 12l2 2 4-4" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"/></svg>';
+  var elvIcon   = '<svg viewBox="0 0 24 24" fill="none"><path d="M13 2 4 14h6l-1 8 9-12h-6l1-8Z" stroke="currentColor" stroke-linejoin="round"/></svg>';
+  var avIcon    = '<svg viewBox="0 0 24 24" fill="none"><rect x="2" y="4" width="20" height="14" rx="2" stroke="currentColor"/><path d="M9 8l6 4-6 4Z" stroke="currentColor" stroke-linejoin="round"/><path d="M8 21h8" stroke="currentColor" stroke-linecap="round"/></svg>';
+  var softIcon  = '<svg viewBox="0 0 24 24" fill="none"><path d="M8 6 3 12l5 6M16 6l5 6-5 6M14 4l-4 16" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"/></svg>';
   var tick = '<svg class="tick" viewBox="0 0 24 24" fill="none"><circle cx="12" cy="12" r="9" stroke="currentColor" stroke-width="1.6"/><path d="M8.5 12l2.3 2.3L15.5 9.5" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>';
 
   var TABS = [
@@ -136,6 +123,30 @@
       icon: shieldIcon, label: "Information Security", sub: "Protected by design",
       badge: ["0", "", "Breaches"],
       rows: [["FW","Firewall","tag","Active"],["ED","Endpoints","bar",""],["ID","Identity","bar",""]]
+    },
+    {
+      h: "ELV Systems",
+      p: "Integrated low-voltage systems for smarter, more efficient environments — access control, surveillance, and automation working as one.",
+      feats: ["Access control and surveillance integration", "Building automation and smart systems", "Structured cabling and low-voltage design"],
+      icon: elvIcon, label: "ELV Systems", sub: "Smarter environments",
+      badge: ["100", "%", "Automated"],
+      rows: [["AC","Access Control","tag","Live"],["CC","Surveillance","bar",""],["BA","Automation","bar",""]]
+    },
+    {
+      h: "Audio Visual Solutions",
+      p: "Reliable communication through intelligent AV integration — conferencing, signage, and collaboration spaces built to perform.",
+      feats: ["Conference room and huddle space AV", "Digital signage and display systems", "Seamless integration with UC platforms"],
+      icon: avIcon, label: "Audio Visual", sub: "Engaging every room",
+      badge: ["4K", "", "Display ready"],
+      rows: [["CR","Conference Rooms","tag","Active"],["DS","Digital Signage","bar",""],["AV","AV Control","bar",""]]
+    },
+    {
+      h: "Software Solutions",
+      p: "Custom-built applications aligned with your workflows — from internal tools to customer-facing platforms.",
+      feats: ["Custom application development", "Workflow automation and integration", "Ongoing support and enhancement"],
+      icon: softIcon, label: "Software Solutions", sub: "Built for your workflow",
+      badge: ["100", "%", "Custom built"],
+      rows: [["AP","Applications","tag","Deployed"],["IN","Integrations","bar",""],["SU","Support","bar",""]]
     }
   ];
 
