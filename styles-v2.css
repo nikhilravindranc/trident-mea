@@ -288,6 +288,27 @@ body.menu-open .mobile-panel { transform: none; visibility: visible; }
   -webkit-mask-image: radial-gradient(circle at 50% 0%, #000, transparent 72%);
   mask-image: radial-gradient(circle at 50% 0%, #000, transparent 72%); }
 
+/* floating glass panes either side of the centered heading, echoing the home hero visual */
+.ph-deco { position: absolute; inset: 0; z-index: 0; pointer-events: none; overflow: hidden; }
+.ph-pane { position: absolute; border-radius: 16px; box-shadow: 0 18px 44px rgba(0,48,96,.10);
+  border: 1px solid rgba(255,255,255,.7); backdrop-filter: blur(3px); -webkit-backdrop-filter: blur(3px); }
+.ph-p1 { width: 130px; height: 96px; top: 64px; left: 4%; transform: rotate(-16deg);
+  background: linear-gradient(150deg, rgba(0,156,217,.20), rgba(0,156,217,.05)); animation: phDrift1 8s ease-in-out infinite; }
+.ph-p2 { width: 92px; height: 70px; top: 188px; left: 11%; transform: rotate(-16deg);
+  background: linear-gradient(150deg, rgba(0,48,96,.16), rgba(0,156,217,.06)); animation: phDrift2 9s ease-in-out infinite; }
+.ph-p3 { width: 140px; height: 104px; top: 70px; right: 5%; transform: rotate(14deg);
+  background: linear-gradient(150deg, rgba(0,48,96,.18), rgba(0,156,217,.06)); animation: phDrift2 8.5s ease-in-out infinite; }
+.ph-p4 { width: 96px; height: 72px; top: 196px; right: 13%; transform: rotate(14deg);
+  background: linear-gradient(150deg, rgba(0,156,217,.20), rgba(255,255,255,.4)); animation: phDrift1 7.5s ease-in-out infinite; }
+@keyframes phDrift1 { 0%,100% { transform: rotate(-16deg) translateY(0); } 50% { transform: rotate(-16deg) translateY(-10px); } }
+@keyframes phDrift2 { 0%,100% { transform: rotate(14deg) translateY(0); } 50% { transform: rotate(14deg) translateY(10px); } }
+.ph-p3 ~ .ph-p4 { animation: phDrift3 7.5s ease-in-out infinite; }
+@keyframes phDrift3 { 0%,100% { transform: rotate(14deg) translateY(0); } 50% { transform: rotate(14deg) translateY(-9px); } }
+/* faint dotted texture tucked behind the right pane */
+.ph-deco .dot-tex { top: 40px; right: -10px; left: auto; opacity: .12;
+  -webkit-mask-image: linear-gradient(225deg,#000,transparent 70%); mask-image: linear-gradient(225deg,#000,transparent 70%);
+  clip-path: polygon(100% 0, 100% 100%, 0 0); }
+
 /* ============================================================
    SOLUTIONS PAGE — intro, listing grid, capabilities
 ============================================================ */
@@ -715,6 +736,9 @@ body.menu-open .mobile-panel { transform: none; visibility: visible; }
   .industries::before { opacity: 0.4; }
   .partners::before { opacity: 0.5; }
   .cta::before { opacity: 0.5; }
+  .ph-pane { opacity: .6; }
+  .ph-p1, .ph-p2 { left: -2%; }
+  .ph-p3, .ph-p4 { right: -2%; }
 }
 
 @media (max-width: 560px) {
@@ -726,6 +750,7 @@ body.menu-open .mobile-panel { transform: none; visibility: visible; }
   .fourcol, .sectors-grid, .partner-top, .partner-grid { grid-template-columns: 1fr 1fr; }
   .sectors-shape { display: none; }
   .statrow { grid-template-columns: 1fr; gap: 6px; padding: 22px 0; }
+  .ph-deco { display: none; }
   .tabs { justify-content: flex-start; flex-wrap: nowrap; overflow-x: auto; }
   .footer-grid { grid-template-columns: 1fr; }
   .footer .f-brand { grid-column: span 1; }
