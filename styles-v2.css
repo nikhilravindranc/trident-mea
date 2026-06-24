@@ -309,30 +309,24 @@ body.menu-open .mobile-panel { transform: none; visibility: visible; }
   -webkit-mask-image: linear-gradient(225deg,#000,transparent 70%); mask-image: linear-gradient(225deg,#000,transparent 70%);
   clip-path: polygon(100% 0, 100% 100%, 0 0); }
 
-/* Healthcare hero — fanned glass-petal motif in one corner + a balancing glow (distinct from the generic page-hero deco) */
+/* Healthcare hero — static vitals-monitor card in one corner + a balancing glow (distinct from the generic page-hero deco) */
 .health-hero::before, .health-hero::after { display: none; }
 .health-deco { position: absolute; inset: 0; z-index: 0; pointer-events: none; overflow: hidden; }
 .health-deco .h-glow-a { position: absolute; bottom: -190px; left: -150px; width: 460px; height: 460px; border-radius: 50%;
   background: radial-gradient(circle, rgba(0,48,96,.09), transparent 68%); }
-.health-deco .h-fan { position: absolute; top: 26px; right: 7%; width: 0; height: 0; }
-.health-deco .h-petal { position: absolute; left: 0; top: 0; width: 50px; height: 196px; margin-left: -25px;
-  border-radius: 50% 50% 6px 6px; transform-origin: top center;
-  background: linear-gradient(180deg, rgba(255,255,255,.92) 0%, rgba(173,221,245,.72) 42%, rgba(0,156,217,.5) 100%);
-  border: 1px solid rgba(255,255,255,.65); box-shadow: 6px 10px 22px rgba(0,48,96,.10); }
-/* frosted cross mark on each petal — reads as a fanned set of medical crosses */
-.health-deco .h-petal::after { content: ""; position: absolute; left: 50%; top: 64px; width: 32px; height: 11px;
-  margin-left: -16px; border-radius: 3px; background: rgba(255,255,255,.8); }
-.health-deco .h-petal::before { content: ""; position: absolute; left: 50%; top: 50px; width: 11px; height: 39px;
-  margin-left: -5.5px; border-radius: 3px; background: rgba(255,255,255,.8); }
-.health-deco .h-petal:nth-child(1) { transform: rotate(-54deg); }
-.health-deco .h-petal:nth-child(2) { transform: rotate(-32deg); }
-.health-deco .h-petal:nth-child(3) { transform: rotate(-10deg); }
-.health-deco .h-petal:nth-child(4) { transform: rotate(12deg);
-  background: linear-gradient(180deg, rgba(255,255,255,.88) 0%, rgba(140,205,235,.7) 42%, rgba(0,130,190,.55) 100%); }
-.health-deco .h-petal:nth-child(5) { transform: rotate(34deg);
-  background: linear-gradient(180deg, rgba(255,255,255,.84) 0%, rgba(96,180,220,.66) 42%, rgba(0,95,155,.58) 100%); }
-.health-deco .h-petal:nth-child(6) { transform: rotate(56deg);
-  background: linear-gradient(180deg, rgba(255,255,255,.8) 0%, rgba(60,150,200,.6) 42%, rgba(0,60,120,.6) 100%); }
+
+/* top-right glass vitals card — a static EKG trace, no motion */
+.health-deco .h-vitals { position: absolute; top: 34px; right: 6%; width: 230px; height: 138px; }
+.health-deco .h-vtile { position: absolute; border-radius: 24px; border: 1px solid rgba(255,255,255,.65);
+  box-shadow: 10px 16px 30px rgba(0,48,96,.10); }
+.health-deco .h-vtile-back { width: 200px; height: 120px; right: -10px; top: 14px; transform: rotate(6deg);
+  background: linear-gradient(135deg, rgba(255,255,255,.7) 0%, rgba(0,130,190,.32) 100%); }
+.health-deco .h-vtile-front { width: 230px; height: 138px; right: 0; top: 0; transform: rotate(-3deg); overflow: hidden;
+  background: linear-gradient(135deg, rgba(255,255,255,.94) 0%, rgba(173,221,245,.65) 55%, rgba(0,156,217,.4) 100%); }
+.health-deco .h-vtile-front svg { position: absolute; left: 0; top: 0; width: 100%; height: 100%; }
+.health-deco .h-vtile-front .h-trace { fill: none; stroke: rgba(255,255,255,.92); stroke-width: 3.4;
+  stroke-linecap: round; stroke-linejoin: round; }
+.health-deco .h-vtile-front .h-dot { fill: rgba(255,255,255,.95); }
 
 /* bottom-left glass-cross badge — same layered-glass material as the fan, balances the composition */
 .health-deco .h-badge { position: absolute; bottom: -26px; left: 4%; width: 132px; height: 132px; }
@@ -346,8 +340,8 @@ body.menu-open .mobile-panel { transform: none; visibility: visible; }
 .health-deco .h-tile-2 .h-plus::before, .health-deco .h-tile-2 .h-plus::after { content: ""; position: absolute; background: rgba(255,255,255,.85); border-radius: 3px; }
 .health-deco .h-tile-2 .h-plus::before { left: 16px; top: 0; width: 6px; height: 38px; }
 .health-deco .h-tile-2 .h-plus::after { left: 0; top: 16px; width: 38px; height: 6px; }
-@media (max-width: 1040px) { .health-deco .h-fan { transform: scale(.8); top: 0; } .health-deco .h-badge { transform: scale(.82); bottom: -36px; } }
-@media (max-width: 860px) { .health-deco .h-fan { transform: scale(.62); } .health-deco .h-badge { transform: scale(.6); bottom: -42px; } }
+@media (max-width: 1040px) { .health-deco .h-vitals { transform: scale(.82); top: 10px; } .health-deco .h-badge { transform: scale(.82); bottom: -36px; } }
+@media (max-width: 860px) { .health-deco .h-vitals { transform: scale(.64); } .health-deco .h-badge { transform: scale(.6); bottom: -42px; } }
 @media (max-width: 560px) { .health-deco { display: none; } }
 
 /* ============================================================
