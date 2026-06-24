@@ -319,6 +319,11 @@ body.menu-open .mobile-panel { transform: none; visibility: visible; }
   border-radius: 50% 50% 6px 6px; transform-origin: top center;
   background: linear-gradient(180deg, rgba(255,255,255,.92) 0%, rgba(173,221,245,.72) 42%, rgba(0,156,217,.5) 100%);
   border: 1px solid rgba(255,255,255,.65); box-shadow: 6px 10px 22px rgba(0,48,96,.10); }
+/* frosted cross mark on each petal — reads as a fanned set of medical crosses */
+.health-deco .h-petal::after { content: ""; position: absolute; left: 50%; top: 64px; width: 32px; height: 11px;
+  margin-left: -16px; border-radius: 3px; background: rgba(255,255,255,.8); }
+.health-deco .h-petal::before { content: ""; position: absolute; left: 50%; top: 50px; width: 11px; height: 39px;
+  margin-left: -5.5px; border-radius: 3px; background: rgba(255,255,255,.8); }
 .health-deco .h-petal:nth-child(1) { transform: rotate(-54deg); }
 .health-deco .h-petal:nth-child(2) { transform: rotate(-32deg); }
 .health-deco .h-petal:nth-child(3) { transform: rotate(-10deg); }
