@@ -456,7 +456,15 @@ body.menu-open .mobile-panel { transform: none; visibility: visible; }
    OUTCOMES — editorial row list (numbered-line style), distinct
    from both the Challenges card grid and the Ecosystem tile grid
 ============================================================ */
-.outcomes { background: #fff; }
+.outcomes { position: relative; overflow: hidden; background: var(--bg-soft); }
+.outcomes > .wrap { position: relative; z-index: 1; }
+.outcomes::before { content: ""; position: absolute; z-index: 0; pointer-events: none;
+  top: 60px; right: -100px; width: 320px; height: 320px;
+  background-image: radial-gradient(var(--cyan) 1.3px, transparent 1.3px); background-size: 20px 20px; opacity: .11;
+  -webkit-mask-image: radial-gradient(circle at 72% 28%, #000, transparent 68%); mask-image: radial-gradient(circle at 72% 28%, #000, transparent 68%); }
+.outcomes::after { content: ""; position: absolute; z-index: 0; pointer-events: none;
+  left: -160px; bottom: -140px; width: 440px; height: 440px; border-radius: 50%;
+  background: radial-gradient(circle, rgba(0,156,217,.07), transparent 65%); }
 .outcome-cards { display: grid; grid-template-columns: repeat(3,1fr); gap: clamp(32px,4vw,44px) clamp(26px,3vw,36px);
   margin-top: clamp(36px,4vw,48px); }
 .outcome-card { position: relative; padding-top: 22px; }
@@ -467,8 +475,14 @@ body.menu-open .mobile-panel { transform: none; visibility: visible; }
 .outcome-card .oc-num sup { font-size: .45em; color: var(--cyan); vertical-align: super; font-weight: 400; }
 .outcome-card h4 { font-size: 16.5px; margin-bottom: 8px; color: var(--ink); }
 .outcome-card p { font-size: 14.5px; color: var(--muted); line-height: 1.55; margin: 0; }
-@media (max-width: 860px) { .outcome-cards { grid-template-columns: 1fr 1fr; } }
-@media (max-width: 560px) { .outcome-cards { grid-template-columns: 1fr; } }
+@media (max-width: 860px) {
+  .outcome-cards { grid-template-columns: 1fr 1fr; }
+  .outcomes::before { opacity: .6; }
+}
+@media (max-width: 560px) {
+  .outcome-cards { grid-template-columns: 1fr; }
+  .outcomes::before { display: none; }
+}
 
 /* "Built Around the Realities" — challenge list */
 .challenge-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 14px; margin-top: clamp(36px,4vw,48px); }
