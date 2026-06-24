@@ -91,6 +91,31 @@
   var softIcon  = '<svg viewBox="0 0 24 24" fill="none"><path d="M8 6 3 12l5 6M16 6l5 6-5 6M14 4l-4 16" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"/></svg>';
   var tick = '<svg class="tick" viewBox="0 0 24 24" fill="none"><circle cx="12" cy="12" r="9" stroke="currentColor" stroke-width="1.6"/><path d="M8.5 12l2.3 2.3L15.5 9.5" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>';
 
+  /* ---------- Healthcare-specific icons for ecosystem section ---------- */
+  var hcIcons = {
+    infra: '<svg viewBox="0 0 24 24" fill="none"><rect x="3" y="4" width="18" height="6" rx="1.5" stroke="currentColor" stroke-width="1.6"/><rect x="3" y="14" width="18" height="6" rx="1.5" stroke="currentColor" stroke-width="1.6"/><path d="M7 7h.01M7 17h.01" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>',
+    uc: '<svg viewBox="0 0 24 24" fill="none"><path d="M12 2c2.8 0 5 2.2 5 5s-2.2 5-5 5-5-2.2-5-5 2.2-5 5-5ZM17 13c1.5 0 2.8.8 3.5 2M7 15c-.7-1.2-2-2-3.5-2M21 20c0-3-2.7-5-6-5s-6 2-6 5M3 20c0-3 2.7-5 6-5" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>',
+    contact: '<svg viewBox="0 0 24 24" fill="none"><path d="M21 15a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V9c0-1.1.9-2 2-2h14a2 2 0 0 1 2 2M9 9h6" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/><path d="M12 15v-3M9 9v3M15 9v3" stroke="currentColor" stroke-width="1.4" stroke-linecap="round"/></svg>',
+    elv: '<svg viewBox="0 0 24 24" fill="none"><path d="M7 3h10a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H7a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2Z" stroke="currentColor" stroke-width="1.6"/><path d="M10 11h4M10 16h4" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></svg>',
+    av: '<svg viewBox="0 0 24 24" fill="none"><rect x="2" y="4" width="20" height="14" rx="2" stroke="currentColor" stroke-width="1.6"/><path d="M9 8l6 4-6 4Z" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"/><path d="M8 21h8" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></svg>',
+    security: '<svg viewBox="0 0 24 24" fill="none"><path d="M12 3l8 4v5c0 4.5-3.4 7.6-8 9-4.6-1.4-8-4.5-8-9V7l8-4Z" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"/><path d="M9 12l2 2 4-4" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>',
+    software: '<svg viewBox="0 0 24 24" fill="none"><path d="M7 12c0 2.8 1.3 5.3 3.3 7M7 12c0-2.8 1.3-5.3 3.3-7M17 12c0 2.8-1.3 5.3-3.3 7M17 12c0-2.8-1.3-5.3-3.3-7M12 3c-1.5 0-2.8 1.3-2.8 2.8M12 18.2c1.5 0 2.8 1.3 2.8 2.8" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/><circle cx="12" cy="12" r="1.6" fill="currentColor"/></svg>',
+    clinical: '<svg viewBox="0 0 24 24" fill="none"><path d="M3 9h18v8a3 3 0 0 1-3 3H6a3 3 0 0 1-3-3V9Z" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"/><path d="M9 3v12M15 3v12M9 9h6M9 15h6" stroke="currentColor" stroke-width="1.4" stroke-linecap="round"/></svg>',
+    patientid: '<svg viewBox="0 0 24 24" fill="none"><path d="M5 7a2 2 0 0 1 2-2h10a2 2 0 0 1 2 2v10a2 2 0 0 1-2 2H7a2 2 0 0 1-2-2V7Z" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"/><circle cx="12" cy="9" r="1.5" fill="currentColor"/><path d="M9 14h6a1 1 0 0 1 0 2H9a1 1 0 0 1 0-2Z" stroke="currentColor" stroke-width="1.4" stroke-linecap="round"/></svg>',
+    mobility: '<svg viewBox="0 0 24 24" fill="none"><path d="M4 16h16v2a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2v-2Z" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"/><path d="M6 3v10h12V3" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"/><circle cx="7" cy="18.5" r="1.5" fill="currentColor"/><circle cx="17" cy="18.5" r="1.5" fill="currentColor"/></svg>'
+  };
+
+  /* Render data-ic icons */
+  document.querySelectorAll('[data-ic]').forEach(function (el) {
+    var ic = el.getAttribute('data-ic');
+    if (hcIcons[ic]) {
+      var svg = document.createElement('div');
+      svg.innerHTML = hcIcons[ic];
+      svg.className = 'sic-solid';
+      el.appendChild(svg.firstElementChild);
+    }
+  });
+
   var TABS = [
     {
       h: "Unified Communications & Collaboration",
