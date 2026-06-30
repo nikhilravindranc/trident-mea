@@ -383,12 +383,14 @@ body.menu-open .mobile-panel { transform: none; visibility: visible; }
 .health-hero .hh-left .crumbs { justify-content: flex-start; }
 .health-hero .hh-left .si-tags { justify-content: flex-start; }
 .health-hero .hh-left .hero-cta { justify-content: flex-start; margin-top: 28px; }
-.health-hero .ph-inner .si-tags { justify-content: flex-start; margin: 0; }
+.health-hero .ph-inner .si-tags { justify-content: flex-start; margin-top: 24px; }
 .health-hero .lead { margin: 0; max-width: 520px; }
 .health-hero .lead { margin: 0; }
 .health-hero .hh-right { position: relative; height: 480px; border-radius: 28px;
-  background: linear-gradient(135deg, #0077b6 0%, #0096c7 40%, #00b4d8 75%, #003060 100%);
-  box-shadow: 0 20px 60px rgba(0,48,96,.22), inset 0 1px 0 rgba(255,255,255,.15); overflow: hidden; }
+  background:
+    linear-gradient(135deg, rgba(0,80,140,.72) 0%, rgba(0,130,185,.55) 45%, rgba(0,160,210,.42) 70%, rgba(0,30,70,.82) 100%),
+    url('images/outcomes/patient-interaction.jpg') center/cover no-repeat;
+  box-shadow: 0 20px 60px rgba(0,48,96,.28), inset 0 1px 0 rgba(255,255,255,.15); overflow: hidden; }
 
 /* Glassmorphism cards */
 .hh-glow { position: absolute; width: 380px; height: 380px; border-radius: 50%;
@@ -435,7 +437,8 @@ body.menu-open .mobile-panel { transform: none; visibility: visible; }
 .htab-btn.active { color: var(--cyan); border-bottom-color: var(--cyan); }
 .htab-panel { display: none; }
 .htab-panel.active { display: block; }
-.htab-eyebrow { font-size: 12.5px; font-weight: 600; letter-spacing: .8px; text-transform: uppercase; color: var(--cyan); margin-bottom: clamp(20px,2.5vw,28px); }
+.htab-eyebrow { font-size: 12.5px; font-weight: 600; letter-spacing: .8px; text-transform: uppercase; color: var(--cyan); margin-bottom: 10px; }
+.htab-desc { font-size: 15px; color: var(--muted); line-height: 1.65; margin: 0 0 clamp(20px,2.5vw,28px); max-width: 680px; }
 .htab-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px; }
 .htab-group { background: #fff; border: 1px solid var(--hair-2); border-radius: 16px; padding: 22px 20px; }
 .htab-group-wide { grid-column: span 2; }
