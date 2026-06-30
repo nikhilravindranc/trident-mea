@@ -5,7 +5,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Healthcare Solutions — Trident MEA Technologies</title>
 <meta name="description" content="Technology systems designed for healthcare environments where operational continuity, system performance, and data security are critical. Infrastructure, communication, security, and clinical technology, integrated by Trident MEA.">
-<link rel="stylesheet" href="styles-v2.css?v=36">
+<link rel="stylesheet" href="styles-v2.css?v=38">
 </head>
 <body>
 
@@ -129,39 +129,65 @@
       </div><!-- /.hh-left -->
 
       <div class="hh-right" aria-hidden="true">
-        <!-- Background glow -->
+        <!-- Animated ambient glow -->
         <div class="hh-glow"></div>
-        <!-- Large central glass card: medical cross + vitals line -->
+        <!-- Ripple rings centred in panel -->
+        <div class="hh-rings">
+          <div class="hh-ring"></div>
+          <div class="hh-ring hh-ring-b"></div>
+        </div>
+        <!-- Status badge -->
+        <div class="hh-status">
+          <span class="hh-status-dot"></span>
+          All Systems Active
+        </div>
+        <!-- Central dashboard card -->
         <div class="hh-card hh-card-main">
           <div class="hh-card-icon">
-            <svg viewBox="0 0 52 52" fill="none"><path d="M20 4h12v16h16v12H32v16H20V32H4V20h16V4z" fill="rgba(255,255,255,0.9)"/></svg>
-          </div>
-          <div class="hh-vitals-line">
-            <svg viewBox="0 0 200 32" fill="none"><path d="M0,16 H60 L72,4 L82,28 L90,10 L100,16 H200" stroke="rgba(255,255,255,0.75)" stroke-width="2" stroke-linecap="round"/></svg>
+            <svg viewBox="0 0 52 52" fill="none"><path d="M20 4h12v16h16v12H32v16H20V32H4V20h16V4z" fill="rgba(255,255,255,0.95)"/></svg>
           </div>
           <p class="hh-card-label">Patient-First Technology</p>
+          <div class="hh-vitals-line">
+            <svg viewBox="0 0 220 36" fill="none" preserveAspectRatio="none">
+              <path class="hh-vitals-path" d="M0,18 H65 L78,3 L92,33 L103,5 L116,18 H220"
+                    stroke="rgba(255,255,255,0.88)" stroke-width="2.4"
+                    stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+          </div>
+          <div class="hh-card-metrics">
+            <div class="hh-metric">
+              <span class="hh-metric-val">24/7</span>
+              <span class="hh-metric-key">Monitoring</span>
+            </div>
+            <div class="hh-metric-div"></div>
+            <div class="hh-metric">
+              <span class="hh-metric-val">15+</span>
+              <span class="hh-metric-key">Facilities</span>
+            </div>
+          </div>
         </div>
-        <!-- Floating stat card top-right -->
+        <!-- Stat card: patients (top-right, floats up) -->
         <div class="hh-card hh-card-stat hh-card-stat-1">
+          <svg class="hh-stat-icon" viewBox="0 0 22 22" fill="none">
+            <circle cx="8" cy="7" r="3" stroke="rgba(255,255,255,.85)" stroke-width="1.5"/>
+            <path d="M1.5 19c0-3.59 2.91-6.5 6.5-6.5" stroke="rgba(255,255,255,.85)" stroke-width="1.5" stroke-linecap="round"/>
+            <circle cx="16" cy="8" r="2.5" stroke="rgba(255,255,255,.65)" stroke-width="1.4"/>
+            <path d="M11.5 19c0-2.49 2.01-4.5 4.5-4.5" stroke="rgba(255,255,255,.65)" stroke-width="1.4" stroke-linecap="round"/>
+          </svg>
           <span class="hh-stat-num">5,000+</span>
           <span class="hh-stat-desc">Patients Supported Annually</span>
         </div>
-        <!-- Floating stat card bottom-left -->
+        <!-- Stat card: uptime (bottom-left, floats down) -->
         <div class="hh-card hh-card-stat hh-card-stat-2">
+          <svg class="hh-stat-icon" viewBox="0 0 22 22" fill="none">
+            <path d="M11 2L4 5.5v5c0 4.42 2.98 8.57 7 9.5 4.02-.93 7-5.08 7-9.5v-5L11 2z"
+                  stroke="rgba(255,255,255,.85)" stroke-width="1.5" stroke-linejoin="round"/>
+            <path d="M8 11l2 2 4-4" stroke="rgba(255,255,255,.95)" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
           <span class="hh-stat-num">100%</span>
           <span class="hh-stat-desc">Uptime-Focused Infrastructure</span>
         </div>
-        <!-- Floating DNA/cross accent -->
-        <div class="hh-card hh-card-accent">
-          <svg viewBox="0 0 40 40" fill="none">
-            <path d="M12,4 C18,12 22,20 18,36" stroke="rgba(255,255,255,0.8)" stroke-width="2" fill="none"/>
-            <path d="M28,4 C22,12 18,20 22,36" stroke="rgba(255,255,255,0.6)" stroke-width="2" fill="none"/>
-            <line x1="13" y1="10" x2="27" y2="10" stroke="rgba(255,255,255,0.5)" stroke-width="1.5"/>
-            <line x1="11" y1="18" x2="29" y2="18" stroke="rgba(255,255,255,0.5)" stroke-width="1.5"/>
-            <line x1="13" y1="26" x2="27" y2="26" stroke="rgba(255,255,255,0.5)" stroke-width="1.5"/>
-          </svg>
-        </div>
-        <!-- Hex cluster decoration inside right panel -->
+        <!-- Hex deco -->
         <div class="hh-hex-deco">
           <svg viewBox="-20 -20 100 120">
             <polygon points="16,0 8,-13.9 -8,-13.9 -16,0 -8,13.9 8,13.9" stroke-opacity=".4"/>

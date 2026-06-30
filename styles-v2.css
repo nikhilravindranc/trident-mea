@@ -392,32 +392,104 @@ body.menu-open .mobile-panel { transform: none; visibility: visible; }
     url('images/outcomes/patient-interaction.jpg') center/cover no-repeat;
   box-shadow: 0 20px 60px rgba(0,48,96,.28), inset 0 1px 0 rgba(255,255,255,.15); overflow: hidden; }
 
+/* Hero panel keyframes */
+@keyframes hh-float-a {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-9px); }
+}
+@keyframes hh-float-b {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(9px); }
+}
+@keyframes hh-pulse-glow {
+  0%, 100% { opacity: .5; transform: translate(-50%,-50%) scale(1); }
+  50% { opacity: 1; transform: translate(-50%,-50%) scale(1.14); }
+}
+@keyframes hh-ring-expand {
+  0% { transform: translate(-50%,-50%) scale(0.55); opacity: .65; }
+  100% { transform: translate(-50%,-50%) scale(2.6); opacity: 0; }
+}
+@keyframes hh-vitals-draw {
+  0% { stroke-dashoffset: 420; opacity: 0; }
+  8% { opacity: 1; }
+  100% { stroke-dashoffset: 0; opacity: 1; }
+}
+@keyframes hh-vitals-loop {
+  0%, 100% { opacity: 1; }
+  40%, 60% { opacity: .35; }
+}
+@keyframes hh-status-pulse {
+  0%, 100% { box-shadow: 0 0 0 0 rgba(72,199,142,.75); }
+  60% { box-shadow: 0 0 0 5px rgba(72,199,142,0); }
+}
+@keyframes hh-fade-up {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+@keyframes hh-fade-in {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
 /* Glassmorphism cards */
-.hh-glow { position: absolute; width: 380px; height: 380px; border-radius: 50%;
-  background: radial-gradient(circle, rgba(255,255,255,.12), rgba(0,180,216,.08) 50%, transparent 75%);
-  top: 50%; left: 50%; transform: translate(-50%,-50%); }
-.hh-card { position: absolute; background: rgba(255,255,255,.15); backdrop-filter: blur(20px);
-  -webkit-backdrop-filter: blur(20px); border: 1px solid rgba(255,255,255,.35); border-radius: 20px; }
-.hh-card-main { width: 230px; height: 190px; top: 50%; left: 50%; transform: translate(-50%,-50%);
-  display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 12px;
-  padding: 24px; box-shadow: 0 8px 32px rgba(0,0,0,.15), inset 0 1px 0 rgba(255,255,255,.3); }
+.hh-glow { position: absolute; width: 420px; height: 420px; border-radius: 50%;
+  background: radial-gradient(circle, rgba(255,255,255,.16), rgba(0,180,216,.1) 45%, transparent 72%);
+  top: 50%; left: 50%; transform: translate(-50%,-50%);
+  animation: hh-pulse-glow 4.5s ease-in-out infinite; }
+
+.hh-rings { position: absolute; top: 50%; left: 50%; pointer-events: none; }
+.hh-ring { position: absolute; width: 120px; height: 120px;
+  border: 1.5px solid rgba(255,255,255,.38); border-radius: 50%;
+  top: 50%; left: 50%; transform: translate(-50%,-50%);
+  animation: hh-ring-expand 3.2s ease-out infinite; }
+.hh-ring-b { animation-delay: 1.6s; }
+
+.hh-status { position: absolute; top: 20px; left: 50%; transform: translateX(-50%);
+  display: inline-flex; align-items: center; gap: 7px;
+  background: rgba(255,255,255,.18); backdrop-filter: blur(16px); -webkit-backdrop-filter: blur(16px);
+  border: 1px solid rgba(255,255,255,.32); border-radius: 99px;
+  padding: 7px 16px; font-size: 11.5px; font-weight: 600; letter-spacing: .3px;
+  color: #fff; white-space: nowrap; z-index: 2;
+  animation: hh-fade-up .5s ease .1s both; }
+.hh-status-dot { width: 8px; height: 8px; border-radius: 50%; background: #48c78e; flex-shrink: 0;
+  animation: hh-status-pulse 2.2s ease-in-out infinite; }
+
+.hh-card { position: absolute; background: rgba(255,255,255,.15); backdrop-filter: blur(22px);
+  -webkit-backdrop-filter: blur(22px); border: 1px solid rgba(255,255,255,.36); border-radius: 20px; }
+
+.hh-card-main { width: 240px; top: 50%; left: 50%; transform: translate(-50%,-50%);
+  display: flex; flex-direction: column; align-items: center; gap: 10px;
+  padding: 22px 20px 16px;
+  box-shadow: 0 12px 40px rgba(0,0,0,.22), inset 0 1px 0 rgba(255,255,255,.36);
+  animation: hh-fade-in .8s ease .2s both; }
 .hh-card-icon { width: 48px; height: 48px; }
-.hh-card-icon svg { width: 100%; height: 100%; }
-.hh-vitals-line { width: 100%; height: 30px; }
+.hh-card-icon svg { width: 100%; height: 100%;
+  filter: drop-shadow(0 0 10px rgba(255,255,255,.45)); }
+.hh-card-label { font-size: 10.5px; font-weight: 600; letter-spacing: .7px; text-transform: uppercase;
+  color: rgba(255,255,255,.88); margin: 0; text-align: center; }
+.hh-vitals-line { width: 100%; height: 34px; }
 .hh-vitals-line svg { width: 100%; height: 100%; }
-.hh-card-label { font-size: 11px; font-weight: 600; letter-spacing: .7px; text-transform: uppercase;
-  color: rgba(255,255,255,.9); margin: 0; text-align: center; }
-.hh-card-stat { padding: 14px 18px; display: flex; flex-direction: column; gap: 5px;
-  box-shadow: 0 4px 20px rgba(0,0,0,.14), inset 0 1px 0 rgba(255,255,255,.3); }
-.hh-stat-num { font-size: 24px; font-weight: 700; color: #fff; line-height: 1; }
-.hh-stat-desc { font-size: 11px; color: rgba(255,255,255,.8); line-height: 1.4; max-width: 130px; }
-.hh-card-stat-1 { top: 7%; right: 5%; width: 160px; border-radius: 16px; }
-.hh-card-stat-2 { bottom: 12%; left: 5%; width: 162px; border-radius: 16px; }
-.hh-card-accent { width: 76px; height: 76px; top: 10%; left: 8%; border-radius: 50%;
-  display: flex; align-items: center; justify-content: center;
-  box-shadow: 0 4px 16px rgba(0,0,0,.12), inset 0 1px 0 rgba(255,255,255,.3); }
+.hh-vitals-path { stroke-dasharray: 420;
+  animation: hh-vitals-draw 1.8s ease-out .7s both, hh-vitals-loop 2.8s ease-in-out 2.6s infinite; }
+.hh-card-metrics { display: flex; align-items: center; width: 100%;
+  border-top: 1px solid rgba(255,255,255,.22); padding-top: 12px; }
+.hh-metric { flex: 1; display: flex; flex-direction: column; align-items: center; gap: 2px; }
+.hh-metric-val { font-size: 15px; font-weight: 700; color: #fff; line-height: 1; }
+.hh-metric-key { font-size: 9.5px; color: rgba(255,255,255,.68); text-transform: uppercase; letter-spacing: .5px; }
+.hh-metric-div { width: 1px; height: 28px; background: rgba(255,255,255,.25); flex-shrink: 0; }
+
+.hh-card-stat { padding: 14px 16px; display: flex; flex-direction: column; gap: 3px;
+  box-shadow: 0 6px 26px rgba(0,0,0,.2), inset 0 1px 0 rgba(255,255,255,.32); }
+.hh-stat-icon { width: 19px; height: 19px; margin-bottom: 5px; }
+.hh-stat-num { font-size: 23px; font-weight: 700; color: #fff; line-height: 1; }
+.hh-stat-desc { font-size: 10.5px; color: rgba(255,255,255,.78); line-height: 1.4; max-width: 130px; }
+.hh-card-stat-1 { top: 7%; right: 4%; width: 152px; border-radius: 16px;
+  animation: hh-fade-up .6s ease .38s both, hh-float-a 3.8s ease-in-out 1.2s infinite; }
+.hh-card-stat-2 { bottom: 10%; left: 4%; width: 154px; border-radius: 16px;
+  animation: hh-fade-up .6s ease .52s both, hh-float-b 3.3s ease-in-out 1.2s infinite; }
+
 .hh-hex-deco { position: absolute; bottom: -10px; right: -10px; width: 150px; height: 150px;
-  opacity: .22; color: rgba(255,255,255,1); }
+  opacity: .2; color: rgba(255,255,255,1); }
 .hh-hex-deco svg { width: 100%; height: 100%; }
 .hh-hex-deco polygon { fill: none; stroke: currentColor; stroke-width: 1.6; }
 
