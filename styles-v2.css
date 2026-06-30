@@ -498,7 +498,7 @@ body.menu-open .mobile-panel { transform: none; visibility: visible; }
 .htab-eyebrow { font-size: 12.5px; font-weight: 600; letter-spacing: .8px; text-transform: uppercase; color: var(--cyan); margin-bottom: 10px; }
 .htab-desc { font-size: 15px; color: var(--muted); line-height: 1.65; margin: 0 0 clamp(20px,2.5vw,28px); max-width: 680px; }
 .htab-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px; }
-.htab-group { background: #fff; border: 1px solid var(--hair-2); border-radius: 16px; padding: 22px 20px; }
+.htab-group { background: linear-gradient(135deg, #f0f9fc 0%, #f5fafd 100%); border: 1.5px solid #d4e8f0; border-radius: 16px; padding: 22px 20px; box-shadow: 0 2px 8px rgba(0,48,96,.06); }
 .htab-group-wide { grid-column: span 2; }
 .htab-group-title { display: flex; align-items: center; gap: 8px; font-size: 14px; font-weight: 700; color: #003060; margin: 0 0 14px; }
 .htab-group-title svg { width: 18px; height: 18px; flex-shrink: 0; color: var(--cyan); }
