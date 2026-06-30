@@ -418,10 +418,6 @@ body.menu-open .mobile-panel { transform: none; visibility: visible; }
   0%, 100% { opacity: 1; }
   40%, 60% { opacity: .35; }
 }
-@keyframes hh-status-pulse {
-  0%, 100% { box-shadow: 0 0 0 0 rgba(72,199,142,.75); }
-  60% { box-shadow: 0 0 0 5px rgba(72,199,142,0); }
-}
 @keyframes hh-fade-up {
   from { opacity: 0; transform: translateY(20px); }
   to { opacity: 1; transform: translateY(0); }
@@ -443,16 +439,6 @@ body.menu-open .mobile-panel { transform: none; visibility: visible; }
   top: 50%; left: 50%; transform: translate(-50%,-50%);
   animation: hh-ring-expand 3.2s ease-out infinite; }
 .hh-ring-b { animation-delay: 1.6s; }
-
-.hh-status { position: absolute; top: 20px; left: 50%; transform: translateX(-50%);
-  display: inline-flex; align-items: center; gap: 7px;
-  background: rgba(255,255,255,.18); backdrop-filter: blur(16px); -webkit-backdrop-filter: blur(16px);
-  border: 1px solid rgba(255,255,255,.32); border-radius: 99px;
-  padding: 7px 16px; font-size: 11.5px; font-weight: 600; letter-spacing: .3px;
-  color: #fff; white-space: nowrap; z-index: 2;
-  animation: hh-fade-up .5s ease .1s both; }
-.hh-status-dot { width: 8px; height: 8px; border-radius: 50%; background: #48c78e; flex-shrink: 0;
-  animation: hh-status-pulse 2.2s ease-in-out infinite; }
 
 .hh-card { position: absolute; background: rgba(255,255,255,.15); backdrop-filter: blur(22px);
   -webkit-backdrop-filter: blur(22px); border: 1px solid rgba(255,255,255,.36); border-radius: 20px; }
