@@ -43,6 +43,5 @@ build/
 .next/
 
 # Ignore old page versions (keep only current)
-industries.html
 careers.html
 contact.html
