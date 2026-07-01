@@ -5,7 +5,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Healthcare Solutions — Trident MEA Technologies</title>
 <meta name="description" content="Technology systems designed for healthcare environments where operational continuity, system performance, and data security are critical. Infrastructure, communication, security, and clinical technology, integrated by Trident MEA.">
-<link rel="stylesheet" href="styles-v2.css?v=42">
+<link rel="stylesheet" href="styles-v2.css?v=43">
 </head>
 <body>
 
@@ -309,30 +309,44 @@
     </div>
 
     <div class="health-tabs reveal">
-      <div class="htab-nav" role="tablist">
-        <button class="htab-btn active" role="tab" aria-selected="true" data-tab="integrated">
-          <svg viewBox="0 0 24 24" fill="none"><rect x="3" y="4" width="18" height="6" rx="1.5" stroke="currentColor" stroke-width="1.6"/><rect x="3" y="14" width="18" height="6" rx="1.5" stroke="currentColor" stroke-width="1.6"/><path d="M7 7h.01M7 17h.01" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
-          Integrated Healthcare Technology
-        </button>
-        <button class="htab-btn" role="tab" aria-selected="false" data-tab="biomedical">
-          <svg viewBox="0 0 24 24" fill="none"><path d="M3 12h3l2-5 4 10 2-5h7" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>
-          Biomedical Engineering
-        </button>
-        <button class="htab-btn" role="tab" aria-selected="false" data-tab="radiology">
-          <svg viewBox="0 0 24 24" fill="none"><circle cx="12" cy="12" r="4" stroke="currentColor" stroke-width="1.6"/><path d="M12 2v3M12 19v3M2 12h3M19 12h3M5.22 5.22l2.12 2.12M16.66 16.66l2.12 2.12M16.66 7.34l2.12-2.12M5.22 18.78l2.12-2.12" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></svg>
-          Radiology &amp; Imaging
-        </button>
+      <div class="htab-cards" role="tablist">
+        <div class="htab-card">
+          <div class="htab-card-icon">
+            <svg viewBox="0 0 24 24" fill="none"><rect x="3" y="4" width="18" height="6" rx="1.5" stroke="currentColor" stroke-width="1.6"/><rect x="3" y="14" width="18" height="6" rx="1.5" stroke="currentColor" stroke-width="1.6"/><path d="M7 7h.01M7 17h.01" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
+          </div>
+          <h3 class="htab-card-title">Integrated Healthcare Technology</h3>
+          <p class="htab-card-desc">Structured cabling, secure networks, nurse-call systems, and EHR integration that keep every department connected and running reliably.</p>
+          <button type="button" class="htab-card-btn" role="tab" aria-selected="false" data-tab="integrated">View Solutions
+            <svg viewBox="0 0 24 24" fill="none"><path d="M5 12h14M13 6l6 6-6 6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          </button>
+        </div>
+        <div class="htab-card">
+          <div class="htab-card-icon">
+            <svg viewBox="0 0 24 24" fill="none"><path d="M3 12h3l2-5 4 10 2-5h7" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          </div>
+          <h3 class="htab-card-title">Biomedical Engineering</h3>
+          <p class="htab-card-desc">Supply, installation, and lifecycle support for clinical equipment — from patient monitors to operation theater systems.</p>
+          <button type="button" class="htab-card-btn" role="tab" aria-selected="false" data-tab="biomedical">View Solutions
+            <svg viewBox="0 0 24 24" fill="none"><path d="M5 12h14M13 6l6 6-6 6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          </button>
+        </div>
+        <div class="htab-card">
+          <div class="htab-card-icon">
+            <svg viewBox="0 0 24 24" fill="none"><circle cx="12" cy="12" r="4" stroke="currentColor" stroke-width="1.6"/><path d="M12 2v3M12 19v3M2 12h3M19 12h3M5.22 5.22l2.12 2.12M16.66 16.66l2.12 2.12M16.66 7.34l2.12-2.12M5.22 18.78l2.12-2.12" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></svg>
+          </div>
+          <h3 class="htab-card-title">Radiology &amp; Imaging</h3>
+          <p class="htab-card-desc">Digital X-ray, PACS, RIS, and DICOM workflows that give radiologists fast, secure access to diagnostic information.</p>
+          <button type="button" class="htab-card-btn" role="tab" aria-selected="false" data-tab="radiology">View Solutions
+            <svg viewBox="0 0 24 24" fill="none"><path d="M5 12h14M13 6l6 6-6 6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          </button>
+        </div>
       </div>
 
       <!-- TAB PANEL 1 -->
-      <div class="htab-panel active" id="tab-integrated" role="tabpanel">
+      <div class="htab-panel" id="tab-integrated" role="tabpanel">
         <div class="htab-eyebrow">The Digital Backbone of Modern Healthcare</div>
         <p class="htab-desc">From structured cabling and secure networks to nurse-call systems and EHR integration — we deliver the connected technology layer that keeps every department running reliably and every team staying coordinated.</p>
-        <button type="button" class="htab-toggle" aria-expanded="false">
-          <span class="htab-toggle-text">See Solutions</span>
-          <svg viewBox="0 0 24 24" fill="none"><path d="M6 9l6 6 6-6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
-        </button>
-        <div class="htab-grid htab-grid-collapsible">
+        <div class="htab-grid">
 
           <div class="htab-group">
             <h4 class="htab-group-title">
@@ -427,11 +441,7 @@
       <div class="htab-panel" id="tab-biomedical" role="tabpanel">
         <div class="htab-eyebrow">Clinical Equipment &amp; Lifecycle Support</div>
         <p class="htab-desc">We supply, install, commission, and maintain the clinical and biomedical equipment your facility depends on — from patient monitors and ventilators to diagnostic devices and operation theater systems — backed by scheduled AMC and on-call support.</p>
-        <button type="button" class="htab-toggle" aria-expanded="false">
-          <span class="htab-toggle-text">See Solutions</span>
-          <svg viewBox="0 0 24 24" fill="none"><path d="M6 9l6 6 6-6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
-        </button>
-        <div class="htab-grid htab-grid-collapsible">
+        <div class="htab-grid">
 
           <div class="htab-group">
             <h4 class="htab-group-title">
@@ -482,11 +492,7 @@
       <div class="htab-panel" id="tab-radiology" role="tabpanel">
         <div class="htab-eyebrow">Advanced Diagnostic Imaging &amp; Integration</div>
         <p class="htab-desc">Our imaging solutions span digital X-ray, PACS, RIS, and DICOM workflows — ensuring radiologists and care teams have fast, secure access to diagnostic information, integrated seamlessly with your hospital information systems.</p>
-        <button type="button" class="htab-toggle" aria-expanded="false">
-          <span class="htab-toggle-text">See Solutions</span>
-          <svg viewBox="0 0 24 24" fill="none"><path d="M6 9l6 6 6-6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
-        </button>
-        <div class="htab-grid htab-grid-collapsible">
+        <div class="htab-grid">
 
           <div class="htab-group">
             <h4 class="htab-group-title">
@@ -712,26 +718,24 @@
 })();
 </script>
 <script>
-/* Health tab system */
-document.querySelectorAll('.htab-btn').forEach(function(btn) {
+/* Health solution cards -> reveal matching detail panel */
+document.querySelectorAll('.htab-card-btn').forEach(function(btn) {
   btn.addEventListener('click', function() {
     var tab = btn.getAttribute('data-tab');
-    document.querySelectorAll('.htab-btn').forEach(function(b){ b.classList.remove('active'); b.setAttribute('aria-selected','false'); });
+    var alreadyActive = btn.getAttribute('aria-selected') === 'true';
+
+    document.querySelectorAll('.htab-card-btn').forEach(function(b){
+      b.classList.remove('active'); b.setAttribute('aria-selected','false');
+    });
     document.querySelectorAll('.htab-panel').forEach(function(p){ p.classList.remove('active'); });
+
+    if (alreadyActive) return;
+
     btn.classList.add('active');
     btn.setAttribute('aria-selected','true');
-    document.getElementById('tab-' + tab).classList.add('active');
-  });
-});
-
-/* Collapsible solutions grid */
-document.querySelectorAll('.htab-toggle').forEach(function(btn) {
-  btn.addEventListener('click', function() {
-    var grid = btn.nextElementSibling;
-    var expanded = btn.getAttribute('aria-expanded') === 'true';
-    btn.setAttribute('aria-expanded', String(!expanded));
-    grid.classList.toggle('open', !expanded);
-    btn.querySelector('.htab-toggle-text').textContent = expanded ? 'See Solutions' : 'Hide Solutions';
+    var panel = document.getElementById('tab-' + tab);
+    panel.classList.add('active');
+    panel.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
   });
 });
 </script>

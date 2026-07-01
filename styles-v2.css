@@ -488,30 +488,38 @@ body.menu-open .mobile-panel { transform: none; visibility: visible; }
    HEALTH TABS — 3-tab solution panel in ecosystem section
 ============================================================ */
 .health-tabs { margin-top: clamp(36px,4vw,52px); }
-.htab-nav { display: flex; gap: 6px; border-bottom: 2px solid var(--hair-2); padding-bottom: 0; margin-bottom: clamp(28px,3vw,40px); flex-wrap: wrap; }
-.htab-btn { display: inline-flex; align-items: center; gap: 8px; padding: 12px 20px; border: none; background: none; cursor: pointer; font-size: 14px; font-weight: 600; color: var(--muted); border-bottom: 3px solid transparent; margin-bottom: -2px; border-radius: 8px 8px 0 0; transition: color .25s, border-color .25s, background .25s; white-space: nowrap; }
-.htab-btn svg { width: 18px; height: 18px; flex-shrink: 0; }
-.htab-btn:hover { color: var(--cyan); background: rgba(0,156,217,.05); }
-.htab-btn.active { color: var(--cyan); border-bottom-color: var(--cyan); }
-.htab-panel { display: none; }
+
+/* Solution cards (replace the old pill tab-nav) */
+.htab-cards { display: grid; grid-template-columns: repeat(3, 1fr); gap: 22px; margin-bottom: clamp(28px,3vw,40px); }
+.htab-card { background: #fff; border: 1px solid var(--hair-2); border-radius: 16px; padding: 26px 24px;
+  display: flex; flex-direction: column; transition: box-shadow .25s, border-color .25s, transform .25s; }
+.htab-card:hover { box-shadow: 0 10px 28px rgba(0,48,96,.1); border-color: #d4e8f0; transform: translateY(-2px); }
+.htab-card-icon { width: 44px; height: 44px; border-radius: 12px; background: rgba(0,156,217,.1);
+  display: flex; align-items: center; justify-content: center; margin-bottom: 16px; color: var(--cyan); flex-shrink: 0; }
+.htab-card-icon svg { width: 22px; height: 22px; }
+.htab-card-title { font-size: 16px; font-weight: 700; color: #003060; margin: 0 0 10px; }
+.htab-card-desc { font-size: 13.5px; color: var(--muted); line-height: 1.6; margin: 0 0 20px; flex: 1; }
+.htab-card-btn { display: inline-flex; align-items: center; gap: 8px; align-self: flex-start;
+  background: var(--cyan); color: #fff; border: none; font-size: 13.5px; font-weight: 600;
+  padding: 10px 18px; border-radius: 9px; cursor: pointer; transition: background .25s, gap .25s; }
+.htab-card-btn svg { width: 15px; height: 15px; transition: transform .25s ease; }
+.htab-card-btn:hover { background: #007cae; gap: 11px; }
+.htab-card-btn.active { background: #003060; }
+.htab-card-btn.active svg { transform: rotate(90deg); }
+
+.htab-panel { display: none; background: linear-gradient(135deg, #f0f9fc 0%, #f5fafd 100%);
+  border: 1.5px solid #d4e8f0; border-radius: 18px; padding: clamp(24px,3vw,34px);
+  animation: htab-panel-in .4s ease both; }
 .htab-panel.active { display: block; }
+@keyframes htab-panel-in {
+  from { opacity: 0; transform: translateY(-8px); }
+  to { opacity: 1; transform: translateY(0); }
+}
 .htab-eyebrow { font-size: 12.5px; font-weight: 600; letter-spacing: .8px; text-transform: uppercase; color: var(--cyan); margin-bottom: 10px; }
 .htab-desc { font-size: 15px; color: var(--muted); line-height: 1.65; margin: 0 0 24px; max-width: 100%; }
 
-.htab-toggle { display: inline-flex; align-items: center; gap: 8px; background: #fff;
-  border: 1.5px solid var(--cyan); color: var(--cyan); font-size: 14px; font-weight: 600;
-  padding: 11px 22px; border-radius: 10px; cursor: pointer; transition: background .25s, color .25s, box-shadow .25s;
-  margin-bottom: clamp(20px,2.5vw,28px); }
-.htab-toggle:hover { background: rgba(0,156,217,.08); box-shadow: 0 2px 10px rgba(0,156,217,.15); }
-.htab-toggle svg { width: 16px; height: 16px; transition: transform .3s ease; }
-.htab-toggle[aria-expanded="true"] svg { transform: rotate(180deg); }
-.htab-toggle[aria-expanded="true"] { background: var(--cyan); color: #fff; }
-
 .htab-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px; }
-.htab-grid-collapsible { max-height: 0; overflow: hidden; opacity: 0; gap: 0;
-  transition: max-height .5s ease, opacity .35s ease, gap .5s ease; }
-.htab-grid-collapsible.open { max-height: 3000px; opacity: 1; gap: 20px; }
-.htab-group { background: linear-gradient(135deg, #f0f9fc 0%, #f5fafd 100%); border: 1.5px solid #d4e8f0; border-radius: 16px; padding: 22px 20px; box-shadow: 0 2px 8px rgba(0,48,96,.06); }
+.htab-group { background: #fff; border: 1.5px solid #d4e8f0; border-radius: 16px; padding: 22px 20px; box-shadow: 0 2px 8px rgba(0,48,96,.06); }
 .htab-group-wide { grid-column: span 2; }
 .htab-group-title { display: flex; align-items: center; gap: 8px; font-size: 14px; font-weight: 700; color: #003060; margin: 0 0 14px; }
 .htab-group-title svg { width: 18px; height: 18px; flex-shrink: 0; color: var(--cyan); }
@@ -523,16 +531,15 @@ body.menu-open .mobile-panel { transform: none; visibility: visible; }
 .htab-subgroup h5 { font-size: 13px; font-weight: 600; color: #003060; margin: 0 0 10px; }
 
 @media (max-width: 860px) {
+  .htab-cards { grid-template-columns: 1fr 1fr; }
   .htab-grid { grid-template-columns: 1fr 1fr; }
   .htab-group-wide { grid-column: span 2; }
   .htab-subgroups { grid-template-columns: 1fr; }
 }
 @media (max-width: 560px) {
+  .htab-cards { grid-template-columns: 1fr; }
   .htab-grid { grid-template-columns: 1fr; }
   .htab-group-wide { grid-column: span 1; }
-  .htab-nav { flex-direction: column; }
-  .htab-btn { border-bottom: none; border-left: 3px solid transparent; border-radius: 8px; padding: 10px 16px; }
-  .htab-btn.active { border-left-color: var(--cyan); border-bottom-color: transparent; }
 }
 
 /* ============================================================
