@@ -496,8 +496,21 @@ body.menu-open .mobile-panel { transform: none; visibility: visible; }
 .htab-panel { display: none; }
 .htab-panel.active { display: block; }
 .htab-eyebrow { font-size: 12.5px; font-weight: 600; letter-spacing: .8px; text-transform: uppercase; color: var(--cyan); margin-bottom: 10px; }
-.htab-desc { font-size: 15px; color: var(--muted); line-height: 1.65; margin: 0 0 clamp(20px,2.5vw,28px); max-width: 680px; }
+.htab-desc { font-size: 15px; color: var(--muted); line-height: 1.65; margin: 0 0 24px; max-width: 680px; }
+
+.htab-toggle { display: inline-flex; align-items: center; gap: 8px; background: #fff;
+  border: 1.5px solid var(--cyan); color: var(--cyan); font-size: 14px; font-weight: 600;
+  padding: 11px 22px; border-radius: 10px; cursor: pointer; transition: background .25s, color .25s, box-shadow .25s;
+  margin-bottom: clamp(20px,2.5vw,28px); }
+.htab-toggle:hover { background: rgba(0,156,217,.08); box-shadow: 0 2px 10px rgba(0,156,217,.15); }
+.htab-toggle svg { width: 16px; height: 16px; transition: transform .3s ease; }
+.htab-toggle[aria-expanded="true"] svg { transform: rotate(180deg); }
+.htab-toggle[aria-expanded="true"] { background: var(--cyan); color: #fff; }
+
 .htab-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px; }
+.htab-grid-collapsible { max-height: 0; overflow: hidden; opacity: 0; gap: 0;
+  transition: max-height .5s ease, opacity .35s ease, gap .5s ease; }
+.htab-grid-collapsible.open { max-height: 3000px; opacity: 1; gap: 20px; }
 .htab-group { background: linear-gradient(135deg, #f0f9fc 0%, #f5fafd 100%); border: 1.5px solid #d4e8f0; border-radius: 16px; padding: 22px 20px; box-shadow: 0 2px 8px rgba(0,48,96,.06); }
 .htab-group-wide { grid-column: span 2; }
 .htab-group-title { display: flex; align-items: center; gap: 8px; font-size: 14px; font-weight: 700; color: #003060; margin: 0 0 14px; }
