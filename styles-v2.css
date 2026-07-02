@@ -525,9 +525,7 @@ body.menu-open .mobile-panel { transform: none; visibility: visible; }
 .htab-group { background: #fff; border: 1.5px solid #d4e8f0; border-radius: 16px; padding: 22px 20px; box-shadow: 0 2px 8px rgba(0,48,96,.06); }
 .htab-group-wide { grid-column: span 2; }
 .htab-group-title { display: flex; align-items: center; gap: 12px; font-size: 14px; font-weight: 700; color: #003060; margin: 0 0 14px; }
-.htab-group-title svg { width: 18px; height: 18px; flex-shrink: 0; color: var(--cyan); }
-.htab-group-title .dm-ic { width: 36px; height: 36px; }
-.htab-group-title .dm-ic::before { width: 62px; height: 62px; }
+.htab-group-title svg { width: 36px; height: 36px; flex-shrink: 0; overflow: visible; }
 .htab-group-desc { font-size: 13px; color: var(--muted); margin-bottom: 12px; line-height: 1.55; }
 .htab-list { list-style: none; padding: 0; margin: 0; display: flex; flex-direction: column; gap: 8px; }
 .htab-list li { font-size: 13px; color: var(--muted); padding-left: 16px; position: relative; line-height: 1.45; }
