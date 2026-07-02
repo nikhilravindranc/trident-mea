@@ -1301,6 +1301,7 @@ body.menu-open .mobile-panel { transform: none; visibility: visible; }
 .jobs-empty { text-align: center; color: var(--muted); font-size: 15px; padding: 40px 0; }
 
 /* Job detail / apply modal */
+.job-card[hidden] { display: none; }
 .job-modal-overlay { position: fixed; inset: 0; z-index: 200; display: none; align-items: flex-start; justify-content: center;
   background: rgba(0,20,40,.55); padding: 40px 20px; overflow-y: auto; backdrop-filter: blur(2px); }
 .job-modal-overlay.open { display: flex; }
@@ -1321,7 +1322,7 @@ body.job-modal-lock { overflow: hidden; }
 .job-modal-left h3 { margin: 0 0 14px; padding-right: 40px; }
 .job-modal-left h4 { font-size: 14px; font-weight: 700; color: var(--ink); margin: 22px 0 10px; }
 .job-modal-left p { font-size: 14px; color: var(--muted); line-height: 1.65; }
-.job-modal-left ul { margin: 0; padding-left: 18px; display: flex; flex-direction: column; gap: 7px; }
+.job-modal-left ul { margin: 0; padding-left: 24px; display: flex; flex-direction: column; gap: 7px; list-style-type: disc; }
 .job-modal-left li { font-size: 13.5px; color: var(--muted); line-height: 1.5; }
 .job-modal-right { padding: 40px 36px; max-height: 82vh; overflow-y: auto; }
 .job-modal-right h4 { font-size: 14px; font-weight: 700; color: var(--ink); margin: 0 0 20px; }
