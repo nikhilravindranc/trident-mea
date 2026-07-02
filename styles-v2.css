@@ -1325,7 +1325,17 @@ body.job-modal-lock { overflow: hidden; }
 .job-modal-left li { font-size: 13.5px; color: var(--muted); line-height: 1.5; }
 .job-modal-right { padding: 40px 36px; max-height: 82vh; overflow-y: auto; }
 .job-modal-right h4 { font-size: 14px; font-weight: 700; color: var(--ink); margin: 0 0 20px; }
-.job-modal-right .form-group input[type="file"] { padding: 9px 12px; background: var(--bg-soft); cursor: pointer; }
+.file-upload { display: flex; align-items: center; gap: 12px; flex-wrap: wrap; }
+.file-upload input[type="file"] { position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px;
+  overflow: hidden; clip: rect(0,0,0,0); white-space: nowrap; border: 0; }
+.file-upload-btn { display: inline-flex; align-items: center; gap: 8px; flex-shrink: 0; font-size: 13.5px; font-weight: 600;
+  color: var(--cyan); background: var(--cyan-08); border: 1.5px solid rgba(0,156,217,.3); border-radius: 9px;
+  padding: 10px 16px; cursor: pointer; transition: background .25s var(--ease), border-color .25s var(--ease), color .25s var(--ease); }
+.file-upload-btn svg { width: 15px; height: 15px; flex-shrink: 0; }
+.file-upload-btn:hover { background: var(--cyan); color: #fff; border-color: var(--cyan); }
+.file-upload input[type="file"]:focus-visible + .file-upload-btn { outline: 2px solid var(--cyan); outline-offset: 2px; }
+.file-upload-name { font-size: 13px; color: var(--muted); overflow: hidden; text-overflow: ellipsis; white-space: nowrap; max-width: 180px; }
+.file-upload-name.has-file { color: var(--ink); font-weight: 600; }
 .job-submit-btn { width: 100%; justify-content: center; margin-top: 4px; }
 .job-submit-btn:disabled { opacity: .7; cursor: default; transform: none; }
 
