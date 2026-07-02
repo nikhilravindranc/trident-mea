@@ -5,7 +5,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Careers — Trident MEA Technologies</title>
 <meta name="description" content="Build your career at Trident MEA Technologies. Join a team of innovators, thinkers, and problem-solvers transforming the Middle East. Browse open positions in Consulting, Engineering, and Sales.">
-<link rel="stylesheet" href="styles-v2.css?v=47">
+<link rel="stylesheet" href="styles-v2.css?v=48">
 </head>
 <body>
 
@@ -115,73 +115,105 @@
     </div>
 
     <div class="jobs-filter-bar reveal d1">
-      <select class="jobs-filter" id="filterDept" data-tax="dept">
-        <option value="">All Departments</option>
-        <option value="consulting">Consulting</option>
-        <option value="engineering">Engineering</option>
-        <option value="sales-business-development">Sales &amp; Business Development</option>
-      </select>
-      <select class="jobs-filter" id="filterLoc" data-tax="loc">
-        <option value="">All Locations</option>
-        <option value="abu-dhabi">Abu Dhabi</option>
-        <option value="dubai">Dubai</option>
-        <option value="remote">Remote</option>
-      </select>
-      <select class="jobs-filter" id="filterType" data-tax="type">
-        <option value="">All Types</option>
-        <option value="contract">Contract</option>
-        <option value="full-time">Full Time</option>
-      </select>
+      <div class="filter-group">
+        <select class="jobs-filter" id="filterDept" data-tax="dept">
+          <option value="">All Departments</option>
+          <option value="consulting">Consulting</option>
+          <option value="engineering">Engineering</option>
+          <option value="sales-business-development">Sales &amp; Business Development</option>
+        </select>
+        <select class="jobs-filter" id="filterLoc" data-tax="loc">
+          <option value="">All Locations</option>
+          <option value="abu-dhabi">Abu Dhabi</option>
+          <option value="dubai">Dubai</option>
+          <option value="remote">Remote</option>
+        </select>
+        <select class="jobs-filter" id="filterType" data-tax="type">
+          <option value="">All Types</option>
+          <option value="contract">Contract</option>
+          <option value="full-time">Full Time</option>
+        </select>
+      </div>
+
+      <div class="view-toggle">
+        <button type="button" class="view-btn active" data-view="grid" aria-label="Grid view">
+          <svg viewBox="0 0 24 24" width="18" fill="none" stroke="currentColor" stroke-width="2">
+            <rect x="3" y="3" width="7" height="7"></rect>
+            <rect x="14" y="3" width="7" height="7"></rect>
+            <rect x="3" y="14" width="7" height="7"></rect>
+            <rect x="14" y="14" width="7" height="7"></rect>
+          </svg>
+        </button>
+        <button type="button" class="view-btn" data-view="list" aria-label="List view">
+          <svg viewBox="0 0 24 24" width="18" fill="none" stroke="currentColor" stroke-width="2">
+            <line x1="3" y1="6" x2="21" y2="6"></line>
+            <line x1="3" y1="12" x2="21" y2="12"></line>
+            <line x1="3" y1="18" x2="21" y2="18"></line>
+          </svg>
+        </button>
+      </div>
     </div>
 
-    <div class="jobs-grid reveal d1" id="jobsGrid">
+    <div class="jobs-grid active reveal d1" id="jobsGrid">
 
       <article class="job-card" data-dept="consulting" data-loc="dubai" data-type="full-time" data-job="senior-solutions-architect">
-        <h3 class="job-title">Senior Solutions Architect</h3>
-        <div class="job-meta">
-          <span class="job-badge job-badge-dept">Consulting</span>
-          <span class="job-badge job-badge-type">Full Time</span>
+        <div class="job-card-list">
+          <h3 class="job-title">Senior Solutions Architect</h3>
+          <div class="job-meta">
+            <span class="job-badge job-badge-dept">Consulting</span>
+            <span class="job-badge job-badge-type">Full Time</span>
+          </div>
+          <p class="job-location">
+            <svg viewBox="0 0 24 24" fill="none"><path d="M12 21s7-5.6 7-11a7 7 0 1 0-14 0c0 5.4 7 11 7 11Z" stroke="currentColor" stroke-width="1.7" stroke-linejoin="round"/><circle cx="12" cy="10" r="2.4" stroke="currentColor" stroke-width="1.7"/></svg>
+            Dubai
+          </p>
+          <p class="job-summary">Lead enterprise consulting projects and design innovative solutions for our clients.</p>
         </div>
-        <p class="job-location">
-          <svg viewBox="0 0 24 24" fill="none"><path d="M12 21s7-5.6 7-11a7 7 0 1 0-14 0c0 5.4 7 11 7 11Z" stroke="currentColor" stroke-width="1.7" stroke-linejoin="round"/><circle cx="12" cy="10" r="2.4" stroke="currentColor" stroke-width="1.7"/></svg>
-          Dubai
-        </p>
-        <p class="job-summary">Lead enterprise consulting projects and design innovative solutions for our clients.</p>
-        <button type="button" class="job-apply-btn" data-open-job="senior-solutions-architect">View &amp; Apply
-          <svg width="16" height="16" viewBox="0 0 24 24" fill="none"><path d="M5 12h14M13 6l6 6-6 6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
-        </button>
+        <div class="job-card-apply">
+          <button type="button" class="job-apply-btn" data-open-job="senior-solutions-architect">View &amp; Apply
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none"><path d="M5 12h14M13 6l6 6-6 6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          </button>
+        </div>
       </article>
 
       <article class="job-card" data-dept="engineering" data-loc="abu-dhabi" data-type="full-time" data-job="full-stack-developer">
-        <h3 class="job-title">Full-Stack Developer</h3>
-        <div class="job-meta">
-          <span class="job-badge job-badge-dept">Engineering</span>
-          <span class="job-badge job-badge-type">Full Time</span>
+        <div class="job-card-list">
+          <h3 class="job-title">Full-Stack Developer</h3>
+          <div class="job-meta">
+            <span class="job-badge job-badge-dept">Engineering</span>
+            <span class="job-badge job-badge-type">Full Time</span>
+          </div>
+          <p class="job-location">
+            <svg viewBox="0 0 24 24" fill="none"><path d="M12 21s7-5.6 7-11a7 7 0 1 0-14 0c0 5.4 7 11 7 11Z" stroke="currentColor" stroke-width="1.7" stroke-linejoin="round"/><circle cx="12" cy="10" r="2.4" stroke="currentColor" stroke-width="1.7"/></svg>
+            Abu Dhabi
+          </p>
+          <p class="job-summary">Build scalable web and mobile applications using modern technologies.</p>
         </div>
-        <p class="job-location">
-          <svg viewBox="0 0 24 24" fill="none"><path d="M12 21s7-5.6 7-11a7 7 0 1 0-14 0c0 5.4 7 11 7 11Z" stroke="currentColor" stroke-width="1.7" stroke-linejoin="round"/><circle cx="12" cy="10" r="2.4" stroke="currentColor" stroke-width="1.7"/></svg>
-          Abu Dhabi
-        </p>
-        <p class="job-summary">Build scalable web and mobile applications using modern technologies.</p>
-        <button type="button" class="job-apply-btn" data-open-job="full-stack-developer">View &amp; Apply
-          <svg width="16" height="16" viewBox="0 0 24 24" fill="none"><path d="M5 12h14M13 6l6 6-6 6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
-        </button>
+        <div class="job-card-apply">
+          <button type="button" class="job-apply-btn" data-open-job="full-stack-developer">View &amp; Apply
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none"><path d="M5 12h14M13 6l6 6-6 6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          </button>
+        </div>
       </article>
 
       <article class="job-card" data-dept="sales-business-development" data-loc="remote" data-type="contract" data-job="business-development-manager">
-        <h3 class="job-title">Business Development Manager</h3>
-        <div class="job-meta">
-          <span class="job-badge job-badge-dept">Sales &amp; Business Development</span>
-          <span class="job-badge job-badge-type">Contract</span>
+        <div class="job-card-list">
+          <h3 class="job-title">Business Development Manager</h3>
+          <div class="job-meta">
+            <span class="job-badge job-badge-dept">Sales &amp; Business Development</span>
+            <span class="job-badge job-badge-type">Contract</span>
+          </div>
+          <p class="job-location">
+            <svg viewBox="0 0 24 24" fill="none"><path d="M12 21s7-5.6 7-11a7 7 0 1 0-14 0c0 5.4 7 11 7 11Z" stroke="currentColor" stroke-width="1.7" stroke-linejoin="round"/><circle cx="12" cy="10" r="2.4" stroke="currentColor" stroke-width="1.7"/></svg>
+            Remote
+          </p>
+          <p class="job-summary">Identify and develop new business opportunities and partnerships.</p>
         </div>
-        <p class="job-location">
-          <svg viewBox="0 0 24 24" fill="none"><path d="M12 21s7-5.6 7-11a7 7 0 1 0-14 0c0 5.4 7 11 7 11Z" stroke="currentColor" stroke-width="1.7" stroke-linejoin="round"/><circle cx="12" cy="10" r="2.4" stroke="currentColor" stroke-width="1.7"/></svg>
-          Remote
-        </p>
-        <p class="job-summary">Identify and develop new business opportunities and partnerships.</p>
-        <button type="button" class="job-apply-btn" data-open-job="business-development-manager">View &amp; Apply
-          <svg width="16" height="16" viewBox="0 0 24 24" fill="none"><path d="M5 12h14M13 6l6 6-6 6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
-        </button>
+        <div class="job-card-apply">
+          <button type="button" class="job-apply-btn" data-open-job="business-development-manager">View &amp; Apply
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none"><path d="M5 12h14M13 6l6 6-6 6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          </button>
+        </div>
       </article>
 
     </div>
@@ -462,6 +494,17 @@
   }
   [selDept, selLoc, selType].forEach(function (s) {
     if (s) s.addEventListener('change', applyFilters);
+  });
+
+  /* Grid / list view toggle */
+  var viewBtns = Array.prototype.slice.call(document.querySelectorAll('.view-btn'));
+  viewBtns.forEach(function (btn) {
+    btn.addEventListener('click', function () {
+      var view = btn.getAttribute('data-view');
+      viewBtns.forEach(function (b) { b.classList.toggle('active', b === btn); });
+      grid.classList.toggle('jobs-grid', view === 'grid');
+      grid.classList.toggle('jobs-list', view === 'list');
+    });
   });
 
   /* Job modal open/close */
