@@ -497,9 +497,9 @@ body.menu-open .mobile-panel { transform: none; visibility: visible; }
 .htab-card:hover .htab-card-icon { transform: scale(1.06); }
 .htab-card-icon { position: absolute; right: -42px; bottom: -42px; width: 156px; height: 156px; border-radius: 50%;
   background: radial-gradient(circle at 32% 32%, rgba(0,156,217,.16), rgba(0,156,217,.07) 70%);
-  display: flex; align-items: flex-start; justify-content: flex-start; padding: 26px 0 0 26px;
-  color: var(--cyan); flex-shrink: 0; z-index: 0; transition: transform .35s var(--ease); }
-.htab-card-icon svg { width: 56px; height: 56px; }
+  display: flex; align-items: flex-start; justify-content: flex-start; padding: 28px 0 0 28px;
+  flex-shrink: 0; z-index: 0; transition: transform .35s var(--ease); }
+.htab-card-icon .dm-ic { width: 62px; height: 62px; }
 .htab-card-title { position: relative; z-index: 1; font-size: 16px; font-weight: 700; color: #003060; margin: 0 0 10px; }
 .htab-card-desc { position: relative; z-index: 1; font-size: 13.5px; color: var(--muted); line-height: 1.6; margin: 0 0 20px; flex: 1; }
 .htab-card-btn { position: relative; z-index: 1; display: inline-flex; align-items: center; gap: 8px; align-self: flex-start;
@@ -524,8 +524,10 @@ body.menu-open .mobile-panel { transform: none; visibility: visible; }
 .htab-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px; }
 .htab-group { background: #fff; border: 1.5px solid #d4e8f0; border-radius: 16px; padding: 22px 20px; box-shadow: 0 2px 8px rgba(0,48,96,.06); }
 .htab-group-wide { grid-column: span 2; }
-.htab-group-title { display: flex; align-items: center; gap: 8px; font-size: 14px; font-weight: 700; color: #003060; margin: 0 0 14px; }
+.htab-group-title { display: flex; align-items: center; gap: 12px; font-size: 14px; font-weight: 700; color: #003060; margin: 0 0 14px; }
 .htab-group-title svg { width: 18px; height: 18px; flex-shrink: 0; color: var(--cyan); }
+.htab-group-title .dm-ic { width: 36px; height: 36px; }
+.htab-group-title .dm-ic::before { width: 62px; height: 62px; }
 .htab-group-desc { font-size: 13px; color: var(--muted); margin-bottom: 12px; line-height: 1.55; }
 .htab-list { list-style: none; padding: 0; margin: 0; display: flex; flex-direction: column; gap: 8px; }
 .htab-list li { font-size: 13px; color: var(--muted); padding-left: 16px; position: relative; line-height: 1.45; }
@@ -539,16 +541,16 @@ body.menu-open .mobile-panel { transform: none; visibility: visible; }
   .htab-group-wide { grid-column: span 2; }
   .htab-subgroups { grid-template-columns: 1fr; }
   .htab-card { padding-right: 100px; }
-  .htab-card-icon { width: 120px; height: 120px; right: -34px; bottom: -34px; padding: 20px 0 0 20px; }
-  .htab-card-icon svg { width: 44px; height: 44px; }
+  .htab-card-icon { width: 120px; height: 120px; right: -34px; bottom: -34px; padding: 22px 0 0 22px; }
+  .htab-card-icon .dm-ic { width: 48px; height: 48px; }
 }
 @media (max-width: 560px) {
   .htab-cards { grid-template-columns: 1fr; }
   .htab-grid { grid-template-columns: 1fr; }
   .htab-group-wide { grid-column: span 1; }
   .htab-card { padding-right: 118px; }
-  .htab-card-icon { width: 140px; height: 140px; right: -38px; bottom: -38px; padding: 24px 0 0 24px; }
-  .htab-card-icon svg { width: 50px; height: 50px; }
+  .htab-card-icon { width: 140px; height: 140px; right: -38px; bottom: -38px; padding: 26px 0 0 26px; }
+  .htab-card-icon .dm-ic { width: 54px; height: 54px; }
 }
 
 /* ============================================================
