@@ -83,6 +83,7 @@ strong { font-weight: 600; }
 
 /* ---------- Layout ---------- */
 .wrap { width: 100%; max-width: var(--maxw); margin: 0 auto; padding-inline: var(--gutter); }
+body.full-width-test .wrap { max-width: 100%; }
 .section { padding-block: clamp(72px,9vw,120px); }
 .section-head { max-width: 720px; }
 .section-head.center { margin-inline: auto; text-align: center; }
