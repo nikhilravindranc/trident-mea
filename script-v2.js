@@ -34,20 +34,22 @@
   var SECTORS = [
     { t: "Healthcare", d: "Supporting critical care with reliable, uninterrupted systems.",
       p: ["M32 50 C14 38 9 27 17 20 C23 15 30 18 32 23 C34 18 41 15 47 20 C55 27 50 38 32 50 Z"] },
-    { t: "Hospitality", d: "Enhancing guest experience while improving operational efficiency.",
-      p: ["M32 14 L52 31 V51 H12 V31 Z"] },
     { t: "Government & Public Sector", d: "Secure, compliant infrastructure for public service delivery.",
       p: ["M11 27 L32 14 L53 27 Z","M13 49 H51 V53 H13 Z","M18 29 H23 V47 H18 Z","M29.5 29 H34.5 V47 H29.5 Z","M41 29 H46 V47 H41 Z"] },
-    { t: "BFSI", d: "High-performance systems built for security, compliance, and uptime.",
+    { t: "Banking & Financial Services", d: "High-performance systems built for security, compliance, and uptime.",
       p: ["M9 21 H55 a3 3 0 0 1 3 3 V40 a3 3 0 0 1 -3 3 H9 a3 3 0 0 1 -3 -3 V24 a3 3 0 0 1 3 -3 Z","M6 28 H58 V33 H6 Z"] },
+    { t: "Hospitality", d: "Enhancing guest experience while improving operational efficiency.",
+      p: ["M32 14 L52 31 V51 H12 V31 Z"] },
     { t: "Education", d: "Connected environments for modern learning experiences.",
       p: ["M32 16 L57 26 L32 36 L7 26 Z","M19 31 L32 36.5 L45 31 V40 C45 44 19 44 19 40 Z"] },
+    { t: "Telecommunications", d: "Scalable infrastructure for high-demand communication networks.",
+      p: ["M14 44 H22 V53 H14 Z","M28 33 H36 V53 H28 Z","M42 22 H50 V53 H42 Z"] },
     { t: "Oil & Gas", d: "Robust solutions designed for demanding, high-risk environments.",
       p: ["M32 12 C32 12 47 30 47 39 A15 15 0 0 1 17 39 C17 30 32 12 32 12 Z"] },
     { t: "Retail", d: "Integrated systems that improve customer experience and operations.",
       p: ["M24 25 A8 8 0 0 1 40 25 L36 25 A4 4 0 0 0 28 25 Z","M15 24 H49 L52 53 H12 Z"] },
-    { t: "Telecommunications", d: "Scalable infrastructure for high-demand communication networks.",
-      p: ["M14 44 H22 V53 H14 Z","M28 33 H36 V53 H28 Z","M42 22 H50 V53 H42 Z"] }
+    { t: "Manufacturing", d: "Dependable technology for continuous production environments.",
+      p: ["M10 52 V28 L24 37 V28 L38 37 V28 L52 37 V52 Z","M14 28 V15 H21 V28 Z"] }
   ];
   function sectorIcon(paths) {
     var solid = paths.map(function (d) { return '<path d="' + d + '" fill="url(#tgSolid)"/>'; }).join("");
@@ -275,4 +277,48 @@
     }, { threshold: 0.3 });
     so.observe(rows);
   }
+
+  /* ---------- Globe hover interaction ---------- */
+  var hvStage = document.querySelector(".hv-stage");
+  var hvGlobe = document.querySelector(".hv-globe");
+  if (hvStage && hvGlobe) {
+    hvStage.addEventListener("mousemove", function (e) {
+      var rect = hvStage.getBoundingClientRect();
+      var centerX = rect.left + rect.width / 2;
+      var centerY = rect.top + rect.height / 2;
+      var deltaX = e.clientX - centerX;
+      var deltaY = e.clientY - centerY;
+      var angle = Math.atan2(deltaY, deltaX) * (180 / Math.PI);
+      var constrainedAngle = Math.max(-45, Math.min(45, angle / 2));
+      hvGlobe.style.transform = "rotateZ(" + constrainedAngle + "deg)";
+    });
+    hvStage.addEventListener("mouseleave", function () {
+      hvGlobe.style.transform = "rotateZ(0deg)";
+      hvGlobe.style.transition = "transform 0.3s ease-out";
+    });
+    hvGlobe.addEventListener("transitionend", function () {
+      hvGlobe.style.transition = "";
+    });
+  }
+
+  /* ---------- Practice graphics hover interaction ---------- */
+  document.querySelectorAll(".practice-stage").forEach(function (stage) {
+    var spin = stage.querySelector(".practice-spin");
+    if (!spin) return;
+    stage.addEventListener("mousemove", function (e) {
+      var rect = stage.getBoundingClientRect();
+      var deltaX = e.clientX - (rect.left + rect.width / 2);
+      var deltaY = e.clientY - (rect.top + rect.height / 2);
+      var angle = Math.atan2(deltaY, deltaX) * (180 / Math.PI);
+      var constrainedAngle = Math.max(-45, Math.min(45, angle / 2));
+      spin.style.transform = "rotateZ(" + constrainedAngle + "deg)";
+    });
+    stage.addEventListener("mouseleave", function () {
+      spin.style.transform = "rotateZ(0deg)";
+      spin.style.transition = "transform 0.3s ease-out";
+    });
+    spin.addEventListener("transitionend", function () {
+      spin.style.transition = "";
+    });
+  });
 })();

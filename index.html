@@ -3,11 +3,11 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Trident MEA Technologies — Enabling CX & IT Solutions for Businesses</title>
-<meta name="description" content="Trident MEA Technologies delivers advanced CX and IT solutions across the Middle East, Africa, and South Asia.">
-<link rel="stylesheet" href="styles-v2.css?v=56">
+<title>Trident MEA Technologies — Consulting-Led Technology Solutions Across MEA</title>
+<meta name="description" content="Trident MEA is a consulting-led technology partner with four specialized practices — Enterprise Infrastructure, Customer Experience, Healthcare & Biomedical, and Professional Services — serving the Middle East, Africa, and South Asia.">
+<link rel="stylesheet" href="styles-v2.css?v=84">
 </head>
-<body class="full-width-test">
+<body>
 
 <!-- ============ NAV ============ -->
 <header class="nav" id="nav">
@@ -69,10 +69,10 @@
   <div class="mp-group" id="mpSol">
     <button type="button">Solutions <svg class="caret" width="18" height="18" viewBox="0 0 24 24" fill="none"><path d="M6 9l6 6 6-6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></button>
     <div class="mp-sub">
-      <a href="#solutions">Healthcare Solutions</a>
-      <a href="#solutions">Hospitality Solutions</a>
-      <a href="#solutions">IT Infrastructure Solutions</a>
-      <a href="#solutions">Unified Communications &amp; Contact Center</a>
+      <a href="healthcare-solutions.html">Healthcare Solutions</a>
+      <a href="hospitality-solutions.html">Hospitality Solutions</a>
+      <a href="it-infrastructure-solutions.html">IT Infrastructure Solutions</a>
+      <a href="communications-solutions.html">Unified Communications &amp; Contact Center</a>
     </div>
   </div>
   <a href="industries.html">Industries</a>
@@ -84,33 +84,156 @@
 
 <main id="top">
 
+<!-- shared gradient defs for dual-material icons -->
+<svg width="0" height="0" style="position:absolute" aria-hidden="true"><defs>
+  <linearGradient id="tgSolid" x1="0" y1="0" x2="0.4" y2="1">
+    <stop offset="0" stop-color="#1bb6ec"/><stop offset="0.5" stop-color="#009cd9"/><stop offset="1" stop-color="#003060"/>
+  </linearGradient>
+  <linearGradient id="tgGlass" x1="0.1" y1="0" x2="0.6" y2="1">
+    <stop offset="0" stop-color="#ffffff" stop-opacity="0.95"/><stop offset="0.55" stop-color="#dceaf5" stop-opacity="0.82"/><stop offset="1" stop-color="#bcd2e6" stop-opacity="0.78"/>
+  </linearGradient>
+  <linearGradient id="tgEdge" x1="0" y1="0" x2="0.5" y2="1">
+    <stop offset="0" stop-color="#ffffff" stop-opacity="0.95"/><stop offset="1" stop-color="#a9c2d8" stop-opacity="0.55"/>
+  </linearGradient>
+</defs></svg>
+
 <!-- ============ HERO ============ -->
 <section class="hero">
   <div class="wrap">
     <div class="hero-grid">
       <div class="hero-copy">
         <span class="dot-tex" aria-hidden="true"></span>
-        <span class="eyebrow reveal">Enabling CX &amp; IT Solutions for Businesses</span>
-        <h1 class="reveal d1">Turn Complex IT Into <span class="accent">Business Advantage</span></h1>
-        <p class="lead reveal d2">We design, integrate, and manage technology ecosystems that improve performance, reduce risk, and scale with your business.</p>
+        <h1 class="reveal d1">Empowering Digital Transformation Across the <span class="accent">Middle East &amp; Africa</span></h1>
+        <p class="lead reveal d2">Technology is transforming how organizations operate, serve customers, and deliver critical services. Trident MEA helps enterprises embrace this transformation through consulting-led technology solutions that strengthen infrastructure, elevate customer experiences, modernize healthcare environments, and simplify complex IT operations.</p>
         <div class="hero-cta reveal d3">
-          <a class="btn btn-primary" href="#solutions">Explore Solutions
+          <a class="btn btn-primary" href="contact.html">Talk to an Expert
             <svg width="17" height="17" viewBox="0 0 24 24" fill="none"><path d="M5 12h14M13 6l6 6-6 6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
           </a>
-          <a class="link-arrow" href="contact.html">Contact Us
+          <a class="link-arrow" href="#practices">Explore Our Practices
             <svg width="16" height="16" viewBox="0 0 24 24" fill="none"><path d="M5 12h14M13 6l6 6-6 6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
           </a>
         </div>
+
+        <div class="hero-trust reveal d3">
+          <p class="tb-caption">Trusted by industry leaders including</p>
+          <div class="tb-logos">
+            <img src="partners/p11.png" alt="Avaya" loading="lazy">
+            <img src="partners/p21.png" alt="Cisco" loading="lazy">
+            <img src="partners/p13.png" alt="Microsoft" loading="lazy">
+            <img src="partners/p06.png" alt="Dell" loading="lazy">
+            <img src="partners/p39.png" alt="Hewlett Packard Enterprise" loading="lazy">
+            <img src="partners/p02.png" alt="Aruba" loading="lazy">
+            <img src="partners/p10.png" alt="VMware" loading="lazy">
+            <img src="partners/p04.png" alt="Fortinet" loading="lazy">
+            <img src="partners/p08.png" alt="Lenovo" loading="lazy">
+          </div>
+        </div>
       </div>
 
-      <div class="hero-visual reveal d2">
-        <div class="hstat-card">
-          <h3>Trusted Regional Delivery</h3>
-          <p>Dubai HQ with operations across UAE, Oman, KSA and India.</p>
-          <div class="hstat-rows">
-            <div class="hstat-row"><span class="hstat-num">18+</span><span class="hstat-label">Years Experience</span></div>
-            <div class="hstat-row"><span class="hstat-num">180+</span><span class="hstat-label">Clients Served</span></div>
-            <div class="hstat-row"><span class="hstat-num">24&times;7</span><span class="hstat-label">Managed Support</span></div>
+      <div class="hero-visual reveal d2" aria-hidden="true">
+        <div class="hv-stage">
+          <div class="hv-glow"></div>
+
+          <svg class="hv-scene" viewBox="0 0 600 600" fill="none">
+            <defs>
+              <linearGradient id="ribbonGrad" x1="0" y1="1" x2="1" y2="0">
+                <stop offset="0" stop-color="#003060" stop-opacity="0"/>
+                <stop offset=".28" stop-color="#009cd9" stop-opacity=".9"/>
+                <stop offset=".65" stop-color="#00c2f0" stop-opacity=".95"/>
+                <stop offset="1" stop-color="#5bd3f7" stop-opacity="0"/>
+              </linearGradient>
+              <linearGradient id="purpleGrad" x1="0" y1="0" x2="1" y2="1">
+                <stop offset="0" stop-color="#7c6ff0" stop-opacity="0"/>
+                <stop offset=".45" stop-color="#a06bf2" stop-opacity=".7"/>
+                <stop offset=".8" stop-color="#e06bc4" stop-opacity=".6"/>
+                <stop offset="1" stop-color="#e06bc4" stop-opacity="0"/>
+              </linearGradient>
+              <linearGradient id="accentGrad" x1="0" y1="0" x2="1" y2="0">
+                <stop offset="0" stop-color="#1bb6ec" stop-opacity="0"/>
+                <stop offset=".5" stop-color="#6fdcf7" stop-opacity=".8"/>
+                <stop offset="1" stop-color="#1bb6ec" stop-opacity="0"/>
+              </linearGradient>
+              <radialGradient id="platGlow" cx="50%" cy="50%" r="50%">
+                <stop offset="0" stop-color="#009cd9" stop-opacity=".22"/>
+                <stop offset="1" stop-color="#009cd9" stop-opacity="0"/>
+              </radialGradient>
+              <filter id="ribbonBlur" x="-50%" y="-50%" width="200%" height="200%"><feGaussianBlur stdDeviation="9"/></filter>
+            </defs>
+
+            <!-- wireframe globe base layer (MEA context) -->
+            <g class="hv-globe-wrap" opacity="0.5">
+              <!-- soft sphere fill -->
+              <circle cx="300" cy="300" r="200" fill="#e4f2fb"/>
+              <!-- rotating meridian cage -->
+              <g class="hv-globe" fill="none" stroke="#63b6e0" stroke-width="1.1">
+                <!-- sphere outline -->
+                <circle cx="300" cy="300" r="200" stroke="#2f9bd4" stroke-width="1.3"/>
+                <!-- latitude lines (horizontal) -->
+                <ellipse cx="300" cy="300" rx="200" ry="61"/>
+                <ellipse cx="300" cy="300" rx="168" ry="157" stroke="#8ecbe8"/>
+                <line x1="100" y1="300" x2="500" y2="300"/>
+                <!-- longitude lines (vertical, varying width = 3D sphere) -->
+                <ellipse cx="300" cy="300" rx="61" ry="200"/>
+                <ellipse cx="300" cy="300" rx="136" ry="200" stroke="#8ecbe8"/>
+                <ellipse cx="300" cy="300" rx="179" ry="200" stroke="#a7d8ef"/>
+                <line x1="300" y1="100" x2="300" y2="500"/>
+              </g>
+            </g>
+
+            <!-- ambient glow -->
+            <ellipse cx="300" cy="300" rx="260" ry="230" fill="url(#platGlow)"/>
+
+            <!-- flowing ribbons -->
+            <path d="M100,470 C170,400 150,320 230,280 C310,240 290,160 370,120 C410,100 450,110 480,145" stroke="url(#ribbonGrad)" stroke-width="20" stroke-linecap="round" filter="url(#ribbonBlur)" opacity=".5"/>
+            <path d="M100,470 C170,400 150,320 230,280 C310,240 290,160 370,120 C410,100 450,110 480,145" stroke="url(#ribbonGrad)" stroke-width="6" stroke-linecap="round"/>
+
+            <path d="M90,190 C160,150 200,205 265,185 C340,160 380,225 455,255 C495,272 515,320 545,355" stroke="url(#purpleGrad)" stroke-width="3.5" stroke-linecap="round"/>
+
+            <path d="M75,345 C150,325 190,375 265,355 C335,338 360,268 430,245" stroke="url(#accentGrad)" stroke-width="2.5" stroke-linecap="round"/>
+
+            <!-- connector lines: badge -> ribbon node -->
+            <g stroke="#9fc4e8" stroke-width="1.3" opacity=".7">
+              <path d="M300 81 C330 90 355 105 372 122"/>
+              <path d="M531 213 C 515 190 498 168 482 150"/>
+              <path d="M21 261 C 70 240 130 215 180 195"/>
+              <path d="M57 465 C 85 462 108 458 128 456"/>
+            </g>
+            <g fill="#00c2f0">
+              <circle cx="372" cy="122" r="3.6"/><circle cx="482" cy="150" r="3.6"/>
+              <circle cx="180" cy="195" r="3.6"/><circle cx="128" cy="456" r="3.6"/>
+            </g>
+
+            <!-- sparkle dots -->
+            <g fill="#bfe0f2">
+              <circle cx="150" cy="120" r="2.6"/><circle cx="480" cy="200" r="2.6"/>
+              <circle cx="120" cy="420" r="2.6"/><circle cx="510" cy="330" r="2.6"/>
+              <circle cx="300" cy="60" r="2.2"/><circle cx="230" cy="480" r="2.2"/>
+            </g>
+          </svg>
+
+          <div class="hv-badge hv-badge-a">
+            <span class="hv-badge-ic">
+              <svg viewBox="0 0 24 24" fill="none"><path d="M12 20s-7-4.35-9.5-9A5.5 5.5 0 0 1 12 6a5.5 5.5 0 0 1 9.5 5c-2.5 4.65-9.5 9-9.5 9Z" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"/><path d="M5 12h3l2-4 3 7 2-5h4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            </span>
+            <span class="hv-badge-label">Healthcare<br>&amp; Biomedical</span>
+          </div>
+          <div class="hv-badge hv-badge-b">
+            <span class="hv-badge-ic">
+              <svg viewBox="0 0 24 24" fill="none"><circle cx="9" cy="8" r="3" stroke="currentColor" stroke-width="1.6"/><circle cx="17" cy="9.5" r="2.4" stroke="currentColor" stroke-width="1.6"/><path d="M3 20c0-3.3 2.7-6 6-6s6 2.7 6 6M15 14.5c2.5.5 4 2.5 4 5.5" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></svg>
+            </span>
+            <span class="hv-badge-label">Professional<br>Services</span>
+          </div>
+          <div class="hv-badge hv-badge-c">
+            <span class="hv-badge-ic">
+              <svg viewBox="0 0 24 24" fill="none"><path d="M4 12a8 8 0 0 1 16 0v5a3 3 0 0 1-3 3h-2" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/><rect x="3" y="12" width="4" height="6" rx="1.5" stroke="currentColor" stroke-width="1.6"/><rect x="17" y="12" width="4" height="6" rx="1.5" stroke="currentColor" stroke-width="1.6"/></svg>
+            </span>
+            <span class="hv-badge-label">Customer<br>Experience</span>
+          </div>
+          <div class="hv-badge hv-badge-d">
+            <span class="hv-badge-ic">
+              <svg viewBox="0 0 24 24" fill="none"><rect x="3" y="4" width="18" height="6" rx="1.5" stroke="currentColor" stroke-width="1.6"/><rect x="3" y="14" width="18" height="6" rx="1.5" stroke="currentColor" stroke-width="1.6"/><path d="M7 7h.01M7 17h.01" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
+            </span>
+            <span class="hv-badge-label">Enterprise<br>Infrastructure</span>
           </div>
         </div>
       </div>
@@ -118,53 +241,454 @@
   </div>
 </section>
 
-<!-- ============ APPROACH ============ -->
-<section class="section approach" id="about">
+<!-- ============ ABOUT ============ -->
+<section class="section aboutx" id="about">
   <div class="wrap">
-    <div class="approach-grid">
-      <div class="approach-copy">
+    <div class="aboutx-grid">
+      <div class="aboutx-copy">
         <span class="eyebrow reveal">Who We Are</span>
-        <h2 class="reveal d1">Your Technology Integration Partner Across MEA</h2>
-        <div class="approach-body">
-          <p class="lead reveal d1">Headquartered in Dubai, Trident MEA Technologies delivers advanced CX and IT solutions across the Middle East, Africa, and South Asia.</p>
-          <div class="approach-paras">
-            <p class="reveal d2">With operations across <strong>Oman, Saudi Arabia, Abu Dhabi, and India</strong>, we integrate complex technologies into unified systems that improve efficiency, reduce operational costs, and enhance business performance.</p>
-            <p class="reveal d2">We don't just implement solutions — we align technology with your business objectives and ensure it performs where it matters most.</p>
-            <a class="link-arrow reveal d3" href="#solutions">Explore our capabilities
-              <svg width="16" height="16" viewBox="0 0 24 24" fill="none"><path d="M5 12h14M13 6l6 6-6 6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
-            </a>
-          </div>
+        <h2 class="reveal d1">Delivering Technology That Powers Business Success</h2>
+        <p class="reveal d2">Technology has become the foundation of every successful organization. Building resilient, secure, and intelligent digital environments requires more than products — it requires the right technology partner.</p>
+        <p class="reveal d2">Headquartered in Dubai and serving customers across the UAE, Oman, Saudi Arabia, and India, Trident MEA delivers consulting, system integration, implementation, and lifecycle support that help organizations modernize operations, improve resilience, and accelerate digital transformation.</p>
+        <p class="reveal d2">With deep technical expertise, globally recognized technology partners, and a customer-first approach, we build solutions that continue delivering value long after deployment.</p>
+        <div class="aboutx-regions reveal d3">
+          <span class="region-chip"><svg viewBox="0 0 24 24" fill="none"><path d="M12 21s7-5.6 7-11a7 7 0 1 0-14 0c0 5.4 7 11 7 11Z" stroke="currentColor" stroke-width="1.7" stroke-linejoin="round"/><circle cx="12" cy="10" r="2.4" stroke="currentColor" stroke-width="1.7"/></svg>Dubai HQ</span>
+          <span class="region-chip">UAE</span>
+          <span class="region-chip">Oman</span>
+          <span class="region-chip">Saudi Arabia</span>
+          <span class="region-chip">India</span>
+        </div>
+      </div>
+      <div class="aboutx-visual">
+        <img src="images/trident-mea.jpg" alt="Trident MEA office building" class="aboutx-image">
+        <div class="aboutx-stats reveal d2">
+          <div class="ax-stat"><b>18+</b><span>Years of Industry Experience</span></div>
+          <div class="ax-stat"><b>250+</b><span>Enterprise Customers</span></div>
+          <div class="ax-stat"><b>500+</b><span>Projects Delivered</span></div>
+          <div class="ax-stat"><b>24&times;7</b><span>Managed Support</span></div>
         </div>
       </div>
     </div>
-
-    <!-- 4 dual-material columns -->
-    <div class="fourcol" id="fourCol"><!-- injected --></div>
   </div>
 </section>
 
-
-
-<!-- ============ SOLUTIONS (tabbed) ============ -->
-<section class="section solutions" id="solutions">
+<!-- ============ PRACTICES ============ -->
+<section class="section practices-suite" id="practices">
   <div class="wrap">
     <div class="section-head center reveal">
-      <span class="eyebrow">Core Capabilities</span>
-      <h2>Integrated solutions built for real business environments</h2>
-      <p class="lead">We combine multiple technologies into cohesive systems designed for reliability, scalability, and long-term performance.</p>
+      <span class="eyebrow">What We Do</span>
+      <h2>Specialized Expertise. One Trusted Technology Partner.</h2>
+      <p class="lead">Every organization faces unique operational challenges. Rather than offering disconnected products, Trident MEA brings together specialized expertise across four dedicated practices — delivering integrated technology ecosystems that support business growth, operational resilience, and exceptional user experiences.</p>
     </div>
 
-    <div class="tabs reveal d1" role="tablist">
-      <button class="tab active" data-tab="0" role="tab">Unified Communications</button>
-      <button class="tab" data-tab="1" role="tab">Contact Center</button>
-      <button class="tab" data-tab="2" role="tab">IT Infrastructure</button>
-      <button class="tab" data-tab="3" role="tab">Information Security</button>
-      <button class="tab" data-tab="4" role="tab">ELV Systems</button>
-      <button class="tab" data-tab="5" role="tab">Audio Visual</button>
-      <button class="tab" data-tab="6" role="tab">Software Solutions</button>
+    <!-- FLAGSHIP: HEALTHCARE & BIOMEDICAL -->
+    <div class="pr-flagship reveal" id="healthcare">
+      <svg class="pr-flagship-motif" viewBox="0 0 1200 300" preserveAspectRatio="none" aria-hidden="true">
+        <path d="M-40,180 C260,180 300,40 420,40 C480,40 500,220 560,220 C600,220 615,110 660,110 C700,110 715,180 760,180 L1240,180"
+          stroke="#003060" stroke-width="3" fill="none"/>
+      </svg>
+      <div class="pr-flagship-top">
+        <div class="pr-flagship-copy">
+          <span class="pr-flagship-badge">
+            <svg viewBox="0 0 24 24" fill="none"><path d="M12 2.5l2.6 5.5 6 .8-4.4 4.2 1.1 6-5.3-2.9-5.3 2.9 1.1-6-4.4-4.2 6-.8Z" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"/></svg>
+            Flagship Practice
+          </span>
+          <h2>Technology That Supports Better Patient Care</h2>
+          <p>Trident MEA's Healthcare &amp; Biomedical practice combines healthcare IT, clinical mobility, biomedical equipment, and professional services into one connected practice — engineered for environments where technology performs when it matters most.</p>
+          <a class="btn btn-primary" href="healthcare-solutions.html">Explore Healthcare Practice
+            <svg width="17" height="17" viewBox="0 0 24 24" fill="none"><path d="M5 12h14M13 6l6 6-6 6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          </a>
+        </div>
+
+        <div class="hc-visual">
+          <div class="practice-stage" aria-hidden="true">
+            <div class="practice-glow"></div>
+            <svg class="practice-scene" viewBox="0 0 600 600" fill="none">
+              <defs>
+                <linearGradient id="hcRibA" x1="0" y1="1" x2="1" y2="0">
+                  <stop offset="0" stop-color="#003060" stop-opacity="0"/>
+                  <stop offset=".3" stop-color="#009cd9" stop-opacity=".9"/>
+                  <stop offset=".7" stop-color="#00c2f0" stop-opacity=".95"/>
+                  <stop offset="1" stop-color="#5bd3f7" stop-opacity="0"/>
+                </linearGradient>
+                <linearGradient id="hcRibB" x1="1" y1="0" x2="0" y2="1">
+                  <stop offset="0" stop-color="#1bb6ec" stop-opacity="0"/>
+                  <stop offset=".5" stop-color="#38c9b0" stop-opacity=".8"/>
+                  <stop offset="1" stop-color="#38c9b0" stop-opacity="0"/>
+                </linearGradient>
+                <filter id="hcBlur" x="-40%" y="-40%" width="180%" height="180%"><feGaussianBlur stdDeviation="8"/></filter>
+              </defs>
+              <g class="practice-background practice-bg-hc">
+                <circle cx="300" cy="300" r="30" fill="none" stroke="#b5d4e8" stroke-width="2" opacity="0.6"/>
+                <circle cx="220" cy="200" r="18" fill="none" stroke="#9fc4e8" stroke-width="1.5"/>
+                <circle cx="380" cy="200" r="18" fill="none" stroke="#9fc4e8" stroke-width="1.5"/>
+                <circle cx="260" cy="400" r="16" fill="none" stroke="#9fc4e8" stroke-width="1.5"/>
+                <circle cx="340" cy="400" r="16" fill="none" stroke="#9fc4e8" stroke-width="1.5"/>
+                <circle cx="210" cy="300" r="15" fill="none" stroke="#9fc4e8" stroke-width="1.5"/>
+                <circle cx="390" cy="300" r="15" fill="none" stroke="#9fc4e8" stroke-width="1.5"/>
+                <line x1="300" y1="300" x2="220" y2="200" stroke="#b5d4e8" stroke-width="1.2" opacity="0.5"/>
+                <line x1="300" y1="300" x2="380" y2="200" stroke="#b5d4e8" stroke-width="1.2" opacity="0.5"/>
+                <line x1="300" y1="300" x2="260" y2="400" stroke="#b5d4e8" stroke-width="1.2" opacity="0.5"/>
+                <line x1="300" y1="300" x2="340" y2="400" stroke="#b5d4e8" stroke-width="1.2" opacity="0.5"/>
+                <line x1="300" y1="300" x2="210" y2="300" stroke="#9fc4e8" stroke-width="1.2" opacity="0.4"/>
+                <line x1="300" y1="300" x2="390" y2="300" stroke="#9fc4e8" stroke-width="1.2" opacity="0.4"/>
+                <path d="M 240 240 Q 300 300 360 360" stroke="#9fc4e8" stroke-width="1.2" fill="none" opacity="0.3"/>
+                <!-- Medical plus symbols overlaid on key nodes -->
+                <text x="300" y="305" text-anchor="middle" font-size="28" font-weight="bold" fill="#e74c3c" opacity="0.8">+</text>
+                <text x="220" y="208" text-anchor="middle" font-size="20" font-weight="bold" fill="#e74c3c" opacity="0.75">+</text>
+                <text x="380" y="208" text-anchor="middle" font-size="20" font-weight="bold" fill="#e74c3c" opacity="0.75">+</text>
+                <text x="300" y="370" text-anchor="middle" font-size="18" font-weight="bold" fill="#e74c3c" opacity="0.7">+</text>
+              </g>
+              <g class="practice-spin practice-spin-hc">
+                <path d="M120,430 C200,360 210,300 300,300 C390,300 400,240 480,170" stroke="url(#hcRibA)" stroke-width="18" stroke-linecap="round" filter="url(#hcBlur)" opacity=".5"/>
+                <path d="M120,430 C200,360 210,300 300,300 C390,300 400,240 480,170" stroke="url(#hcRibA)" stroke-width="6" stroke-linecap="round"/>
+                <path d="M150,175 C225,240 260,300 300,300 C355,300 400,360 470,425" stroke="url(#hcRibB)" stroke-width="4" stroke-linecap="round"/>
+                <path d="M110,300 C200,250 245,340 300,300 C368,252 410,348 490,300" stroke="url(#hcRibA)" stroke-width="2.5" stroke-linecap="round" opacity=".7"/>
+                <circle cx="300" cy="300" r="6" fill="#00c2f0"/>
+                <circle cx="480" cy="170" r="4" fill="#38c9b0"/>
+                <circle cx="120" cy="430" r="4" fill="#009cd9"/>
+              </g>
+            </svg>
+            <div class="pr-badge b1"><span class="prb-ic"><svg viewBox="0 0 24 24" fill="none"><path d="M12 20s-7-4.35-9.5-9A5.5 5.5 0 0 1 12 6a5.5 5.5 0 0 1 9.5 5c-2.5 4.65-9.5 9-9.5 9Z" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"/><path d="M5 12h3l1.5-3 3 6 1.5-3h4" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/></svg></span><span>Healthcare IT</span></div>
+            <div class="pr-badge b2"><span class="prb-ic"><svg viewBox="0 0 24 24" fill="none"><rect x="6" y="3" width="12" height="18" rx="2.5" stroke="currentColor" stroke-width="1.6"/><path d="M10 7h4M12 12v5M9.5 14.5h5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg></span><span>Clinical Mobility</span></div>
+            <div class="pr-badge b3"><span class="prb-ic"><svg viewBox="0 0 24 24" fill="none"><path d="M8 4v6a4 4 0 0 0 8 0V4" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/><path d="M12 14v3a3 3 0 0 0 6 0v-1" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/><circle cx="18" cy="15" r="1.6" stroke="currentColor" stroke-width="1.6"/></svg></span><span>Biomedical</span></div>
+          </div>
+        </div>
+      </div>
+
+      <div class="pr-flagship-stats">
+        <div><b>14+</b><span>Specialized Portfolio Categories</span></div>
+        <div><b>24&times;7</b><span>Mission-Critical Support</span></div>
+        <div><b>18+</b><span>Years Serving Healthcare Providers</span></div>
+      </div>
+      <div class="pr-flagship-tags-label"><span>Healthcare Portfolio</span></div>
+      <div class="pr-flagship-tags">
+        <span>Patient Monitoring</span>
+        <span>Electrocardiographs (ECG)</span>
+        <span>Defibrillators</span>
+        <span>Infusion Pumps</span>
+        <span>Ultrasound Systems</span>
+        <span>Medical Displays</span>
+        <span>Clinical Workstations</span>
+        <span>Medical Carts</span>
+        <span>Operating Theatre Solutions</span>
+        <span>Calibration</span>
+        <span>Asset Management</span>
+        <span>Telemedicine</span>
+      </div>
     </div>
 
-    <div class="tab-stage" id="tabStage"><!-- injected --></div>
+    <!-- ENTERPRISE INFRASTRUCTURE -->
+    <div class="pr-flagship pr-flagship--sub reveal" id="enterprise-infrastructure">
+      <div class="pr-flagship-top">
+        <div class="pr-flagship-copy">
+          <span class="pr-flagship-badge pr-badge-outline">
+            <svg viewBox="0 0 24 24" fill="none"><rect x="3" y="4" width="18" height="6" rx="1.5" stroke="currentColor" stroke-width="1.6"/><rect x="3" y="14" width="18" height="6" rx="1.5" stroke="currentColor" stroke-width="1.6"/><path d="M7 7h.01M7 17h.01" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
+            Core Practice
+          </span>
+          <h2>Enterprise Infrastructure</h2>
+          <p class="pr-lead">A resilient digital foundation is essential for every modern organization.</p>
+          <p>Trident MEA designs, deploys, and supports secure, scalable, and high-performance enterprise infrastructure solutions that enable businesses to operate efficiently while preparing for future growth.</p>
+          <a class="btn btn-primary" href="it-infrastructure-solutions.html">Explore Enterprise Infrastructure
+            <svg width="17" height="17" viewBox="0 0 24 24" fill="none"><path d="M5 12h14M13 6l6 6-6 6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          </a>
+        </div>
+
+        <div class="hc-visual">
+          <div class="practice-stage" aria-hidden="true">
+            <div class="practice-glow"></div>
+            <svg class="practice-scene" viewBox="0 0 600 600" fill="none">
+              <defs>
+                <linearGradient id="eiRibA" x1="0" y1="0" x2="1" y2="1">
+                  <stop offset="0" stop-color="#003060" stop-opacity="0"/>
+                  <stop offset=".35" stop-color="#009cd9" stop-opacity=".9"/>
+                  <stop offset=".7" stop-color="#00c2f0" stop-opacity=".9"/>
+                  <stop offset="1" stop-color="#5bd3f7" stop-opacity="0"/>
+                </linearGradient>
+                <linearGradient id="eiRibB" x1="0" y1="0" x2="1" y2="0">
+                  <stop offset="0" stop-color="#1bb6ec" stop-opacity="0"/>
+                  <stop offset=".5" stop-color="#63b6e0" stop-opacity=".85"/>
+                  <stop offset="1" stop-color="#1bb6ec" stop-opacity="0"/>
+                </linearGradient>
+                <filter id="eiBlur" x="-40%" y="-40%" width="180%" height="180%"><feGaussianBlur stdDeviation="8"/></filter>
+              </defs>
+              <g class="practice-background practice-bg-ei">
+                <line x1="120" y1="300" x2="480" y2="300" stroke="#9fc4e8" stroke-width="1.2" opacity="0.4"/>
+                <line x1="300" y1="120" x2="300" y2="480" stroke="#9fc4e8" stroke-width="1.2" opacity="0.4"/>
+                <circle cx="200" cy="200" r="18" fill="none" stroke="#63b6e0" stroke-width="1.8"/>
+                <circle cx="400" cy="200" r="18" fill="none" stroke="#63b6e0" stroke-width="1.8"/>
+                <circle cx="200" cy="400" r="18" fill="none" stroke="#63b6e0" stroke-width="1.8"/>
+                <circle cx="400" cy="400" r="18" fill="none" stroke="#63b6e0" stroke-width="1.8"/>
+                <circle cx="300" cy="300" r="16" fill="none" stroke="#9fc4e8" stroke-width="1.8" opacity="0.7"/>
+                <line x1="200" y1="200" x2="400" y2="200" stroke="#9fc4e8" stroke-width="1.2" opacity="0.5"/>
+                <line x1="200" y1="200" x2="300" y2="300" stroke="#9fc4e8" stroke-width="1.2" opacity="0.5"/>
+                <line x1="400" y1="200" x2="300" y2="300" stroke="#9fc4e8" stroke-width="1.2" opacity="0.5"/>
+                <line x1="200" y1="400" x2="300" y2="300" stroke="#9fc4e8" stroke-width="1.2" opacity="0.5"/>
+                <line x1="400" y1="400" x2="300" y2="300" stroke="#9fc4e8" stroke-width="1.2" opacity="0.5"/>
+                <!-- Tech/server symbols overlaid on corner nodes -->
+                <g fill="none" stroke="#009cd9" stroke-width="1.5" opacity="0.8">
+                  <rect x="192" y="192" width="16" height="16" rx="2"/>
+                  <line x1="192" y1="200" x2="208" y2="200"/>
+                </g>
+                <g fill="none" stroke="#009cd9" stroke-width="1.5" opacity="0.8">
+                  <rect x="392" y="192" width="16" height="16" rx="2"/>
+                  <line x1="392" y1="200" x2="408" y2="200"/>
+                </g>
+                <g fill="none" stroke="#009cd9" stroke-width="1.5" opacity="0.8">
+                  <rect x="192" y="392" width="16" height="16" rx="2"/>
+                  <line x1="192" y1="400" x2="208" y2="400"/>
+                </g>
+              </g>
+              <g class="practice-spin practice-spin-ei">
+                <path d="M120,160 C260,205 340,395 480,440" stroke="url(#eiRibA)" stroke-width="18" stroke-linecap="round" filter="url(#eiBlur)" opacity=".45"/>
+                <path d="M120,160 C260,205 340,395 480,440" stroke="url(#eiRibA)" stroke-width="6" stroke-linecap="round"/>
+                <path d="M120,440 C260,395 340,205 480,160" stroke="url(#eiRibA)" stroke-width="5" stroke-linecap="round" opacity=".85"/>
+                <path d="M105,300 C210,258 390,342 495,300" stroke="url(#eiRibB)" stroke-width="4" stroke-linecap="round"/>
+                <g fill="#00c2f0"><circle cx="300" cy="300" r="6"/><circle cx="480" cy="440" r="4"/><circle cx="120" cy="160" r="4"/><circle cx="480" cy="160" r="4"/><circle cx="120" cy="440" r="4"/></g>
+              </g>
+            </svg>
+            <div class="pr-badge b1"><span class="prb-ic"><svg viewBox="0 0 24 24" fill="none"><rect x="3" y="4" width="18" height="6" rx="1.5" stroke="currentColor" stroke-width="1.6"/><rect x="3" y="14" width="18" height="6" rx="1.5" stroke="currentColor" stroke-width="1.6"/><path d="M7 7h.01M7 17h.01" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg></span><span>Networking</span></div>
+            <div class="pr-badge b2"><span class="prb-ic"><svg viewBox="0 0 24 24" fill="none"><path d="M6.5 19a4.5 4.5 0 0 1-.5-8.97A6 6 0 0 1 17.7 9.2a4 4 0 0 1-.2 9.8Z" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"/></svg></span><span>Cloud</span></div>
+            <div class="pr-badge b3"><span class="prb-ic"><svg viewBox="0 0 24 24" fill="none"><ellipse cx="12" cy="6" rx="7" ry="3" stroke="currentColor" stroke-width="1.6"/><path d="M5 6v6c0 1.66 3.13 3 7 3s7-1.34 7-3V6M5 12v6c0 1.66 3.13 3 7 3s7-1.34 7-3v-6" stroke="currentColor" stroke-width="1.6"/></svg></span><span>Data Centre</span></div>
+          </div>
+        </div>
+      </div>
+
+      <div class="pr-flagship-tags-label"><span>Key Solutions</span></div>
+      <div class="pr-flagship-tags">
+        <span>Enterprise Networking</span><span>Wireless Infrastructure</span><span>Servers</span><span>Storage</span>
+        <span>Hyper-Converged Infrastructure</span><span>Data Centres</span><span>Cloud Solutions</span><span>Hybrid Cloud</span>
+        <span>Virtualization</span><span>Backup &amp; Disaster Recovery</span><span>End User Computing</span><span>Infrastructure Monitoring</span>
+        <span>IT Modernization</span><span>Business Continuity</span><span>Infrastructure Security</span>
+      </div>
+    </div>
+
+    <!-- CUSTOMER EXPERIENCE -->
+    <div class="pr-flagship pr-flagship--sub reveal" id="customer-experience">
+      <div class="pr-flagship-top rev">
+        <div class="pr-flagship-copy">
+          <span class="pr-flagship-badge pr-badge-outline">
+            <svg viewBox="0 0 24 24" fill="none"><path d="M21 12a8.5 8.5 0 0 1-12.3 7.6L3 21l1.4-5.7A8.5 8.5 0 1 1 21 12Z" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"/><path d="M9 11h6M9 14h4" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></svg>
+            Core Practice
+          </span>
+          <h2>Customer Experience Solutions</h2>
+          <p class="pr-lead">Customer expectations continue to evolve, requiring organizations to deliver personalized, connected, and intelligent interactions across every communication channel.</p>
+          <p>Trident MEA provides comprehensive customer experience solutions that improve engagement, streamline operations, and enhance employee productivity through advanced communication technologies.</p>
+          <a class="btn btn-primary" href="communications-solutions.html">Explore Customer Experience
+            <svg width="17" height="17" viewBox="0 0 24 24" fill="none"><path d="M5 12h14M13 6l6 6-6 6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          </a>
+        </div>
+
+        <div class="hc-visual">
+          <div class="practice-stage cx" aria-hidden="true">
+            <div class="practice-glow"></div>
+            <svg class="practice-scene" viewBox="0 0 600 600" fill="none">
+              <defs>
+                <linearGradient id="cxRibA" x1="0" y1="0" x2="1" y2="1">
+                  <stop offset="0" stop-color="#009cd9" stop-opacity="0"/>
+                  <stop offset=".45" stop-color="#7c6ff0" stop-opacity=".85"/>
+                  <stop offset=".85" stop-color="#e06bc4" stop-opacity=".7"/>
+                  <stop offset="1" stop-color="#e06bc4" stop-opacity="0"/>
+                </linearGradient>
+                <linearGradient id="cxRibB" x1="0" y1="1" x2="1" y2="0">
+                  <stop offset="0" stop-color="#009cd9" stop-opacity="0"/>
+                  <stop offset=".5" stop-color="#00c2f0" stop-opacity=".85"/>
+                  <stop offset="1" stop-color="#5bd3f7" stop-opacity="0"/>
+                </linearGradient>
+                <filter id="cxBlur" x="-40%" y="-40%" width="180%" height="180%"><feGaussianBlur stdDeviation="8"/></filter>
+              </defs>
+              <g class="practice-background practice-bg-cx">
+                <circle cx="300" cy="300" r="25" fill="none" stroke="#7c6ff0" stroke-width="1.8" opacity="0.7"/>
+                <path d="M 300 300 L 420 240" stroke="#e06bc4" stroke-width="1.5" fill="none" opacity="0.5"/>
+                <path d="M 300 300 L 400 420" stroke="#009cd9" stroke-width="1.5" fill="none" opacity="0.5"/>
+                <path d="M 300 300 L 180 420" stroke="#e06bc4" stroke-width="1.5" fill="none" opacity="0.5"/>
+                <path d="M 300 300 L 140 240" stroke="#009cd9" stroke-width="1.5" fill="none" opacity="0.5"/>
+                <circle cx="420" cy="240" r="12" fill="none" stroke="#7c6ff0" stroke-width="1.2"/>
+                <circle cx="400" cy="420" r="12" fill="none" stroke="#e06bc4" stroke-width="1.2"/>
+                <circle cx="180" cy="420" r="12" fill="none" stroke="#009cd9" stroke-width="1.2"/>
+                <circle cx="140" cy="240" r="12" fill="none" stroke="#7c6ff0" stroke-width="1.2"/>
+                <!-- Chat bubble icons at touchpoints -->
+                <path d="M 410 230 L 425 230 Q 430 230 430 235 L 430 245 Q 430 250 425 250 L 413 250 L 410 253 L 413 250 L 413 250 Q 408 250 408 245 L 408 235 Q 408 230 413 230 Z" fill="none" stroke="#7c6ff0" stroke-width="1.2" opacity="0.8"/>
+                <path d="M 390 410 L 405 410 Q 410 410 410 415 L 410 425 Q 410 430 405 430 L 393 430 L 390 433 L 393 430 Q 388 430 388 425 L 388 415 Q 388 410 393 410 Z" fill="none" stroke="#e06bc4" stroke-width="1.2" opacity="0.8"/>
+                <path d="M 170 410 L 185 410 Q 190 410 190 415 L 190 425 Q 190 430 185 430 L 173 430 L 170 433 L 173 430 Q 168 430 168 425 L 168 415 Q 168 410 173 410 Z" fill="none" stroke="#009cd9" stroke-width="1.2" opacity="0.8"/>
+              </g>
+              <g class="practice-spin practice-spin-cx">
+                <path d="M300,300 C300,215 365,168 450,150" stroke="url(#cxRibB)" stroke-width="5" stroke-linecap="round"/>
+                <path d="M300,300 C388,300 448,352 472,438" stroke="url(#cxRibA)" stroke-width="16" stroke-linecap="round" filter="url(#cxBlur)" opacity=".45"/>
+                <path d="M300,300 C388,300 448,352 472,438" stroke="url(#cxRibA)" stroke-width="6" stroke-linecap="round"/>
+                <path d="M300,300 C232,362 165,352 122,420" stroke="url(#cxRibB)" stroke-width="4.5" stroke-linecap="round"/>
+                <path d="M300,300 C228,252 178,190 150,148" stroke="url(#cxRibA)" stroke-width="4" stroke-linecap="round" opacity=".8"/>
+                <circle cx="300" cy="300" r="7" fill="#7c6ff0"/>
+                <g fill="#00c2f0"><circle cx="450" cy="150" r="4"/><circle cx="472" cy="438" r="4"/><circle cx="122" cy="420" r="4"/><circle cx="150" cy="148" r="4"/></g>
+              </g>
+            </svg>
+            <div class="pr-badge b1"><span class="prb-ic"><svg viewBox="0 0 24 24" fill="none"><path d="M21 12a8.5 8.5 0 0 1-12.3 7.6L3 21l1.4-5.7A8.5 8.5 0 1 1 21 12Z" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"/><path d="M9 11h6M9 14h4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg></span><span>Contact Centre</span></div>
+            <div class="pr-badge b2"><span class="prb-ic"><svg viewBox="0 0 24 24" fill="none"><path d="M4 12a8 8 0 0 1 16 0v5a3 3 0 0 1-3 3h-2" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/><rect x="3" y="12" width="4" height="6" rx="1.5" stroke="currentColor" stroke-width="1.6"/><rect x="17" y="12" width="4" height="6" rx="1.5" stroke="currentColor" stroke-width="1.6"/></svg></span><span>Unified Comms</span></div>
+            <div class="pr-badge b3"><span class="prb-ic"><svg viewBox="0 0 24 24" fill="none"><rect x="4" y="7" width="16" height="12" rx="3" stroke="currentColor" stroke-width="1.6"/><path d="M12 3v4M8.5 12v2M15.5 12v2" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/><circle cx="12" cy="3" r="1.4" fill="currentColor"/></svg></span><span>AI Automation</span></div>
+          </div>
+        </div>
+      </div>
+
+      <div class="pr-flagship-tags-label"><span>Key Solutions</span></div>
+      <div class="pr-flagship-tags">
+        <span>Unified Communications</span><span>Enterprise Voice</span><span>IP Telephony</span><span>Contact Centres</span>
+        <span>AI Automation</span><span>Voice Bots</span><span>Chatbots</span><span>Omnichannel Engagement</span>
+        <span>Email</span><span>WhatsApp Integration</span><span>SMS</span><span>Social Media Integration</span>
+        <span>Quality Management</span><span>Call Recording</span><span>Speech Analytics</span><span>Workforce Engagement</span>
+        <span>Digital Collaboration</span>
+      </div>
+    </div>
+
+    <!-- PROFESSIONAL & MANAGED SERVICES -->
+    <div class="pr-flagship pr-flagship--sub reveal" id="professional-services">
+      <div class="pr-flagship-top">
+        <div class="pr-flagship-copy">
+          <span class="pr-flagship-badge pr-badge-outline">
+            <svg viewBox="0 0 24 24" fill="none"><circle cx="12" cy="12" r="3.2" stroke="currentColor" stroke-width="1.6"/><path d="M12 4.5V7M12 17v2.5M4.5 12H7M17 12h2.5M6.7 6.7l1.8 1.8M15.5 15.5l1.8 1.8M17.3 6.7l-1.8 1.8M8.5 15.5l-1.8 1.8" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></svg>
+            Core Practice
+          </span>
+          <h2>Professional &amp; Managed Services</h2>
+          <p class="pr-lead">Technology investments deliver maximum value only when supported by expert planning, implementation, and lifecycle management.</p>
+          <p>Our Professional Services practice helps organizations successfully deploy, integrate, optimize, and manage mission-critical technology platforms while reducing operational complexity.</p>
+          <a class="btn btn-primary" href="solutions.html">Explore Professional Services
+            <svg width="17" height="17" viewBox="0 0 24 24" fill="none"><path d="M5 12h14M13 6l6 6-6 6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          </a>
+        </div>
+
+        <div class="hc-visual">
+          <div class="practice-stage" aria-hidden="true">
+            <div class="practice-glow"></div>
+            <svg class="practice-scene" viewBox="0 0 600 600" fill="none">
+              <defs>
+                <linearGradient id="psRibA" x1="0" y1="0" x2="1" y2="1">
+                  <stop offset="0" stop-color="#5bd3f7" stop-opacity="0"/>
+                  <stop offset=".4" stop-color="#00c2f0" stop-opacity=".9"/>
+                  <stop offset=".8" stop-color="#009cd9" stop-opacity=".9"/>
+                  <stop offset="1" stop-color="#003060" stop-opacity="0"/>
+                </linearGradient>
+                <linearGradient id="psRibB" x1="1" y1="1" x2="0" y2="0">
+                  <stop offset="0" stop-color="#1bb6ec" stop-opacity="0"/>
+                  <stop offset=".5" stop-color="#63b6e0" stop-opacity=".85"/>
+                  <stop offset="1" stop-color="#1bb6ec" stop-opacity="0"/>
+                </linearGradient>
+                <filter id="psBlur" x="-40%" y="-40%" width="180%" height="180%"><feGaussianBlur stdDeviation="8"/></filter>
+              </defs>
+              <g class="practice-background practice-bg-ps">
+                <circle cx="300" cy="300" r="50" fill="none" stroke="#009cd9" stroke-width="1.5" opacity="0.5"/>
+                <circle cx="300" cy="300" r="90" fill="none" stroke="#2f9bd4" stroke-width="1.5" opacity="0.4"/>
+                <circle cx="300" cy="300" r="120" fill="none" stroke="#63b6e0" stroke-width="1.2" opacity="0.3"/>
+                <circle cx="300" cy="300" r="18" fill="none" stroke="#009cd9" stroke-width="1.8"/>
+                <circle cx="300" cy="180" r="12" fill="none" stroke="#2f9bd4" stroke-width="1.5"/>
+                <circle cx="400" cy="280" r="12" fill="none" stroke="#2f9bd4" stroke-width="1.5"/>
+                <circle cx="370" cy="400" r="12" fill="none" stroke="#2f9bd4" stroke-width="1.5"/>
+                <circle cx="230" cy="400" r="12" fill="none" stroke="#2f9bd4" stroke-width="1.5"/>
+                <line x1="300" y1="300" x2="300" y2="180" stroke="#63b6e0" stroke-width="1.2" opacity="0.5"/>
+                <line x1="300" y1="300" x2="400" y2="280" stroke="#63b6e0" stroke-width="1.2" opacity="0.5"/>
+                <line x1="300" y1="300" x2="370" y2="400" stroke="#63b6e0" stroke-width="1.2" opacity="0.5"/>
+                <line x1="300" y1="300" x2="230" y2="400" stroke="#63b6e0" stroke-width="1.2" opacity="0.5"/>
+                <!-- Gear/wrench icons at service nodes -->
+                <g fill="none" stroke="#2f9bd4" stroke-width="1.2" opacity="0.8">
+                  <circle cx="300" cy="172" r="7"/>
+                  <line x1="293" y1="172" x2="307" y2="172"/>
+                  <line x1="300" y1="165" x2="300" y2="179"/>
+                </g>
+                <g fill="none" stroke="#2f9bd4" stroke-width="1.2" opacity="0.8">
+                  <circle cx="395" cy="280" r="7"/>
+                  <line x1="388" y1="280" x2="402" y2="280"/>
+                  <line x1="395" y1="273" x2="395" y2="287"/>
+                </g>
+                <g fill="none" stroke="#2f9bd4" stroke-width="1.2" opacity="0.8">
+                  <circle cx="370" cy="395" r="7"/>
+                  <line x1="363" y1="395" x2="377" y2="395"/>
+                  <line x1="370" y1="388" x2="370" y2="402"/>
+                </g>
+              </g>
+              <g class="practice-spin practice-spin-ps">
+                <path d="M300,190 A110,110 0 1 1 190,300" stroke="url(#psRibA)" stroke-width="16" stroke-linecap="round" filter="url(#psBlur)" opacity=".4"/>
+                <path d="M300,190 A110,110 0 1 1 190,300" stroke="url(#psRibA)" stroke-width="6" stroke-linecap="round"/>
+                <path d="M300,140 A160,160 0 1 0 460,300" stroke="url(#psRibB)" stroke-width="4.5" stroke-linecap="round"/>
+                <path d="M300,230 A70,70 0 1 1 230,300" stroke="url(#psRibA)" stroke-width="3.5" stroke-linecap="round" opacity=".8"/>
+                <circle cx="300" cy="300" r="6" fill="#00c2f0"/>
+                <circle cx="300" cy="190" r="4" fill="#009cd9"/>
+                <circle cx="460" cy="300" r="4" fill="#63b6e0"/>
+              </g>
+            </svg>
+            <div class="pr-badge b1"><span class="prb-ic"><svg viewBox="0 0 24 24" fill="none"><path d="M12 3l2 4.3 4.7.6-3.4 3.3.8 4.6L12 13.7 7.9 15.8l.8-4.6L5.3 7.9 10 7.3Z" stroke="currentColor" stroke-width="1.5" stroke-linejoin="round"/></svg></span><span>Consulting</span></div>
+            <div class="pr-badge b2"><span class="prb-ic"><svg viewBox="0 0 24 24" fill="none"><circle cx="12" cy="12" r="3.2" stroke="currentColor" stroke-width="1.6"/><path d="M12 4.5V7M12 17v2.5M4.5 12H7M17 12h2.5M6.7 6.7l1.8 1.8M15.5 15.5l1.8 1.8M17.3 6.7l-1.8 1.8M8.5 15.5l-1.8 1.8" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg></span><span>Managed Services</span></div>
+            <div class="pr-badge b3"><span class="prb-ic"><svg viewBox="0 0 24 24" fill="none"><path d="M12 3a9 9 0 1 0 9 9" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/><path d="M12 7v5l3 2" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg></span><span>24&times;7 Support</span></div>
+          </div>
+        </div>
+      </div>
+
+      <div class="pr-flagship-tags-label"><span>Professional Services Portfolio</span></div>
+      <div class="pr-flagship-tags">
+        <span>Technology Consulting</span><span>Solution Architecture</span><span>Project Management</span><span>Implementation Services</span>
+        <span>Migration Services</span><span>Integration Services</span><span>Training</span><span>Documentation</span>
+        <span>Knowledge Transfer</span><span>Resident Engineers</span><span>Managed Services</span><span>Annual Maintenance Contracts</span>
+        <span>Remote Support</span><span>24&times;7 Helpdesk</span><span>Preventive Maintenance</span><span>Health Checks</span>
+        <span>Performance Optimization</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ WHY TRIDENT ============ -->
+<section class="section whyx" id="why">
+  <div class="wrap">
+    <div class="section-head center reveal">
+      <span class="eyebrow">Why Trident</span>
+      <h2>Why Organizations Choose Trident MEA</h2>
+      <p class="lead">Technology projects are about more than successful implementation. They require trusted advisors, experienced engineers, and long-term partnerships that continue creating business value well beyond deployment.</p>
+    </div>
+    <div class="why-grid">
+      <div class="why-card reveal">
+        <span class="why-ic"><svg viewBox="0 0 24 24" fill="none"><path d="M12 21s7-5.6 7-11a7 7 0 1 0-14 0c0 5.4 7 11 7 11Z" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"/><circle cx="12" cy="10" r="2.4" stroke="currentColor" stroke-width="1.6"/></svg></span>
+        <h4>Regional Presence</h4>
+        <p>Local delivery capabilities across the UAE, Oman, Saudi Arabia, and India.</p>
+      </div>
+      <div class="why-card reveal d1">
+        <span class="why-ic"><svg viewBox="0 0 24 24" fill="none"><path d="M12 15a6 6 0 1 0 0-12 6 6 0 0 0 0 12Z" stroke="currentColor" stroke-width="1.6"/><path d="M9.5 9l1.8 1.8L15 7.2" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/><path d="M8.2 13.8 7 21l5-3 5 3-1.2-7.2" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
+        <h4>Certified Engineering</h4>
+        <p>Highly skilled professionals delivering complex enterprise technology projects.</p>
+      </div>
+      <div class="why-card reveal d2">
+        <span class="why-ic"><svg viewBox="0 0 24 24" fill="none"><path d="M3 12h4l2-5 4 10 2-5h6" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
+        <h4>Healthcare Expertise</h4>
+        <p>Dedicated specialists supporting hospitals, laboratories, and healthcare providers.</p>
+      </div>
+      <div class="why-card reveal">
+        <span class="why-ic"><svg viewBox="0 0 24 24" fill="none"><circle cx="6" cy="18" r="2.4" stroke="currentColor" stroke-width="1.6"/><circle cx="18" cy="6" r="2.4" stroke="currentColor" stroke-width="1.6"/><circle cx="18" cy="18" r="2.4" stroke="currentColor" stroke-width="1.6"/><circle cx="6" cy="6" r="2.4" stroke="currentColor" stroke-width="1.6"/><path d="M8.4 6h7.2M6 8.4v7.2M18 8.4v7.2M8.4 18h7.2" stroke="currentColor" stroke-width="1.6"/></svg></span>
+        <h4>Strategic Partnerships</h4>
+        <p>Collaborating with leading global technology vendors to deliver best-in-class solutions.</p>
+      </div>
+      <div class="why-card reveal d1">
+        <span class="why-ic"><svg viewBox="0 0 24 24" fill="none"><path d="M4 17V7a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2v10" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/><path d="M8 21h8M12 17v4" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/><path d="M8 12l2.5 2.5L16 9" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
+        <h4>End-to-End Delivery</h4>
+        <p>From consulting and architecture to implementation, optimization, and ongoing support.</p>
+      </div>
+      <div class="why-card reveal d2">
+        <span class="why-ic"><svg viewBox="0 0 24 24" fill="none"><path d="M3 17l6-6 4 4 8-8" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/><path d="M15 7h6v6" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
+        <h4>Customer Success</h4>
+        <p>Long-term partnerships built on trust, responsiveness, and measurable business outcomes.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ INDUSTRIES ============ -->
+<section class="section industries" id="industries">
+  <div class="wrap">
+    <div class="section-head reveal">
+      <span class="eyebrow">Industries We Serve</span>
+      <h2>Built Around the Needs of Critical Industries</h2>
+      <p class="lead">Every industry operates differently. Our teams understand sector-specific operational challenges and design technology solutions aligned with regulatory requirements, business priorities, and long-term growth strategies.</p>
+    </div>
+    <div class="sectors-grid cols5" id="sectorsGrid"><!-- injected --></div>
+    <div class="industries-cta reveal">
+      <a class="link-arrow" href="industries.html">Explore Industries
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none"><path d="M5 12h14M13 6l6 6-6 6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+      </a>
+    </div>
   </div>
 </section>
 
@@ -181,55 +705,6 @@
   <div class="marquee rev reveal"><div class="marquee-track" data-row="b"></div></div>
 </section>
 
-<!-- ============ INDUSTRIES / SECTORS ============ -->
-<section class="section industries" id="industries">
-  <!-- shared gradient defs for dual-material icons -->
-  <svg width="0" height="0" style="position:absolute" aria-hidden="true"><defs>
-    <linearGradient id="tgSolid" x1="0" y1="0" x2="0.4" y2="1">
-      <stop offset="0" stop-color="#1bb6ec"/><stop offset="0.5" stop-color="#009cd9"/><stop offset="1" stop-color="#003060"/>
-    </linearGradient>
-    <linearGradient id="tgGlass" x1="0.1" y1="0" x2="0.6" y2="1">
-      <stop offset="0" stop-color="#ffffff" stop-opacity="0.95"/><stop offset="0.55" stop-color="#dceaf5" stop-opacity="0.82"/><stop offset="1" stop-color="#bcd2e6" stop-opacity="0.78"/>
-    </linearGradient>
-    <linearGradient id="tgEdge" x1="0" y1="0" x2="0.5" y2="1">
-      <stop offset="0" stop-color="#ffffff" stop-opacity="0.95"/><stop offset="1" stop-color="#a9c2d8" stop-opacity="0.55"/>
-    </linearGradient>
-  </defs></svg>
-
-  <div class="wrap">
-    <div class="section-head reveal">
-      <span class="eyebrow">Industries We Serve</span>
-      <h2>Built for the demands of critical sectors</h2>
-      <p class="lead">Each industry comes with unique operational and regulatory challenges. We design solutions that align with those realities.</p>
-    </div>
-    <div class="sectors-grid" id="sectorsGrid"><!-- injected --></div>
-  </div>
-</section>
-
-<!-- ============ PARTNERS ============ -->
-<section class="section partners" id="partners">
-  <div class="wrap">
-    <div class="section-head reveal">
-      <span class="eyebrow">Technology Partners</span>
-      <h2>Partnering with global technology leaders</h2>
-      <p class="lead">We collaborate with industry-leading technology providers to deliver reliable, future-ready solutions.</p>
-    </div>
-
-    <div class="tier-label reveal"><span>Strategic Alliances</span></div>
-    <div class="partner-top reveal d1">
-      <div class="squircle"><img src="partners/p11.png" alt="Avaya" loading="lazy"></div>
-      <div class="squircle"><img src="partners/p21.png" alt="Cisco" loading="lazy"></div>
-      <div class="squircle"><img src="partners/p13.png" alt="Microsoft" loading="lazy"></div>
-      <div class="squircle"><img src="partners/p06.png" alt="Dell" loading="lazy"></div>
-      <div class="squircle"><img src="partners/p39.png" alt="Hewlett Packard Enterprise" loading="lazy"></div>
-      <div class="squircle"><img src="partners/p02.png" alt="Aruba" loading="lazy"></div>
-    </div>
-
-    <div class="tier-label reveal"><span>Our Full Partner Ecosystem</span></div>
-    <div class="partner-grid reveal d1" id="partnerGrid"></div>
-  </div>
-</section>
-
 </main>
 
 <!-- ============ CTA ============ -->
@@ -237,19 +712,20 @@
   <div class="wrap">
     <div class="cta-inner reveal">
       <div>
-        <h2>Let's build the right technology foundation for your business</h2>
-        <p>Connect with our team to explore solutions tailored to your environment.</p>
+        <h2>Let's Build Your Digital Future Together</h2>
+        <p>Whether you're modernizing enterprise infrastructure, transforming customer engagement, strengthening healthcare operations, or planning your next digital initiative, our specialists are ready to help.</p>
         <div class="cta-actions">
-          <a class="btn btn-primary" href="mailto:info@tridentmea.com">Connect with an expert
+          <a class="btn btn-primary" href="contact.html">Talk to an Expert
             <svg width="17" height="17" viewBox="0 0 24 24" fill="none"><path d="M5 12h14M13 6l6 6-6 6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
           </a>
+          <a class="btn btn-soft" href="mailto:info@tridentmea.com">Contact Our Team</a>
         </div>
       </div>
       <div class="cta-lines" aria-hidden="true">
         <span class="licon"><svg viewBox="0 0 24 24" fill="none"><circle cx="12" cy="12" r="9" stroke="currentColor"/><path d="M3 12h18M12 3c2.5 2.5 2.5 15 0 18M12 3c-2.5 2.5-2.5 15 0 18" stroke="currentColor"/></svg></span>
         <span class="licon"><svg viewBox="0 0 24 24" fill="none"><path d="M4 12a8 8 0 0 1 16 0v5a3 3 0 0 1-3 3h-2" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"/><rect x="3" y="12" width="4" height="6" rx="1.5" stroke="currentColor"/><rect x="17" y="12" width="4" height="6" rx="1.5" stroke="currentColor"/></svg></span>
         <span class="licon"><svg viewBox="0 0 24 24" fill="none"><path d="M12 3l8 4v5c0 4.5-3.4 7.6-8 9-4.6-1.4-8-4.5-8-9V7l8-4Z" stroke="currentColor" stroke-linejoin="round"/><path d="M9 12l2 2 4-4" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
-        <span class="licon"><svg viewBox="0 0 24 24" fill="none"><path d="M7 8l-4 4 4 4M17 8l4 4-4 4M14 4l-4 16" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
+        <span class="licon"><svg viewBox="0 0 24 24" fill="none"><path d="M3 12h4l2-5 4 10 2-5h6" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
       </div>
     </div>
   </div>
@@ -263,26 +739,25 @@
         <a class="brand" href="index.html">
           <img class="brand-logo" src="trident-logo.png" alt="Trident MEA Technologies" width="300" height="72">
         </a>
-        <p>Trident MEA Technologies delivers advanced CX and IT solutions across the Middle East, Africa, and South Asia — helping businesses improve performance, reduce costs, and scale with confidence.</p>
+        <p>Trident MEA is a consulting-led technology partner delivering enterprise infrastructure, customer experience, healthcare, and professional services across the Middle East, Africa, and South Asia.</p>
       </div>
       <div class="f-col">
-        <h4>Solutions</h4>
+        <h4>Practices</h4>
         <ul>
-          <li><a href="#solutions">Healthcare Solutions</a></li>
-          <li><a href="#solutions">Hospitality Solutions</a></li>
-          <li><a href="#solutions">IT Infrastructure Solutions</a></li>
-          <li><a href="#solutions">Unified Communications &amp; Contact Center</a></li>
+          <li><a href="it-infrastructure-solutions.html">Enterprise Infrastructure</a></li>
+          <li><a href="communications-solutions.html">Customer Experience</a></li>
+          <li><a href="healthcare-solutions.html">Healthcare &amp; Biomedical</a></li>
+          <li><a href="solutions.html">Professional Services</a></li>
         </ul>
       </div>
       <div class="f-col">
         <h4>Quick Links</h4>
         <ul>
-          <li><a href="about.html">About Us</a></li>
-          <li><a href="industries.html">Markets We Serve</a></li>
-          <li><a href="partners.html">Partners</a></li>
-          <li><a href="clients.html">Clients</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="industries.html">Industries</a></li>
+          <li><a href="partners.html">Technology Partners</a></li>
           <li><a href="careers.html">Careers</a></li>
-          <li><a href="contact.html">Contact Us</a></li>
+          <li><a href="contact.html">Contact</a></li>
         </ul>
       </div>
       <div class="f-col">
@@ -301,6 +776,6 @@
   </div>
 </footer>
 
-<script src="script-v2.js?v=5"></script>
+<script src="script-v2.js?v=7"></script>
 </body>
 </html>
