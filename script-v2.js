@@ -224,16 +224,19 @@
   window.addEventListener("scroll", onScroll, { passive: true }); onScroll();
 
   /* ---------- Dropdown ---------- */
-  var solDrop = document.getElementById("solDrop");
-  if (solDrop) {
-    var btn = solDrop.querySelector("button"), timer;
-    function open() { clearTimeout(timer); solDrop.classList.add("open"); btn.setAttribute("aria-expanded","true"); }
-    function close() { solDrop.classList.remove("open"); btn.setAttribute("aria-expanded","false"); }
-    solDrop.addEventListener("mouseenter", open);
-    solDrop.addEventListener("mouseleave", function () { timer = setTimeout(close, 120); });
-    btn.addEventListener("click", function (e) { e.preventDefault(); solDrop.classList.contains("open") ? close() : open(); });
-    document.addEventListener("click", function (e) { if (!solDrop.contains(e.target)) close(); });
+  function setupDropdown(dropId) {
+    var drop = document.getElementById(dropId);
+    if (!drop) return;
+    var btn = drop.querySelector("button"), timer;
+    function open() { clearTimeout(timer); drop.classList.add("open"); btn.setAttribute("aria-expanded","true"); }
+    function close() { drop.classList.remove("open"); btn.setAttribute("aria-expanded","false"); }
+    drop.addEventListener("mouseenter", open);
+    drop.addEventListener("mouseleave", function () { timer = setTimeout(close, 120); });
+    btn.addEventListener("click", function (e) { e.preventDefault(); drop.classList.contains("open") ? close() : open(); });
+    document.addEventListener("click", function (e) { if (!drop.contains(e.target)) close(); });
   }
+  setupDropdown("aboutDrop");
+  setupDropdown("solDrop");
 
   /* ---------- Mobile menu ---------- */
   var ham = document.getElementById("hamburger"), panel = document.getElementById("mobilePanel");
@@ -244,8 +247,12 @@
   panel.querySelectorAll("a").forEach(function (a) {
     a.addEventListener("click", function () { document.body.classList.remove("menu-open"); ham.setAttribute("aria-expanded","false"); });
   });
-  var mpSol = document.getElementById("mpSol");
-  if (mpSol) mpSol.querySelector("button").addEventListener("click", function () { mpSol.classList.toggle("open"); });
+  function setupMobileDropdown(mpId) {
+    var mp = document.getElementById(mpId);
+    if (mp) mp.querySelector("button").addEventListener("click", function () { mp.classList.toggle("open"); });
+  }
+  setupMobileDropdown("mpAbout");
+  setupMobileDropdown("mpSol");
 
   /* ---------- Reveal ---------- */
   var reveals = document.querySelectorAll(".reveal");
