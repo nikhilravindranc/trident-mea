@@ -1,0 +1,26 @@
+<svg viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="servGrad" x1="0" y1="0" x2="100" y2="100">
+      <stop offset="0" stop-color="#f97316"/>
+      <stop offset="0.5" stop-color="#ec4899"/>
+      <stop offset="1" stop-color="#d946ef"/>
+    </linearGradient>
+  </defs>
+  <g stroke="url(#servGrad)" stroke-width="4" stroke-linecap="round" stroke-linejoin="round">
+    <!-- Person head -->
+    <circle cx="28" cy="25" r="8"/>
+    <!-- Person body -->
+    <path d="M 20 35 Q 20 33 28 33 Q 36 33 36 35 L 36 55 L 20 55 Z"/>
+    <!-- Person arms/shoulders -->
+    <path d="M 20 38 L 12 42"/>
+    <path d="M 36 38 L 44 42"/>
+    <!-- Briefcase/folder -->
+    <rect x="20" y="48" width="16" height="14" rx="1"/>
+    <rect x="24" y="45" width="8" height="4" rx="1"/>
+    <!-- Chat bubble -->
+    <path d="M 50 28 Q 50 22 58 22 L 75 22 Q 80 22 80 28 L 80 48 Q 80 52 75 52 L 65 52 L 60 58 L 62 52 L 58 52 Q 50 52 50 48 Z"/>
+    <!-- Chat lines -->
+    <line x1="57" y1="32" x2="73" y2="32"/>
+    <line x1="57" y1="40" x2="73" y2="40"/>
+  </g>
+</svg>

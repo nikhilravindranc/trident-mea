@@ -30,40 +30,52 @@
     return '<div class="pill-card"><img src="partners/' + p[0] + '" alt="' + p[1] + '" loading="lazy"></div>';
   }).join("");
 
-  /* ---------- Sectors (dual-material 3D icons) ---------- */
+  /* ---------- Homepage partner groups (by solution area) ---------- */
+  var partnerGroups = {
+    partnersInfra: [
+      ["p01.png","Juniper Networks"],["p03.png","Ruckus Wireless"],["p04.png","Fortinet"],["p05.png","Sophos"],
+      ["p07.png","EnGenius"],["p08.png","Lenovo"],["p10.png","VMware"],["p12.png","Veeam"],
+      ["p18.png","Hikvision"],["p19.png","APC"],["p20.png","Schneider Electric"],["p29.png","Zebra"],["p40.png","Extreme Networks"]
+    ],
+    partnersComms: [
+      ["p09.png","SMART"],["p14.png","ConVox"],["p15.png","Yeastar"],["p16.png","Grandstream"],["p17.png","NovelVox"],
+      ["p22.png","AudioCodes"],["p24.png","Sennheiser"],["p27.png","JVC"],["p28.jpeg","Sony"],
+      ["p33.png","Poly"],["p36.png","Mitel"],["p37.png","Barco"],["p38.png","Jabra"]
+    ],
+    partnersHealth: [
+      ["p25.png","Ergotron"],["p31.png","Cybernet"],["p32.png","GE HealthCare"],["p34.png","Philips Healthcare"]
+    ]
+  };
+  Object.keys(partnerGroups).forEach(function (id) {
+    var el = document.getElementById(id);
+    if (!el) return;
+    el.innerHTML = partnerGroups[id].map(function (p) {
+      return '<div class="pill-card"><img src="partners/' + p[0] + '" alt="' + p[1] + '" loading="lazy"></div>';
+    }).join("");
+  });
+
+  /* ---------- Sectors (photography-led cards) ---------- */
   var SECTORS = [
-    { t: "Healthcare", d: "Supporting critical care with reliable, uninterrupted systems.",
-      p: ["M32 50 C14 38 9 27 17 20 C23 15 30 18 32 23 C34 18 41 15 47 20 C55 27 50 38 32 50 Z"] },
-    { t: "Government & Public Sector", d: "Secure, compliant infrastructure for public service delivery.",
-      p: ["M11 27 L32 14 L53 27 Z","M13 49 H51 V53 H13 Z","M18 29 H23 V47 H18 Z","M29.5 29 H34.5 V47 H29.5 Z","M41 29 H46 V47 H41 Z"] },
-    { t: "Banking & Financial Services", d: "High-performance systems built for security, compliance, and uptime.",
-      p: ["M9 21 H55 a3 3 0 0 1 3 3 V40 a3 3 0 0 1 -3 3 H9 a3 3 0 0 1 -3 -3 V24 a3 3 0 0 1 3 -3 Z","M6 28 H58 V33 H6 Z"] },
-    { t: "Hospitality", d: "Enhancing guest experience while improving operational efficiency.",
-      p: ["M32 14 L52 31 V51 H12 V31 Z"] },
-    { t: "Education", d: "Connected environments for modern learning experiences.",
-      p: ["M32 16 L57 26 L32 36 L7 26 Z","M19 31 L32 36.5 L45 31 V40 C45 44 19 44 19 40 Z"] },
-    { t: "Telecommunications", d: "Scalable infrastructure for high-demand communication networks.",
-      p: ["M14 44 H22 V53 H14 Z","M28 33 H36 V53 H28 Z","M42 22 H50 V53 H42 Z"] },
-    { t: "Oil & Gas", d: "Robust solutions designed for demanding, high-risk environments.",
-      p: ["M32 12 C32 12 47 30 47 39 A15 15 0 0 1 17 39 C17 30 32 12 32 12 Z"] },
-    { t: "Retail", d: "Integrated systems that improve customer experience and operations.",
-      p: ["M24 25 A8 8 0 0 1 40 25 L36 25 A4 4 0 0 0 28 25 Z","M15 24 H49 L52 53 H12 Z"] },
-    { t: "Manufacturing", d: "Dependable technology for continuous production environments.",
-      p: ["M10 52 V28 L24 37 V28 L38 37 V28 L52 37 V52 Z","M14 28 V15 H21 V28 Z"] }
+    { t: "Healthcare", d: "Supporting critical care with reliable, uninterrupted systems.", img: "healthcare.jpg" },
+    { t: "Government & Public Sector", d: "Secure, compliant infrastructure for public service delivery.", img: "government.jpg" },
+    { t: "Banking & Financial Services", d: "High-performance systems built for security, compliance, and uptime.", img: "banking.jpg" },
+    { t: "Hospitality", d: "Enhancing guest experience while improving operational efficiency.", img: "hospitality.jpg" },
+    { t: "Education", d: "Connected environments for modern learning experiences.", img: "education.jpg" },
+    { t: "Telecommunications", d: "Scalable infrastructure for high-demand communication networks.", img: "telecom.jpg" },
+    { t: "Oil & Gas", d: "Robust solutions designed for demanding, high-risk environments.", img: "oilgas.jpg" },
+    { t: "Retail", d: "Integrated systems that improve customer experience and operations.", img: "retail.jpg" },
+    { t: "Manufacturing", d: "Dependable technology for continuous production environments.", img: "manufacturing.jpg" }
   ];
-  function sectorIcon(paths) {
-    var solid = paths.map(function (d) { return '<path d="' + d + '" fill="url(#tgSolid)"/>'; }).join("");
-    var glass = paths.map(function (d) { return '<path d="' + d + '" fill="url(#tgGlass)" stroke="url(#tgEdge)" stroke-width="1.4" stroke-linejoin="round"/>'; }).join("");
-    return '<svg viewBox="0 0 64 64" fill="none">' +
-      '<g class="sic-solid" transform="translate(6,-4)">' + solid + '</g>' +
-      '<g class="sic-glass">' + glass + '</g></svg>';
-  }
   var sgrid = document.getElementById("sectorsGrid");
-  if (sgrid) sgrid.innerHTML = SECTORS.map(function (s, i) {
-    return '<article class="sector reveal' + (i % 4 ? " d" + (i % 4) : "") + '">' +
-      '<div class="sector-ic">' + sectorIcon(s.p) + '</div>' +
-      '<h3>' + s.t + '</h3><p>' + s.d + '</p></article>';
-  }).join("");
+  if (sgrid) {
+    sgrid.innerHTML = SECTORS.map(function (s, i) {
+      return '<article class="sector reveal' + (i % 4 ? " d" + (i % 4) : "") + '">' +
+        '<div class="sector-image" style="background-image:url(&quot;images/industries/' + s.img + '&quot;)"></div>' +
+        '<div class="sector-overlay"><h3>' + s.t + '</h3><p>' + s.d + '</p></div></article>';
+    }).join("");
+    var cta = document.getElementById("industriesCta");
+    if (cta) sgrid.appendChild(cta);
+  }
 
   /* ---------- Who We Are — 4 dual-material columns ---------- */
   var FOURCOL = [
