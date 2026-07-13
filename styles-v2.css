@@ -1325,7 +1325,7 @@ body.menu-open .mobile-panel { transform: none; visibility: visible; }
   .partner-grid { grid-template-columns: repeat(4,1fr); }
   .statrow { grid-template-columns: 160px 1fr; }
 }
-@media (max-width: 1850px) {
+@media (max-width: 1200px) {
   .nav-menu, .nav-tools { display: none; }
   .hamburger { display: flex; }
 }
