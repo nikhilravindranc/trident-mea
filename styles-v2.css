@@ -188,36 +188,20 @@ body.menu-open .mobile-panel { transform: none; visibility: visible; }
   pointer-events: none; border-radius: 50%;
   background: radial-gradient(circle, rgba(0,156,217,.10), rgba(0,156,217,.04) 42%, transparent 68%); }
 
-/* subtle tech node pattern on left side */
-.hero::after { content: ""; position: absolute; z-index: 0; pointer-events: none;
-  left: 0; top: 0; width: 45%; height: 100%;
-  background-image:
-    /* horizontal connecting lines */
-    linear-gradient(90deg, transparent 0%, rgba(0,156,217,0.06) 45%, transparent 100%),
-    linear-gradient(90deg, transparent 0%, rgba(0,156,217,0.04) 45%, transparent 100%),
-    /* vertical connecting lines */
-    linear-gradient(0deg, transparent 0%, rgba(0,156,217,0.06) 45%, transparent 100%),
-    linear-gradient(0deg, transparent 0%, rgba(0,156,217,0.04) 45%, transparent 100%),
-    /* tech nodes (circles) - primary */
-    radial-gradient(circle, rgba(0,156,217,0.15) 2px, transparent 2px),
-    /* tech nodes (circles) - secondary */
-    radial-gradient(circle, rgba(0,156,217,0.08) 1px, transparent 1px);
-  background-size:
-    100% 100px,
-    100% 200px,
-    100px 100%,
-    200px 100%,
-    100px 100px,
-    100px 100px;
-  background-position:
-    0 0,
-    0 50px,
-    0 0,
-    50px 0,
-    0 0,
-    50px 50px;
-  -webkit-mask-image: linear-gradient(90deg, #000 0%, #000 40%, transparent 100%);
-  mask-image: linear-gradient(90deg, #000 0%, #000 40%, transparent 100%); }
+/* subtle tech hex cluster, top-left of hero */
+.hero-hexcluster { position: absolute; z-index: 0; pointer-events: none; color: var(--cyan);
+  top: -20px; left: -30px; width: 260px; height: 300px; opacity: .4;
+  -webkit-mask-image: radial-gradient(circle at 24% 20%, #000, transparent 76%);
+  mask-image: radial-gradient(circle at 24% 20%, #000, transparent 76%); }
+.hero-hexcluster svg { width: 100%; height: 100%; display: block; }
+.hero-hexcluster polygon { fill: none; stroke: currentColor; stroke-width: 2; }
+
+@media (max-width: 860px) {
+  .hero-hexcluster { opacity: .22; }
+}
+@media (max-width: 560px) {
+  .hero-hexcluster { display: none; }
+}
 .hero-grid { display: grid; grid-template-columns: 1.15fr .85fr; gap: 50px; align-items: center; position: relative; z-index: 1; }
 .hero-copy { position: relative; z-index: 2; max-width: 800px; }
 .hero-copy h1 { font-size: clamp(32px,3.6vw,52px); line-height: 1.2; margin-bottom: 20px; }
