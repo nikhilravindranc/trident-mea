@@ -30,30 +30,6 @@
     return '<div class="pill-card"><img src="partners/' + p[0] + '" alt="' + p[1] + '" loading="lazy"></div>';
   }).join("");
 
-  /* ---------- Homepage partner groups (by solution area) ---------- */
-  var partnerGroups = {
-    partnersInfra: [
-      ["p01.png","Juniper Networks"],["p03.png","Ruckus Wireless"],["p04.png","Fortinet"],["p05.png","Sophos"],
-      ["p07.png","EnGenius"],["p08.png","Lenovo"],["p10.png","VMware"],["p12.png","Veeam"],
-      ["p18.png","Hikvision"],["p19.png","APC"],["p20.png","Schneider Electric"],["p29.png","Zebra"],["p40.png","Extreme Networks"]
-    ],
-    partnersComms: [
-      ["p09.png","SMART"],["p14.png","ConVox"],["p15.png","Yeastar"],["p16.png","Grandstream"],["p17.png","NovelVox"],
-      ["p22.png","AudioCodes"],["p24.png","Sennheiser"],["p27.png","JVC"],["p28.jpeg","Sony"],
-      ["p33.png","Poly"],["p36.png","Mitel"],["p37.png","Barco"],["p38.png","Jabra"]
-    ],
-    partnersHealth: [
-      ["p25.png","Ergotron"],["p31.png","Cybernet"],["p32.png","GE HealthCare"],["p34.png","Philips Healthcare"]
-    ]
-  };
-  Object.keys(partnerGroups).forEach(function (id) {
-    var el = document.getElementById(id);
-    if (!el) return;
-    el.innerHTML = partnerGroups[id].map(function (p) {
-      return '<div class="pill-card"><img src="partners/' + p[0] + '" alt="' + p[1] + '" loading="lazy"></div>';
-    }).join("");
-  });
-
   /* ---------- Sectors (photography-led cards) ---------- */
   var SECTORS = [
     { t: "Healthcare", d: "Supporting critical care with reliable, uninterrupted systems.", img: "healthcare.jpg" },
