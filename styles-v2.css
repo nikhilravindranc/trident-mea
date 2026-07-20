@@ -191,6 +191,15 @@ body.menu-open .mobile-panel { transform: none; visibility: visible; }
   pointer-events: none; border-radius: 50%;
   background: radial-gradient(circle, rgba(0,156,217,.10), rgba(0,156,217,.04) 42%, transparent 68%); }
 
+/* signature gold wave motif — flows left→right behind hero content, above white bg */
+.hero-wave { position: absolute; inset: 0; z-index: 0; pointer-events: none;
+  background: url(images/trident-wave.svg) no-repeat center center; background-size: cover;
+  opacity: .55;
+  -webkit-mask-image: linear-gradient(90deg, rgba(0,0,0,.32) 0%, #000 40%, #000 100%);
+  mask-image: linear-gradient(90deg, rgba(0,0,0,.32) 0%, #000 40%, #000 100%); }
+@media (max-width: 860px) { .hero-wave { opacity: .40; } }
+@media (max-width: 560px) { .hero-wave { opacity: .28; } }
+
 /* subtle circuit-board motif, top-left of hero */
 .hero-circuit { position: absolute; z-index: 0; pointer-events: none; color: var(--cyan);
   top: -20px; left: -30px; width: 260px; height: 300px; opacity: .4;
@@ -223,12 +232,17 @@ body.menu-open .mobile-panel { transform: none; visibility: visible; }
 .hero-visual { position: relative; }
 .hv-stage { position: relative; width: 100%; aspect-ratio: 1 / 1; }
 .hv-glow { position: absolute; inset: 6%; border-radius: 50%; pointer-events: none; z-index: 0;
-  background: radial-gradient(circle, rgba(0,156,217,.16), rgba(0,156,217,.05) 46%, transparent 72%); }
+  background: radial-gradient(circle, rgba(245,176,66,.16), rgba(0,156,217,.05) 50%, transparent 74%); }
 .hv-skyline { position: absolute; inset: 15%; border-radius: 50%; overflow: hidden; z-index: 0;
-  box-shadow: 0 30px 70px rgba(0,48,96,.22); }
-.hv-skyline img { width: 100%; height: 100%; object-fit: cover; display: block; }
-.hv-skyline::after { content: ""; position: absolute; inset: 0; border-radius: 50%;
-  background: radial-gradient(circle, rgba(0,20,45,.15) 0%, rgba(0,20,45,.55) 100%); }
+  isolation: isolate; box-shadow: 0 30px 70px rgba(0,26,58,.42);
+  outline: 1px solid rgba(245,176,66,.45); outline-offset: -1px; }
+.hv-skyline img { width: 100%; height: 100%; object-fit: cover; display: block;
+  filter: grayscale(1) contrast(1.08) brightness(1.05); }
+/* signature duotone — midnight-navy shadows lift to a warm amber highlight (ownable brand accent) */
+.hv-skyline::before { content: ""; position: absolute; inset: 0; z-index: 1;
+  background: #0c1c3a; mix-blend-mode: lighten; }
+.hv-skyline::after { content: ""; position: absolute; inset: 0; z-index: 2;
+  background: #f5b042; mix-blend-mode: darken; }
 .hv-scene { position: relative; z-index: 1; width: 100%; height: 100%; display: block; }
 
 .hv-stats { position: absolute; inset: 0; z-index: 4; pointer-events: none; }
