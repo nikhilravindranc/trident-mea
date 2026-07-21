@@ -4,18 +4,6 @@
 (function () {
   "use strict";
 
-  /* ---------- Marquee (client logos) ---------- */
-  var clients = [];
-  for (var i = 1; i <= 47; i++) clients.push("clients/c" + String(i).padStart(2, "0") + (i === 16 ? ".svg" : ".png"));
-  var rowA = clients.slice(0, 24), rowB = clients.slice(24).concat([clients[15]]);
-  function fill(sel, list) {
-    var t = document.querySelector(sel); if (!t) return;
-    var h = list.map(function (s) { return '<div class="logo-cell"><img src="' + s + '" alt="Client logo" loading="lazy"></div>'; }).join("");
-    t.innerHTML = h + h;
-  }
-  fill('.marquee-track[data-row="a"]', rowA);
-  fill('.marquee-track[data-row="b"]', rowB);
-
   /* ---------- Partner grid ---------- */
   var partners = [
     ["p01.png","Juniper Networks"],["p03.png","Ruckus Wireless"],["p04.png","Fortinet"],["p05.png","Sophos"],
