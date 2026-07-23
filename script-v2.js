@@ -304,4 +304,27 @@
       spin.style.transition = "";
     });
   });
+
+  /* ---------- Recent Projects scroller ---------- */
+  var projTrack = document.getElementById("projTrack");
+  var projLeft = document.getElementById("projArrowLeft");
+  var projRight = document.getElementById("projArrowRight");
+  if (projTrack && projLeft && projRight) {
+    var scrollByCard = function (dir) {
+      var card = projTrack.querySelector(".proj-card");
+      var gap = 28;
+      var amount = card ? card.getBoundingClientRect().width + gap : 300;
+      projTrack.scrollBy({ left: dir * amount, behavior: "smooth" });
+    };
+    var updateArrows = function () {
+      var max = projTrack.scrollWidth - projTrack.clientWidth - 2;
+      projLeft.disabled = projTrack.scrollLeft <= 0;
+      projRight.disabled = projTrack.scrollLeft >= max;
+    };
+    projLeft.addEventListener("click", function () { scrollByCard(-1); });
+    projRight.addEventListener("click", function () { scrollByCard(1); });
+    projTrack.addEventListener("scroll", updateArrows);
+    window.addEventListener("resize", updateArrows);
+    updateArrows();
+  }
 })();

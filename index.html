@@ -5,7 +5,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Trident MEA Technologies — Consulting-Led Technology Solutions Across MEA</title>
 <meta name="description" content="Trident MEA is a consulting-led technology partner with four specialized practices — Enterprise Infrastructure, Customer Experience, Healthcare & Biomedical, and Professional Services — serving the Middle East, Africa, and South Asia.">
-<link rel="stylesheet" href="styles-v2.css?v=199">
+<link rel="stylesheet" href="styles-v2.css?v=203">
 </head>
 <body>
 
@@ -133,56 +133,73 @@
       <div class="hero-visual reveal d2" aria-hidden="true">
         <div class="hv-stage">
           <div class="hv-glow"></div>
-          <div class="hv-collage">
-            <div class="hv-quad"><img src="images/practice-healthcare-2.jpg" alt="" loading="lazy"></div>
-            <div class="hv-quad"><img src="images/practice-infrastructure-2.jpg" alt="" loading="lazy"></div>
-            <div class="hv-quad"><img src="images/practice-managed-services-2.jpg" alt="" loading="lazy"></div>
-            <div class="hv-quad"><img src="images/practice-cx-2.jpg" alt="" loading="lazy"></div>
-            <div class="hv-center-badge" aria-hidden="true">
-              <svg viewBox="0 0 24 24" fill="none">
-                <path d="M12 2.5 4 5.8v6.1c0 5.4 3.4 9.9 8 11.3 4.6-1.4 8-5.9 8-11.3V5.8L12 2.5Z" stroke="currentColor" stroke-width="1.5" stroke-linejoin="round"/>
-                <rect x="9" y="11" width="6" height="5" rx="1.1" stroke="currentColor" stroke-width="1.5"/>
-                <path d="M10.3 11V9.6a1.7 1.7 0 0 1 3.4 0V11" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
-              </svg>
-            </div>
-          </div>
 
-          <svg class="hv-scene" viewBox="0 0 600 600" fill="none">
+          <svg class="hv-scene hv-scene--pie" viewBox="0 0 600 600" fill="none">
             <defs>
               <radialGradient id="platGlow" cx="50%" cy="50%" r="50%">
                 <stop offset="0" stop-color="#009cd9" stop-opacity=".22"/>
                 <stop offset="1" stop-color="#009cd9" stop-opacity="0"/>
               </radialGradient>
+              <clipPath id="pieTop"><path d="M300,300 L102,102 A280,280 0 0,1 498,102 Z"/></clipPath>
+              <clipPath id="pieRight"><path d="M300,300 L498,102 A280,280 0 0,1 498,498 Z"/></clipPath>
+              <clipPath id="pieBottom"><path d="M300,300 L498,498 A280,280 0 0,1 102,498 Z"/></clipPath>
+              <clipPath id="pieLeft"><path d="M300,300 L102,498 A280,280 0 0,1 102,102 Z"/></clipPath>
             </defs>
 
             <!-- ambient glow -->
-            <ellipse cx="300" cy="300" rx="260" ry="230" fill="url(#platGlow)"/>
+            <ellipse cx="300" cy="300" rx="280" ry="280" fill="url(#platGlow)"/>
 
-            <!-- connector lines: badge -> anchor point -->
-            <g stroke="#9fc4e8" stroke-width="1.3" opacity=".7">
-              <path d="M300 81 C330 90 355 105 372 122"/>
-              <path d="M531 213 C 515 190 498 168 482 150"/>
-              <path d="M21 261 C 70 240 130 215 180 195"/>
-              <path d="M57 465 C 85 462 108 458 128 456"/>
+            <!-- four practice-photo pie slices -->
+            <image href="images/practice-healthcare-2.jpg" x="0" y="0" width="600" height="600" preserveAspectRatio="xMidYMid slice" clip-path="url(#pieTop)"/>
+            <image href="images/practice-infrastructure-2.jpg" x="0" y="0" width="600" height="600" preserveAspectRatio="xMidYMid slice" clip-path="url(#pieRight)"/>
+            <image href="images/practice-managed-services-2.jpg" x="0" y="0" width="600" height="600" preserveAspectRatio="xMidYMid slice" clip-path="url(#pieBottom)"/>
+            <image href="images/practice-cx-2.jpg" x="0" y="0" width="600" height="600" preserveAspectRatio="xMidYMid slice" clip-path="url(#pieLeft)"/>
+
+            <!-- cohesive tint wash over the photos -->
+            <path d="M300,300 L102,102 A280,280 0 0,1 498,102 Z" fill="#04223f" opacity=".16"/>
+            <path d="M300,300 L498,102 A280,280 0 0,1 498,498 Z" fill="#003060" opacity=".14"/>
+            <path d="M300,300 L498,498 A280,280 0 0,1 102,498 Z" fill="#04223f" opacity=".16"/>
+            <path d="M300,300 L102,498 A280,280 0 0,1 102,102 Z" fill="#003060" opacity=".14"/>
+
+            <!-- slice divider lines -->
+            <g stroke="#ffffff" stroke-width="2" opacity=".55">
+              <line x1="300" y1="300" x2="102" y2="102"/>
+              <line x1="300" y1="300" x2="498" y2="102"/>
+              <line x1="300" y1="300" x2="498" y2="498"/>
+              <line x1="300" y1="300" x2="102" y2="498"/>
             </g>
+
+            <!-- outer ring -->
+            <circle cx="300" cy="300" r="280" stroke="#ffffff" stroke-width="3"/>
+            <!-- decorative dashed ring -->
+            <circle cx="300" cy="300" r="300" stroke="#9fc4e8" stroke-width="1.3" stroke-dasharray="2 9" opacity=".6"/>
+
+            <!-- orbit dot markers -->
             <g fill="#009cd9">
-              <circle cx="372" cy="122" r="3.8"/><circle cx="482" cy="150" r="3.8"/>
-              <circle cx="180" cy="195" r="3.8"/><circle cx="128" cy="456" r="3.8"/>
+              <circle cx="300" cy="20" r="3.6"/>
+              <circle cx="580" cy="300" r="3.6"/>
+              <circle cx="300" cy="580" r="3.6"/>
+              <circle cx="20" cy="300" r="3.6"/>
             </g>
-
-            <!-- sparkle dots -->
             <g fill="#bfe0f2">
-              <circle cx="150" cy="120" r="2.6"/><circle cx="480" cy="200" r="2.6"/>
-              <circle cx="120" cy="420" r="2.6"/><circle cx="510" cy="330" r="2.6"/>
-              <circle cx="300" cy="60" r="2.2"/><circle cx="230" cy="480" r="2.2"/>
+              <circle cx="102" cy="102" r="2.8"/><circle cx="498" cy="102" r="2.8"/>
+              <circle cx="498" cy="498" r="2.8"/><circle cx="102" cy="498" r="2.8"/>
             </g>
           </svg>
 
+          <div class="hv-center-badge" aria-hidden="true">
+            <svg viewBox="0 0 24 24" fill="none">
+              <path d="M12 2.5 4 5.8v6.1c0 5.4 3.4 9.9 8 11.3 4.6-1.4 8-5.9 8-11.3V5.8L12 2.5Z" stroke="currentColor" stroke-width="1.5" stroke-linejoin="round"/>
+              <rect x="9" y="11" width="6" height="5" rx="1.1" stroke="currentColor" stroke-width="1.5"/>
+              <path d="M10.3 11V9.6a1.7 1.7 0 0 1 3.4 0V11" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
+            </svg>
+          </div>
+
           <div class="hv-stats">
-            <div class="hv-stat hv-stat-a"><b>18+</b><span>Years of Industry Experience</span></div>
-            <div class="hv-stat hv-stat-b"><b>250+</b><span>Enterprise Customers</span></div>
-            <div class="hv-stat hv-stat-c"><b>500+</b><span>Projects Delivered</span></div>
-            <div class="hv-stat hv-stat-d"><b>24&times;7</b><span>Managed Support</span></div>
+            <div class="hv-stat hv-stat-a"><span class="hv-stat-ic"><svg viewBox="0 0 24 24" fill="none"><circle cx="9" cy="8" r="3" stroke="currentColor" stroke-width="1.7"/><path d="M3.5 19c.6-3 2.7-4.6 5.5-4.6s4.9 1.6 5.5 4.6" stroke="currentColor" stroke-width="1.7" stroke-linecap="round"/><circle cx="17" cy="9" r="2.4" stroke="currentColor" stroke-width="1.7"/><path d="M14.8 19c.4-2.4 1.7-3.8 3.4-3.8s2.9 1.4 3.3 3.8" stroke="currentColor" stroke-width="1.7" stroke-linecap="round"/></svg></span><b>18+</b><span>Years of Industry Experience</span></div>
+            <div class="hv-stat hv-stat-b"><span class="hv-stat-ic"><svg viewBox="0 0 24 24" fill="none"><circle cx="9" cy="8" r="3" stroke="currentColor" stroke-width="1.7"/><path d="M3.5 19c.6-3 2.7-4.6 5.5-4.6s4.9 1.6 5.5 4.6" stroke="currentColor" stroke-width="1.7" stroke-linecap="round"/><circle cx="17" cy="9" r="2.4" stroke="currentColor" stroke-width="1.7"/><path d="M14.8 19c.4-2.4 1.7-3.8 3.4-3.8s2.9 1.4 3.3 3.8" stroke="currentColor" stroke-width="1.7" stroke-linecap="round"/></svg></span><b>250+</b><span>Enterprise Customers</span></div>
+            <div class="hv-stat hv-stat-c"><span class="hv-stat-ic"><svg viewBox="0 0 24 24" fill="none"><rect x="3" y="7.5" width="18" height="12" rx="2" stroke="currentColor" stroke-width="1.7"/><path d="M8.5 7.5V6a2 2 0 0 1 2-2h3a2 2 0 0 1 2 2v1.5" stroke="currentColor" stroke-width="1.7"/><path d="M3 12.5h18" stroke="currentColor" stroke-width="1.7"/></svg></span><b>500+</b><span>Projects Delivered</span></div>
+            <div class="hv-stat hv-stat-d"><span class="hv-stat-ic"><svg viewBox="0 0 24 24" fill="none"><path d="M4 12.5a8 8 0 0 1 16 0V17a2.4 2.4 0 0 1-2.4 2.4H16" stroke="currentColor" stroke-width="1.7" stroke-linecap="round"/><rect x="3" y="12.5" width="4" height="6" rx="1.6" stroke="currentColor" stroke-width="1.7"/><rect x="17" y="12.5" width="4" height="6" rx="1.6" stroke="currentColor" stroke-width="1.7"/></svg></span><b>24&times;7</b><span>Managed Support</span></div>
           </div>
         </div>
       </div>
@@ -259,12 +276,6 @@
         <h3>Healthcare &amp; Biomedical</h3>
         <span class="pc-accent"></span>
         <p class="pc-lead">Advanced healthcare IT, clinical mobility and biomedical solutions that improve patient care and operational efficiency.</p>
-        <ul class="pc-list">
-          <li><svg viewBox="0 0 24 24" fill="none"><path d="M3 12h4l2-6 4 12 2-6h6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>Patient Monitoring</li>
-          <li><svg viewBox="0 0 24 24" fill="none"><rect x="4" y="4" width="16" height="16" rx="3" stroke="currentColor" stroke-width="2"/><path d="M12 8v8M8 12h8" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>Biomedical Equipment</li>
-          <li><svg viewBox="0 0 24 24" fill="none"><rect x="3" y="4" width="18" height="13" rx="2" stroke="currentColor" stroke-width="2"/><path d="M8 21h8M12 17v4" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>Clinical Workstations</li>
-          <li><svg viewBox="0 0 24 24" fill="none"><circle cx="12" cy="8" r="3.2" stroke="currentColor" stroke-width="2"/><path d="M5 20c1.4-3.6 4-5.4 7-5.4s5.6 1.8 7 5.4" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>Telemedicine Solutions</li>
-        </ul>
       </div>
       <div class="pc-foot">
         <div class="pc-stat"><b>100+</b><span>Clinical Devices Supported</span></div>
@@ -286,12 +297,6 @@
         <h3>Enterprise Infrastructure</h3>
         <span class="pc-accent"></span>
         <p class="pc-lead">Design, deploy and manage secure, scalable and high-performance IT infrastructure built for the future.</p>
-        <ul class="pc-list">
-          <li><svg viewBox="0 0 24 24" fill="none"><ellipse cx="12" cy="6" rx="8" ry="3" stroke="currentColor" stroke-width="2"/><path d="M4 6v6c0 1.66 3.58 3 8 3s8-1.34 8-3V6M4 12v6c0 1.66 3.58 3 8 3s8-1.34 8-3v-6" stroke="currentColor" stroke-width="2"/></svg>Data Center Solutions</li>
-          <li><svg viewBox="0 0 24 24" fill="none"><circle cx="6" cy="6" r="2.5" stroke="currentColor" stroke-width="2"/><circle cx="18" cy="6" r="2.5" stroke="currentColor" stroke-width="2"/><circle cx="12" cy="18" r="2.5" stroke="currentColor" stroke-width="2"/><path d="M8 7.3L10.3 16M16 7.3L13.7 16M8.5 6H15.5" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>Networking &amp; Security</li>
-          <li><svg viewBox="0 0 24 24" fill="none"><path d="M7 17a4 4 0 010-8 5 5 0 019.6-1.5A3.5 3.5 0 0117.5 17H7Z" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/></svg>Cloud &amp; Virtualization</li>
-          <li><svg viewBox="0 0 24 24" fill="none"><circle cx="7" cy="7" r="2.6" stroke="currentColor" stroke-width="2"/><circle cx="17" cy="7" r="2.6" stroke="currentColor" stroke-width="2"/><path d="M3.5 19c.7-2.6 2-4 3.5-4s2.8 1.4 3.5 4M13.5 19c.7-2.6 2-4 3.5-4s2.8 1.4 3.5 4" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>Collaboration Platforms</li>
-        </ul>
       </div>
       <div class="pc-foot">
         <div class="pc-stat"><b>99.99%</b><span>Infrastructure Availability</span></div>
@@ -313,12 +318,6 @@
         <h3>Customer Experience Solutions</h3>
         <span class="pc-accent"></span>
         <p class="pc-lead">Transform customer interactions with unified communications, contact center and intelligent engagement solutions.</p>
-        <ul class="pc-list">
-          <li><svg viewBox="0 0 24 24" fill="none"><path d="M4 10.5a8 8 0 0116 0V16a2 2 0 01-2 2h-1" stroke="currentColor" stroke-width="2" stroke-linecap="round"/><rect x="3" y="10.5" width="4" height="6" rx="1.6" stroke="currentColor" stroke-width="2"/><rect x="17" y="10.5" width="4" height="6" rx="1.6" stroke="currentColor" stroke-width="2"/></svg>Unified Communications</li>
-          <li><svg viewBox="0 0 24 24" fill="none"><path d="M21 11.5a8.4 8.4 0 01-8.5 8.4 8.6 8.6 0 01-4-.98L3 20l1.1-4.2A8.5 8.5 0 1121 11.5Z" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/></svg>Contact Center Solutions</li>
-          <li><svg viewBox="0 0 24 24" fill="none"><circle cx="7" cy="12" r="2.2" stroke="currentColor" stroke-width="2"/><circle cx="17" cy="7" r="2.2" stroke="currentColor" stroke-width="2"/><circle cx="17" cy="17" r="2.2" stroke="currentColor" stroke-width="2"/><path d="M9 11l6-2.5M9 13l6 2.5" stroke="currentColor" stroke-width="2"/></svg>Omnichannel Engagement</li>
-          <li><svg viewBox="0 0 24 24" fill="none"><path d="M12 3l1.8 4.4L18 9l-4.2 1.6L12 15l-1.8-4.4L6 9l4.2-1.6L12 3z" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"/><path d="M19 15l.9 2.1L22 18l-2.1.9L19 21l-.9-2.1L16 18l2.1-.9L19 15z" stroke="currentColor" stroke-width="1.5" stroke-linejoin="round"/></svg>AI &amp; Automation</li>
-        </ul>
       </div>
       <div class="pc-foot">
         <div class="pc-stat"><b>500K+</b><span>Calls Handled Daily</span></div>
@@ -340,12 +339,6 @@
         <h3>Professional &amp; Managed Services</h3>
         <span class="pc-accent"></span>
         <p class="pc-lead">Proactive monitoring, management and support services to ensure your business runs seamlessly 24/7.</p>
-        <ul class="pc-list">
-          <li><svg viewBox="0 0 24 24" fill="none"><circle cx="12" cy="12" r="8.5" stroke="currentColor" stroke-width="2"/><path d="M12 7v5l3.3 2" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>24&times;7 Monitoring &amp; Support</li>
-          <li><svg viewBox="0 0 24 24" fill="none"><rect x="3" y="4" width="18" height="13" rx="2" stroke="currentColor" stroke-width="2"/><path d="M8 21h8M12 17v4M7 8h6M7 11h4" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>IT Service Management</li>
-          <li><svg viewBox="0 0 24 24" fill="none"><path d="M12 3l7 3.2V11c0 4.7-3 8.2-7 10-4-1.8-7-5.3-7-10V6.2L12 3z" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/><path d="M9 12l2 2 4-4.5" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>Preventive Maintenance</li>
-          <li><svg viewBox="0 0 24 24" fill="none"><circle cx="8" cy="8" r="3" stroke="currentColor" stroke-width="2"/><circle cx="17" cy="9" r="2.4" stroke="currentColor" stroke-width="2"/><path d="M2.8 19c.8-3.2 2.8-5 5.2-5s4.4 1.8 5.2 5M14.5 19c.5-2.4 1.8-3.8 3.5-3.8s3 1.4 3.5 3.8" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>SLA Driven Services</li>
-        </ul>
       </div>
       <div class="pc-foot">
         <div class="pc-stat"><b>24&times;7</b><span>Support &amp; Monitoring</span></div>
@@ -356,6 +349,23 @@
     </div>
 
     </div><!-- /.pc-row -->
+  </div>
+</section>
+
+<!-- ============ INDUSTRIES WE SERVE ============ -->
+<section class="section industries" id="industries">
+  <div class="wrap">
+    <div class="section-head reveal">
+      <span class="eyebrow">Industries We Serve</span>
+      <h2>Built Around the Needs of Critical Industries</h2>
+      <p class="lead">Every industry operates differently. Our teams understand sector-specific operational challenges and design technology solutions aligned with regulatory requirements, business priorities, and long-term growth strategies.</p>
+    </div>
+    <div class="sectors-grid cols5" id="sectorsGrid"><!-- injected --></div>
+    <div class="industries-cta reveal" id="industriesCta">
+      <a class="link-arrow" href="industries.html">Explore Industries
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none"><path d="M5 12h14M13 6l6 6-6 6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+      </a>
+    </div>
   </div>
 </section>
 
@@ -504,22 +514,6 @@
 </section>
 
 <!-- ============ INDUSTRIES ============ -->
-<section class="section industries" id="industries">
-  <div class="wrap">
-    <div class="section-head reveal">
-      <span class="eyebrow">Industries We Serve</span>
-      <h2>Built Around the Needs of Critical Industries</h2>
-      <p class="lead">Every industry operates differently. Our teams understand sector-specific operational challenges and design technology solutions aligned with regulatory requirements, business priorities, and long-term growth strategies.</p>
-    </div>
-    <div class="sectors-grid cols5" id="sectorsGrid"><!-- injected --></div>
-    <div class="industries-cta reveal" id="industriesCta">
-      <a class="link-arrow" href="industries.html">Explore Industries
-        <svg width="16" height="16" viewBox="0 0 24 24" fill="none"><path d="M5 12h14M13 6l6 6-6 6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
-      </a>
-    </div>
-  </div>
-</section>
-
 <!-- ============ WHY TRIDENT ============ -->
 <section class="section whyx" id="why">
   <div class="wrap">
@@ -564,26 +558,90 @@
 </section>
 
 <!-- ============ PARTNERS (grouped by solution area) ============ -->
-<section class="section partners" id="clients">
+<section class="section projects" id="projects">
   <div class="wrap">
     <div class="section-head center reveal">
-      <span class="eyebrow">Leaders Who Choose Us</span>
-      <h2>Technology Partners Powering Our Solutions</h2>
-      <p class="lead">We work with a curated ecosystem of global technology leaders, organized around the practices we deliver.</p>
+      <span class="eyebrow">Our Portfolio</span>
+      <h2>Recent Projects Delivered Across the Region</h2>
+      <p class="lead">A snapshot of how we've helped organizations across healthcare, infrastructure, customer experience, and managed services achieve measurable outcomes.</p>
     </div>
 
-    <div class="tier-label reveal"><span>Strategic Alliances</span></div>
-    <div class="partner-top partner-top--5 reveal">
-      <div class="squircle"><img src="partners/p11.png" alt="Avaya" loading="lazy"></div>
-      <div class="squircle"><img src="partners/p21.png" alt="Cisco" loading="lazy"></div>
-      <div class="squircle"><img src="partners/p02.png" alt="HPE Aruba Networking" loading="lazy"></div>
-      <div class="squircle"><img src="partners/p04.png" alt="Fortinet" loading="lazy"></div>
-      <div class="squircle"><img src="partners/p13-microsoft-full.png" alt="Microsoft" loading="lazy"></div>
-      <div class="squircle"><img src="partners/p33.png" alt="Poly" loading="lazy"></div>
-      <div class="squircle"><img src="partners/p08.png" alt="Lenovo" loading="lazy"></div>
-      <div class="squircle"><img src="partners/p37.png" alt="Barco" loading="lazy"></div>
-      <div class="squircle"><img src="partners/p28.jpeg" alt="Sony" loading="lazy"></div>
-      <div class="squircle"><img src="partners/p06.png" alt="Dell Technologies" loading="lazy"></div>
+    <div class="proj-scroller reveal">
+      <button class="proj-arrow proj-arrow--left" id="projArrowLeft" type="button" aria-label="Scroll to previous project">
+        <svg viewBox="0 0 24 24" fill="none"><path d="M15 6l-6 6 6 6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+      </button>
+
+      <div class="proj-track" id="projTrack">
+        <a class="proj-card" href="projects.html#hospital-network-modernization">
+          <div class="proj-photo">
+            <span class="proj-tag">Healthcare &amp; Biomedical</span>
+            <img src="images/practice-healthcare-2.jpg" alt="Regional Hospital Network Modernization" loading="lazy">
+          </div>
+          <div class="proj-body">
+            <h3>Regional Hospital Network Modernization</h3>
+            <p>Deployed integrated clinical mobility, patient monitoring, and biomedical equipment support across a 6-facility hospital network in the UAE.</p>
+            <span class="proj-meta">6 Facilities · UAE</span>
+            <span class="proj-link">View Project
+              <svg viewBox="0 0 24 24" fill="none"><path d="M5 12h14M13 6l6 6-6 6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            </span>
+          </div>
+        </a>
+
+        <a class="proj-card" href="projects.html#data-center-consolidation">
+          <div class="proj-photo">
+            <span class="proj-tag">Enterprise Infrastructure</span>
+            <img src="images/124623.jpg" alt="Enterprise Data Center Consolidation" loading="lazy">
+          </div>
+          <div class="proj-body">
+            <h3>Enterprise Data Center Consolidation</h3>
+            <p>Migrated legacy infrastructure to a hyperconverged platform, cutting operational overhead while achieving 99.99% uptime for a regional enterprise client.</p>
+            <span class="proj-meta">99.99% Uptime</span>
+            <span class="proj-link">View Project
+              <svg viewBox="0 0 24 24" fill="none"><path d="M5 12h14M13 6l6 6-6 6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            </span>
+          </div>
+        </a>
+
+        <a class="proj-card" href="projects.html#unified-contact-center-rollout">
+          <div class="proj-photo">
+            <span class="proj-tag">Customer Experience</span>
+            <img src="images/practice-cx-2.jpg" alt="Unified Contact Center Rollout" loading="lazy">
+          </div>
+          <div class="proj-body">
+            <h3>Unified Contact Center Rollout</h3>
+            <p>Implemented an omnichannel contact center platform handling over 500,000 customer interactions daily across voice, chat, and digital channels.</p>
+            <span class="proj-meta">500K+ Interactions / Day</span>
+            <span class="proj-link">View Project
+              <svg viewBox="0 0 24 24" fill="none"><path d="M5 12h14M13 6l6 6-6 6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            </span>
+          </div>
+        </a>
+
+        <a class="proj-card" href="projects.html#247-managed-operations-center">
+          <div class="proj-photo">
+            <span class="proj-tag">Professional &amp; Managed Services</span>
+            <img src="images/practice-managed-services-2.jpg" alt="24x7 Managed Operations Center" loading="lazy">
+          </div>
+          <div class="proj-body">
+            <h3>24&times;7 Managed Operations Center</h3>
+            <p>Established a round-the-clock monitoring and support center delivering proactive incident response across a multi-site enterprise environment.</p>
+            <span class="proj-meta">24&times;7 Coverage</span>
+            <span class="proj-link">View Project
+              <svg viewBox="0 0 24 24" fill="none"><path d="M5 12h14M13 6l6 6-6 6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            </span>
+          </div>
+        </a>
+      </div>
+
+      <button class="proj-arrow proj-arrow--right" id="projArrowRight" type="button" aria-label="Scroll to next project">
+        <svg viewBox="0 0 24 24" fill="none"><path d="M9 6l6 6-6 6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+      </button>
+    </div>
+
+    <div class="proj-cta reveal">
+      <a class="btn btn-primary" href="projects.html">See All Projects
+        <svg width="17" height="17" viewBox="0 0 24 24" fill="none"><path d="M5 12h14M13 6l6 6-6 6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+      </a>
     </div>
   </div>
 </section>
@@ -647,6 +705,7 @@
         <ul>
           <li><a href="about.html">About</a></li>
           <li><a href="industries.html">Industries</a></li>
+          <li><a href="projects.html">Projects</a></li>
           <li><a href="partners.html">Technology Partners</a></li>
           <li><a href="careers.html">Careers</a></li>
           <li><a href="contact.html">Contact</a></li>
@@ -668,6 +727,6 @@
   </div>
 </footer>
 
-<script src="script-v2.js?v=13"></script>
+<script src="script-v2.js?v=14"></script>
 </body>
 </html>
