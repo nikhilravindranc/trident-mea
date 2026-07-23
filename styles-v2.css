@@ -380,6 +380,11 @@ body.menu-open .mobile-panel { transform: none; visibility: visible; }
 .pr-flagship-top.rev .pr-flagship-copy { order: 2; }
 .pr-flagship-top.rev .hc-visual { order: 1; }
 
+/* practice section intro */
+.practice-intro { margin-top: clamp(48px,5vw,64px); text-align: center; }
+.practice-intro .eyebrow { display: block; font-size: 12px; font-weight: 700; letter-spacing: 1px; color: var(--primary-blue); text-transform: uppercase; margin-bottom: 12px; }
+.practice-intro h3 { font-size: clamp(28px,3vw,38px); font-weight: 300; color: var(--ink); letter-spacing: -0.5px; }
+
 /* photo practice cards: healthcare / infrastructure / cx / professional services */
 .pc-row { display: grid; grid-template-columns: repeat(4,1fr); gap: clamp(20px,2.4vw,28px); margin-top: clamp(28px,3.5vw,36px); }
 .pc-card { --pc-color: var(--cyan); --pc-color-soft: rgba(0,156,217,.1);
