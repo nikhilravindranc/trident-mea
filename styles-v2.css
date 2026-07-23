@@ -243,6 +243,25 @@ body.menu-open .mobile-panel { transform: none; visibility: visible; }
 .hv-center-badge svg { width: 46%; height: 46%; }
 .hv-scene { position: relative; z-index: 1; width: 100%; height: 100%; display: block; }
 
+/* slice identity labels — name each pie-slice photo so the practice it represents is unambiguous */
+.hv-slice-labels { position: absolute; inset: 0; z-index: 5; pointer-events: none; }
+.hv-slice-label { position: absolute; transform: translate(-50%,-50%);
+  display: flex; align-items: center; gap: 6px; white-space: nowrap;
+  background: rgba(255,255,255,.94); backdrop-filter: blur(8px); -webkit-backdrop-filter: blur(8px);
+  border-radius: 20px; padding: 5px 12px 5px 5px; box-shadow: 0 8px 20px rgba(0,20,45,.20);
+  font-size: 11.5px; font-weight: 700; color: var(--ink); }
+.hv-slice-ic { display: flex; align-items: center; justify-content: center; width: 22px; height: 22px;
+  border-radius: 50%; background: var(--cyan); color: #fff; flex: 0 0 auto; }
+.hv-slice-ic svg { width: 12px; height: 12px; }
+.hv-slice-label-right { top: 50%; left: 89.2%; }
+.hv-slice-label-left { top: 50%; left: 10.8%; }
+/* top/bottom labels sit in the narrow clear column between the corner stat cards, so keep them compact */
+.hv-slice-label-top, .hv-slice-label-bottom { max-width: 30%; padding: 4px 10px 4px 4px; font-size: 10px; gap: 5px; }
+.hv-slice-label-top .hv-slice-ic, .hv-slice-label-bottom .hv-slice-ic { width: 18px; height: 18px; }
+.hv-slice-label-top .hv-slice-ic svg, .hv-slice-label-bottom .hv-slice-ic svg { width: 10px; height: 10px; }
+.hv-slice-label-top { top: 8%; left: 50%; }
+.hv-slice-label-bottom { top: 92%; left: 50%; }
+
 .hv-stats { position: absolute; inset: 0; z-index: 4; pointer-events: none; }
 .hv-stat {
   position: absolute; width: 36%; background: rgba(255,255,255,.85);
@@ -1090,6 +1109,7 @@ body.menu-open .mobile-panel { transform: none; visibility: visible; }
    HEALTHCARE & BIOMEDICAL BANNER (dark, feature grid)
 ============================================================ */
 .hcta { background: var(--bg-soft); padding-block: clamp(48px,6vw,80px) 0; }
+.hcta-head { margin-inline: auto; margin-bottom: clamp(32px,4vw,48px); max-width: 1200px; }
 .hcta-inner { position: relative; overflow: hidden; border-radius: 26px; --hcta-pad: clamp(32px,4vw,48px); padding: var(--hcta-pad);
   background: linear-gradient(135deg, #00274d 0%, #003060 55%, #002a54 100%); border: 1px solid rgba(255,255,255,.08);
   max-width: 1200px; margin: 0 auto; box-shadow: 0 30px 70px rgba(0,20,45,.28); animation: hctaFadeIn .8s ease-out; }
@@ -1555,6 +1575,8 @@ a.proj-card { color: inherit; }
   .hv-stat b { font-size: 14px; margin-bottom: 1px; }
   .hv-stat span { font-size: 8px; }
   .hv-stat-a { left: 8%; } .hv-stat-b { right: 4%; } .hv-stat-c { left: 2%; } .hv-stat-d { right: 4%; }
+  /* circle is too small at this width to also fit slice labels without colliding with the stat cards */
+  .hv-slice-labels { display: none; }
 }
 @media (max-width: 860px) {
   /* Simplify patterns on tablet */
