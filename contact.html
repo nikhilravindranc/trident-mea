@@ -5,7 +5,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Contact Us — Trident MEA Technologies</title>
 <meta name="description" content="Contact Trident MEA Technologies. Offices in Dubai, Abu Dhabi, Muscat, Riyadh, Kochi, Coimbatore, and Bangalore. Tell us about your requirements and our team will connect with you.">
-<link rel="stylesheet" href="styles-v2.css?v=133">
+<link rel="stylesheet" href="styles-v2.css?v=209">
 </head>
 <body>
 
@@ -287,7 +287,7 @@
     [[42.4,37.3],[43.4,37.3],[44.8,37.2],[45.5,35.8],[46.0,34.5],[47.1,33.0],[47.8,31.5],[48.0,30.5],[47.5,30.1],[46.3,29.1],[44.7,29.2],[43.5,29.9],[42.0,31.0],[40.4,32.0],[39.2,33.4],[40.5,34.4],[41.3,36.0],[41.8,36.7]],
     [[35.5,36.6],[36.5,36.8],[37.8,36.6],[38.8,36.7],[40.0,36.9],[41.5,36.3],[41.8,34.9],[40.9,34.1],[39.2,33.1],[38.7,31.9],[37.8,31.0],[37.0,30.0],[36.5,29.5],[35.0,29.2],[34.9,30.1],[34.2,31.2],[34.5,32.4],[35.1,33.1],[35.4,33.9],[35.9,34.6],[35.8,35.5],[35.9,36.2]],
     [[30.5,41.5],[32.0,41.8],[34.0,42.0],[36.0,41.8],[38.0,41.3],[40.0,41.2],[42.0,41.0],[43.5,40.4],[44.5,39.7],[44.0,38.5],[43.0,37.5],[42.0,37.3],[40.0,37.0],[38.0,37.0],[36.0,37.0],[34.5,36.8],[33.0,36.3],[31.5,36.5],[30.5,37.2],[30.0,38.0],[30.0,39.5],[30.0,40.5]],
-    [[68.2,23.8],[68.5,22.5],[70.0,22.0],[70.5,20.8],[72.5,20.0],[72.8,19.0],[73.2,17.5],[74.0,15.5],[74.5,13.5],[75.5,11.8],[76.5,10.5],[77.0,8.5],[77.5,8.1],[78.5,8.8],[79.5,10.0],[79.9,11.5],[80.3,13.0],[80.2,14.0],[80.4,15.5],[81.5,16.5],[82.3,17.0],[83.5,18.0],[84.7,19.0],[86.5,20.5],[87.2,21.5],[88.5,21.8],[89.0,22.0],[89.8,22.0],[88.2,23.5],[88.6,24.5],[88.2,25.3],[89.8,25.3],[91.5,25.0],[92.0,26.5],[92.0,27.5],[91.0,28.0],[89.5,27.0],[88.0,27.5],[86.0,27.8],[84.0,27.2],[82.0,27.5],[80.0,28.5],[78.5,30.2],[77.0,31.0],[75.5,32.5],[74.5,34.2],[74.0,35.5],[76.0,35.2],[77.5,35.0],[78.5,34.5],[78.0,33.0],[77.0,31.8],[76.0,30.5],[75.0,29.5],[73.5,28.5],[71.5,27.5],[70.5,26.0],[69.0,25.0]],
+    [[68.2,23.8],[68.9,22.3],[69.6,21.5],[70.6,20.8],[72.6,20.1],[72.9,19.1],[73.3,17.6],[74.1,15.5],[74.6,13.4],[75.4,11.9],[76.3,10.3],[77.0,8.4],[77.6,8.1],[78.3,8.9],[79.3,9.8],[79.9,11.4],[80.2,13.0],[80.5,15.9],[81.7,16.8],[82.2,17.0],[83.3,17.9],[84.8,19.1],[86.5,20.6],[87.5,21.6],[88.9,21.9],[89.9,22.2],[91.2,23.6],[92.0,24.3],[92.0,27.3],[89.8,27.1],[88.7,27.0],[88.2,26.0],[85.8,26.5],[82.5,27.6],[80.0,28.9],[78.3,30.0],[77.0,30.8],[76.0,32.0],[75.0,33.3],[74.5,34.8],[73.5,33.0],[72.5,31.0],[71.3,29.0],[70.3,27.0],[69.5,25.0]],
     [[61.5,25.0],[61.7,26.5],[62.5,27.0],[63.5,27.0],[64.5,28.0],[66.0,29.0],[66.5,30.0],[67.5,31.2],[68.5,31.8],[69.5,31.5],[71.0,31.5],[72.5,32.5],[74.0,34.0],[74.2,34.5],[75.5,33.0],[74.8,31.5],[73.8,30.5],[72.5,29.0],[70.5,27.5],[69.0,26.0],[68.0,25.0],[67.0,24.5],[65.5,25.0],[63.5,25.0]],
     [[60.5,35.5],[61.5,35.9],[63.0,36.5],[64.5,36.8],[66.5,37.3],[68.0,37.2],[70.5,37.4],[71.5,36.5],[71.0,35.5],[71.0,34.5],[70.5,33.5],[69.5,32.5],[68.0,31.8],[66.5,30.8],[64.8,30.0],[62.5,29.5],[60.8,30.0],[60.6,31.5],[60.8,33.5]],
     [[80.0,6.0],[80.3,5.9],[81.2,6.3],[81.8,7.5],[81.5,9.0],[80.8,9.7],[79.8,9.0],[79.8,8.0],[80.0,7.0]],
@@ -357,30 +357,119 @@
   function renderMap() {
     var box = document.getElementById("os-map-box");
     if (!box) return;
-    var dots = buildDots(0.55);
-    var svg = svgEl("svg", { "class":"os-map-svg", viewBox:"0 0 "+VIEW.w+" "+VIEW.h, preserveAspectRatio:"xMidYMid meet" });
+    var svg = svgEl("svg", { "class":"os-map-svg", viewBox:"0 0 "+VIEW.w+" "+VIEW.h, preserveAspectRatio:"xMidYMid slice" });
+
     var defs = svgEl("defs");
     defs.innerHTML =
-      '<radialGradient id="os-seaGlow" cx="50%" cy="55%" r="60%">' +
-        '<stop offset="0%" stop-color="#f4f8fe"/>' +
-        '<stop offset="100%" stop-color="#eef4fb"/>' +
+      '<linearGradient id="os-bp" x1="0" y1="0" x2="0" y2="1">' +
+        '<stop offset="0%" stop-color="#eef5fc"/>' +
+        '<stop offset="55%" stop-color="#e2edf9"/>' +
+        '<stop offset="100%" stop-color="#d6e6f6"/>' +
+      '</linearGradient>' +
+      '<radialGradient id="os-vign" cx="50%" cy="44%" r="60%">' +
+        '<stop offset="0%" stop-color="#ffffff" stop-opacity="0.55"/>' +
+        '<stop offset="72%" stop-color="#ffffff" stop-opacity="0"/>' +
       '</radialGradient>' +
       '<pattern id="os-grid" width="40" height="40" patternUnits="userSpaceOnUse">' +
-        '<path d="M 40 0 L 0 0 0 40" fill="none" stroke="#dde8f2" stroke-width="0.5"/>' +
-      '</pattern>';
+        '<path d="M 40 0 L 0 0 0 40" fill="none" stroke="#c6dcef" stroke-width="0.6"/>' +
+      '</pattern>' +
+      '<pattern id="os-grid2" width="200" height="200" patternUnits="userSpaceOnUse">' +
+        '<path d="M 200 0 L 0 0 0 200" fill="none" stroke="#a9caea" stroke-width="1"/>' +
+        '<path d="M0 -8 V8 M-8 0 H8" stroke="#7fb0dd" stroke-width="1.3"/>' +
+      '</pattern>' +
+      '<linearGradient id="os-arcgrad" x1="0" y1="0" x2="1" y2="0">' +
+        '<stop offset="0%" stop-color="#009cd9" stop-opacity="0.12"/>' +
+        '<stop offset="50%" stop-color="#009cd9" stop-opacity="0.95"/>' +
+        '<stop offset="100%" stop-color="#0072b8" stop-opacity="0.45"/>' +
+      '</linearGradient>' +
+      '<filter id="os-soft" x="-30%" y="-30%" width="160%" height="160%">' +
+        '<feGaussianBlur stdDeviation="5"/>' +
+      '</filter>';
     svg.appendChild(defs);
-    svg.appendChild(svgEl("rect", { x:0, y:0, width:VIEW.w, height:VIEW.h, fill:"url(#os-seaGlow)" }));
+
+    // ---- background layers ----
+    svg.appendChild(svgEl("rect", { x:0, y:0, width:VIEW.w, height:VIEW.h, fill:"url(#os-bp)" }));
     svg.appendChild(svgEl("rect", { x:0, y:0, width:VIEW.w, height:VIEW.h, fill:"url(#os-grid)", opacity:"0.7" }));
-    for (var i = 0; i < dots.length; i++)
-      svg.appendChild(svgEl("circle", { cx:dots[i][0], cy:dots[i][1], r:"2.8", fill:"#b8c8d8" }));
-    for (var j = 0; j < COUNTRY_LABELS.length; j++) {
-      var c = COUNTRY_LABELS[j], p = project(c.lon, c.lat);
-      var t = svgEl("text", { x:p[0], y:p[1], fill:"#8898AA",
-        "font-family":"JetBrains Mono, monospace",
-        "font-size":"15", "letter-spacing":"2", "text-anchor":"middle" });
-      t.textContent = c.name;
-      svg.appendChild(t);
+    svg.appendChild(svgEl("rect", { x:0, y:0, width:VIEW.w, height:VIEW.h, fill:"url(#os-grid2)", opacity:"0.85" }));
+    svg.appendChild(svgEl("rect", { x:0, y:0, width:VIEW.w, height:VIEW.h, fill:"url(#os-vign)" }));
+
+    // ---- edge ruler ticks ----
+    var ruler = svgEl("g", { stroke:"#8fb6dd", "stroke-width":"1", opacity:"0.5" });
+    for (var rx = 0; rx <= VIEW.w; rx += 40) {
+      var bx = (rx % 200 === 0) ? 16 : 9;
+      ruler.appendChild(svgEl("line", { x1:rx, y1:0, x2:rx, y2:bx }));
+      ruler.appendChild(svgEl("line", { x1:rx, y1:VIEW.h, x2:rx, y2:VIEW.h-bx }));
     }
+    for (var ry = 0; ry <= VIEW.h; ry += 40) {
+      var by = (ry % 200 === 0) ? 16 : 9;
+      ruler.appendChild(svgEl("line", { x1:0, y1:ry, x2:by, y2:ry }));
+      ruler.appendChild(svgEl("line", { x1:VIEW.w, y1:ry, x2:VIEW.w-by, y2:ry }));
+    }
+    svg.appendChild(ruler);
+
+    // ---- scattered data numerals ----
+    var nums = ["691","228","465","802","471","633","3126","793","5348","202","789","937","715","206","844.5903","603.1082","917.5413","229.8772"];
+    var pos  = [[120,120],[300,760],[520,220],[980,150],[1180,110],[770,540],[1360,300],[140,470],[90,700],[1470,610],[1050,470],[880,720],[430,600],[1250,780],[660,110],[1430,180],[520,470],[1120,610]];
+    var ng = svgEl("g", { fill:"#7a9dc0", "font-family":"JetBrains Mono, monospace", "font-size":"18", opacity:"0.5", "letter-spacing":"1" });
+    for (var n = 0; n < nums.length; n++) {
+      var tn = svgEl("text", { x:pos[n][0], y:pos[n][1] });
+      tn.textContent = nums[n];
+      ng.appendChild(tn);
+    }
+    svg.appendChild(ng);
+
+    // ---- region watermark labels ----
+    var regions = [ { name:"GULF REGION", x:360, y:180 }, { name:"SOUTH INDIA", x:1205, y:648 } ];
+    var rg = svgEl("g", { fill:"#8aa7c6", "font-family":"JetBrains Mono, monospace", "font-size":"26", "letter-spacing":"6", "text-anchor":"middle", opacity:"0.55" });
+    for (var r = 0; r < regions.length; r++) {
+      var tr = svgEl("text", { x:regions[r].x, y:regions[r].y });
+      tr.textContent = regions[r].name;
+      rg.appendChild(tr);
+    }
+    svg.appendChild(rg);
+
+    // ---- projected office points ----
+    var pts = {};
+    OFFICES.forEach(function (o) { pts[o.id] = project(o.lon, o.lat); });
+
+    function arcPath(a, b, lift) {
+      var mx = (a[0]+b[0])/2, my = (a[1]+b[1])/2;
+      var dx = b[0]-a[0], dy = b[1]-a[1];
+      var len = Math.sqrt(dx*dx + dy*dy) || 1;
+      return "M"+a[0]+" "+a[1]+" Q"+mx+" "+(my - len*lift)+" "+b[0]+" "+b[1];
+    }
+
+    // ---- connection arcs (Dubai hub) ----
+    var LINKS = [["dubai","riyadh"],["dubai","abudhabi"],["dubai","muscat"],["dubai","kochi"],["muscat","coimbatore"],["kochi","coimbatore"]];
+    var ag = svgEl("g");
+    LINKS.forEach(function (l) {
+      var a = pts[l[0]], b = pts[l[1]];
+      if (!a || !b) return;
+      var d = arcPath(a, b, 0.2);
+      ag.appendChild(svgEl("path", { d:d, fill:"none", stroke:"#9fd4ef", "stroke-width":"6", "stroke-linecap":"round", opacity:"0.35", filter:"url(#os-soft)" }));
+      ag.appendChild(svgEl("path", { d:d, fill:"none", stroke:"url(#os-arcgrad)", "stroke-width":"2.4", "stroke-linecap":"round", "stroke-dasharray":"10 14", "class":"os-arc" }));
+    });
+    svg.appendChild(ag);
+
+    // ---- blueprint target markers under each pin ----
+    var mg = svgEl("g");
+    OFFICES.forEach(function (o) {
+      var p = pts[o.id], col = "#009cd9";
+      mg.appendChild(svgEl("line", { x1:p[0]-30, y1:p[1], x2:p[0]-12, y2:p[1], stroke:col, "stroke-width":"1.4", opacity:"0.55" }));
+      mg.appendChild(svgEl("line", { x1:p[0]+12, y1:p[1], x2:p[0]+30, y2:p[1], stroke:col, "stroke-width":"1.4", opacity:"0.55" }));
+      mg.appendChild(svgEl("line", { x1:p[0], y1:p[1]-30, x2:p[0], y2:p[1]-12, stroke:col, "stroke-width":"1.4", opacity:"0.55" }));
+      mg.appendChild(svgEl("line", { x1:p[0], y1:p[1]+12, x2:p[0], y2:p[1]+30, stroke:col, "stroke-width":"1.4", opacity:"0.55" }));
+      mg.appendChild(svgEl("circle", { cx:p[0], cy:p[1], r:"20", fill:"none", stroke:col, "stroke-width":"1.4", opacity:"0.45" }));
+      if (o.id === "dubai") {
+        mg.appendChild(svgEl("circle", { cx:p[0], cy:p[1], r:"34", fill:"none", stroke:col, "stroke-width":"1.2", opacity:"0.28", "stroke-dasharray":"3 5" }));
+        mg.appendChild(svgEl("circle", { cx:p[0], cy:p[1], r:"50", fill:"none", stroke:col, "stroke-width":"1", opacity:"0.16" }));
+      }
+      var lbl = svgEl("text", { x:p[0]+28, y:p[1]-22, fill:"#4a6a8a", "font-family":"JetBrains Mono, monospace", "font-size":"15", "letter-spacing":"0.5" });
+      lbl.textContent = o.lat.toFixed(2) + "°N  " + o.lon.toFixed(2) + "°E";
+      mg.appendChild(lbl);
+    });
+    svg.appendChild(mg);
+
     box.appendChild(svg);
   }
   var state = { hover: null, active: "dubai" };

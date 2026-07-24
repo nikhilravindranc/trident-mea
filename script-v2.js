@@ -37,8 +37,6 @@
         '<div class="sector-image" style="background-image:url(&quot;images/industries/' + s.img + '&quot;)"></div>' +
         '<div class="sector-overlay"><h3>' + s.t + '</h3><p>' + s.d + '</p></div></article>';
     }).join("");
-    var cta = document.getElementById("industriesCta");
-    if (cta) sgrid.appendChild(cta);
   }
 
   /* ---------- Who We Are — 4 dual-material columns ---------- */
