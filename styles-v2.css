@@ -723,7 +723,7 @@ body.menu-open .mobile-panel { transform: none; visibility: visible; }
   -webkit-mask-image: radial-gradient(115% 80% at 74% 42%, #000 0%, rgba(0,0,0,.45) 45%, transparent 74%);
   mask-image: radial-gradient(115% 80% at 74% 42%, #000 0%, rgba(0,0,0,.45) 45%, transparent 74%); }
 
-.ish-inner { display: grid; grid-template-columns: 1fr .9fr; gap: clamp(30px,5vw,76px); align-items: center; }
+.ish-inner { display: grid; grid-template-columns: 1fr .9fr; gap: clamp(20px,3vw,44px); align-items: center; }
 .instack-hero .ish-copy { text-align: left; }
 .instack-hero .ish-copy .crumbs { justify-content: flex-start; margin-bottom: 22px; }
 .instack-hero .ish-copy h1 { margin-bottom: 20px; }
