@@ -732,7 +732,18 @@ body.menu-open .mobile-panel { transform: none; visibility: visible; }
 
 /* the stack diagram */
 .ish-stack { position: relative; width: 100%; max-width: 520px; margin-inline: auto; }
-.ish-stack > svg { width: 100%; height: auto; display: block; overflow: visible; }
+.ish-stack > svg { position: relative; width: 100%; height: auto; display: block; overflow: visible; }
+
+/* soft ambient glow + concentric network rings behind the stack — echoes
+   the hero globe's glow treatment while nodding to signal/connectivity */
+.ish-glow { position: absolute; inset: -8%; z-index: 0; pointer-events: none; border-radius: 50%;
+  background: radial-gradient(circle, rgba(0,156,217,.14), rgba(0,156,217,.04) 48%, transparent 72%); }
+.ish-rings { position: absolute; inset: 0; z-index: 0; pointer-events: none; }
+.ish-rings span { position: absolute; top: 50%; left: 50%; transform: translate(-50%,-50%); border-radius: 50%;
+  border: 1px dashed rgba(0,156,217,.16); }
+.ish-rings span:nth-child(1) { width: 68%; height: 68%; }
+.ish-rings span:nth-child(2) { width: 92%; height: 92%; border-color: rgba(0,156,217,.11); }
+.ish-rings span:nth-child(3) { width: 116%; height: 116%; border-color: rgba(0,156,217,.07); }
 .ish-top { fill: rgba(0,156,217,.08); stroke: #009cd9; stroke-width: 1.5; stroke-linejoin: round; }
 .ish-side { fill: rgba(0,48,96,.15); stroke: rgba(0,156,217,.5); stroke-width: 1.2; stroke-linejoin: round; }
 /* vertical rails carry a flowing dash — the only motion, so the
