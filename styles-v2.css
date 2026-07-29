@@ -1397,10 +1397,6 @@ a.proj-card { color: inherit; }
 .pd-hero .crumbs svg { width: 14px; height: 14px; opacity: .5; flex-shrink: 0; }
 
 .pd-hero-inner { display: grid; grid-template-columns: 1.1fr .9fr; gap: clamp(24px,3.5vw,40px); align-items: center; margin-top: 14px; }
-.pd-tags { display: flex; flex-wrap: wrap; gap: 8px; margin: 0 0 12px; }
-.pd-tag { font-size: 11.5px; font-weight: 700; letter-spacing: .3px; color: var(--primary-blue); background: var(--cyan-08);
-  border: 1px solid var(--cyan-12); padding: 6px 13px; border-radius: 20px; }
-.pd-tag--practice { color: #fff; background: var(--cyan); border-color: var(--cyan); }
 .pd-hero-copy h1 { max-width: 560px; font-size: clamp(32px,4vw,52px); }
 .pd-hero-copy .lead { max-width: 480px; margin-top: 10px; font-size: 14px; line-height: 1.55; }
 .pd-hero-meta { display: flex; flex-wrap: wrap; gap: 16px; margin-top: 16px; padding-top: 14px; border-top: 1px solid var(--hair); }
@@ -1410,6 +1406,7 @@ a.proj-card { color: inherit; }
 .pd-hero-banner { border-radius: 14px; overflow: hidden; aspect-ratio: 4/2.1; box-shadow: 0 14px 34px rgba(0,48,96,.14); max-width: 92%; margin-left: auto; }
 .pd-hero-banner img { width: 100%; height: 100%; object-fit: cover; display: block; }
 
+.pd-body { padding-top: clamp(32px,4vw,44px); }
 .pd-layout { display: grid; grid-template-columns: 1fr .36fr; gap: clamp(32px,4vw,56px); align-items: start; }
 .pd-content h2 { font-size: clamp(21px,2.2vw,26px); margin: 34px 0 14px; }
 .pd-content h2:first-child { margin-top: 0; }
