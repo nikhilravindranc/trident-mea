@@ -325,4 +325,73 @@
     window.addEventListener("resize", updateArrows);
     updateArrows();
   }
+
+  /* ---------- Projects grid: sort + pagination ---------- */
+  var projGrid = document.getElementById("projGrid");
+  var projSort = document.getElementById("projSort");
+  var projPagination = document.getElementById("projPagination");
+  var projCount = document.getElementById("projCount");
+  if (projGrid && projPagination) {
+    var PAGE_SIZE = 6;
+    var cards = Array.prototype.slice.call(projGrid.querySelectorAll(".proj-card"));
+    var currentPage = 1;
+
+    function sortCards(mode) {
+      var sorted = cards.slice();
+      sorted.sort(function (a, b) {
+        if (mode === "az") {
+          return (a.getAttribute("data-title") || "").localeCompare(b.getAttribute("data-title") || "");
+        }
+        var da = a.getAttribute("data-date") || "";
+        var db = b.getAttribute("data-date") || "";
+        return mode === "oldest" ? da.localeCompare(db) : db.localeCompare(da);
+      });
+      return sorted;
+    }
+
+    function renderPagination(total, page) {
+      var pages = Math.ceil(total / PAGE_SIZE);
+      if (pages <= 1) { projPagination.innerHTML = ""; return; }
+      var html = '<button class="pg-btn pg-prev" type="button" ' + (page === 1 ? "disabled" : "") + '>' +
+        '<svg width="15" height="15" viewBox="0 0 24 24" fill="none"><path d="M15 6l-6 6 6 6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></button>';
+      for (var i = 1; i <= pages; i++) {
+        html += '<button class="pg-btn pg-num' + (i === page ? " active" : "") + '" type="button" data-page="' + i + '">' + i + '</button>';
+      }
+      html += '<button class="pg-btn pg-next" type="button" ' + (page === pages ? "disabled" : "") + '>' +
+        '<svg width="15" height="15" viewBox="0 0 24 24" fill="none"><path d="M9 6l6 6-6 6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></button>';
+      projPagination.innerHTML = html;
+    }
+
+    function render() {
+      var mode = projSort ? projSort.value : "newest";
+      var sorted = sortCards(mode);
+      var total = sorted.length;
+      var pages = Math.max(1, Math.ceil(total / PAGE_SIZE));
+      if (currentPage > pages) currentPage = pages;
+      var start = (currentPage - 1) * PAGE_SIZE;
+      var end = start + PAGE_SIZE;
+
+      sorted.forEach(function (card, i) {
+        projGrid.appendChild(card);
+        card.style.display = (i >= start && i < end) ? "" : "none";
+      });
+
+      renderPagination(total, currentPage);
+      if (projCount) projCount.textContent = total + (total === 1 ? " project" : " projects");
+    }
+
+    if (projSort) projSort.addEventListener("change", function () { currentPage = 1; render(); });
+    projPagination.addEventListener("click", function (e) {
+      var btn = e.target.closest(".pg-btn");
+      if (!btn || btn.disabled) return;
+      var pages = Math.max(1, Math.ceil(cards.length / PAGE_SIZE));
+      if (btn.classList.contains("pg-prev")) currentPage = Math.max(1, currentPage - 1);
+      else if (btn.classList.contains("pg-next")) currentPage = Math.min(pages, currentPage + 1);
+      else currentPage = parseInt(btn.getAttribute("data-page"), 10);
+      render();
+      projGrid.scrollIntoView({ behavior: "smooth", block: "start" });
+    });
+
+    render();
+  }
 })();
