@@ -77,7 +77,7 @@ p { margin: 0; }
 strong { font-weight: 600; }
 
 .eyebrow {
-  display: inline-block; font-size: 12.5px; font-weight: 600; letter-spacing: 2.2px;
+  display: inline-block; font-size: 14px; font-weight: 600; letter-spacing: 2.2px;
   text-transform: uppercase; color: var(--cyan); margin-bottom: 20px;
 }
 
@@ -733,6 +733,21 @@ body.menu-open .mobile-panel { transform: none; visibility: visible; }
 .instack-hero { padding: 150px 0 0; overflow: hidden; }
 .instack-hero::before, .instack-hero::after { display: none; }
 
+/* large faded infrastructure collage — built from the same 4 layer photos
+   used in the stack below, scattered as an oversized background collage,
+   washed out with a white blend so it reads as ambient texture, not competing photos */
+.ish-photo-field { position: absolute; inset: 0; z-index: 0; pointer-events: none;
+  background:
+    linear-gradient(180deg, rgba(255,255,255,.86) 0%, rgba(255,255,255,.68) 45%, rgba(255,255,255,.92) 100%),
+    url("images/End-User Computing.png") 0% 0% / 58% 60% no-repeat,
+    url("images/Cloud Computing.png") 100% 4% / 54% 52% no-repeat,
+    url("images/Compute and Data Centre.png") 2% 100% / 52% 56% no-repeat,
+    url("images/IT Infra.png") 100% 100% / 60% 58% no-repeat;
+  background-blend-mode: lighten;
+  opacity: .68;
+  -webkit-mask-image: radial-gradient(120% 85% at 72% 40%, #000 0%, rgba(0,0,0,.5) 50%, transparent 78%);
+  mask-image: radial-gradient(120% 85% at 72% 40%, #000 0%, rgba(0,0,0,.5) 50%, transparent 78%); }
+
 /* faint blueprint grid field, faded toward the edges */
 .ish-field { position: absolute; inset: 0; z-index: 0; pointer-events: none;
   background-image:
@@ -770,6 +785,9 @@ body.menu-open .mobile-panel { transform: none; visibility: visible; }
 .ish-rings span:nth-child(3) { width: 112%; height: 112%; border-color: rgba(0,156,217,.14); }
 .ish-top { fill: rgba(0,156,217,.08); stroke: #009cd9; stroke-width: 1.5; stroke-linejoin: round; }
 .ish-side { fill: rgba(0,48,96,.15); stroke: rgba(0,156,217,.5); stroke-width: 1.2; stroke-linejoin: round; }
+/* each layer's own closing base — a thin dark hexagon continuing directly off
+   the side face's bottom edge (same shape, zero gap) so the layer sits flush on it */
+.ish-cap-side { fill: #001d3d; stroke: rgba(0,156,217,.5); stroke-width: 1.2; stroke-linejoin: round; }
 /* vertical rails carry a flowing dash — the only motion, so the
    plates and their HTML label chips can never drift out of sync */
 .ish-rail-line { stroke: rgba(0,156,217,.5); stroke-width: 1.4; stroke-dasharray: 4 6;
@@ -782,10 +800,10 @@ body.menu-open .mobile-panel { transform: none; visibility: visible; }
   background: #fff; border: 1px solid var(--hair); box-shadow: 0 6px 18px rgba(0,48,96,.09);
   font-size: 13px; font-weight: 600; color: var(--ink); white-space: nowrap; }
 .ish-label svg { width: 15px; height: 15px; color: var(--cyan); flex-shrink: 0; }
-.ish-label.ish-l1 { top: 17.0%; }
-.ish-label.ish-l2 { top: 39.4%; }
-.ish-label.ish-l3 { top: 61.7%; }
-.ish-label.ish-l4 { top: 84.0%; }
+.ish-label.ish-l1 { top: 11.6%; }
+.ish-label.ish-l2 { top: 34.8%; }
+.ish-label.ish-l3 { top: 58.0%; }
+.ish-label.ish-l4 { top: 81.2%; }
 
 /* inline metric rail — replaces the healthcare hero's floating stat cards */
 .ish-rail { display: grid; grid-template-columns: repeat(4,1fr);
@@ -974,6 +992,15 @@ body.menu-open .mobile-panel { transform: none; visibility: visible; }
 
 /* dark variant — Enterprise Infrastructure page only, matches the What We Do / Healthcare CTA navy */
 .sol-intro--dark { background: linear-gradient(135deg, #00274d 0%, #003060 55%, #002a54 100%); }
+/* signature gold wave — same motif as the homepage's Healthcare CTA dark band.
+   Unlike the CTA (copy left / visual right), this section has readable body copy
+   and tags on the right, so the wave is faded out over that column, not into it. */
+.sol-intro--dark .si-wave { position: absolute; inset: 0; z-index: 0; pointer-events: none;
+  background: url(images/trident-wave.svg) no-repeat center center; background-size: cover;
+  opacity: .22;
+  -webkit-mask-image: linear-gradient(100deg, #000 0%, #000 26%, rgba(0,0,0,.3) 55%, rgba(0,0,0,.08) 100%);
+  mask-image: linear-gradient(100deg, #000 0%, #000 26%, rgba(0,0,0,.3) 55%, rgba(0,0,0,.08) 100%); }
+@media (max-width: 860px) { .sol-intro--dark .si-wave { opacity: .12; } }
 .sol-intro--dark .si-head h2 { color: #fff; }
 .sol-intro--dark .si-body p { color: rgba(255,255,255,.75); }
 .sol-intro--dark .si-body p strong { color: #fff; }

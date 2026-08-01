@@ -5,7 +5,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Enterprise Infrastructure Solutions — Trident MEA Technologies</title>
 <meta name="description" content="Enterprise infrastructure solutions from Trident MEA — networking, data centre, cloud and virtualization, business continuity, end user computing, and infrastructure modernization across on-premises, hybrid, and cloud environments.">
-<link rel="stylesheet" href="styles-v2.css?v=232">
+<link rel="stylesheet" href="styles-v2.css?v=245">
 </head>
 <body>
 
@@ -83,6 +83,7 @@
 
 <!-- ============ PAGE HERO ============ -->
 <section class="page-hero instack-hero">
+  <div class="ish-photo-field" aria-hidden="true"></div>
   <div class="ish-field" aria-hidden="true"></div>
   <div class="wrap">
     <div class="ish-inner">
@@ -107,60 +108,72 @@
         <div class="ish-rings">
           <span></span><span></span><span></span>
         </div>
-        <svg viewBox="0 0 520 470" fill="none">
+        <svg viewBox="0 0 520 690" fill="none">
           <defs>
+            <radialGradient id="ishBaseShadow" cx="50%" cy="50%" r="50%">
+              <stop offset="0" stop-color="#00294f" stop-opacity=".38"/>
+              <stop offset="100%" stop-color="#00294f" stop-opacity="0"/>
+            </radialGradient>
             <clipPath id="ishClip1">
-              <path d="M85,80 L260,120 L435,80 L435,98 L260,138 L85,98 Z"/>
+              <path d="M85,80 L260,120 L435,80 L435,120 L260,160 L85,120 Z"/>
               <path d="M260,40 L435,80 L260,120 L85,80 Z"/>
             </clipPath>
             <clipPath id="ishClip2">
-              <path d="M85,185 L260,225 L435,185 L435,203 L260,243 L85,203 Z"/>
-              <path d="M260,145 L435,185 L260,225 L85,185 Z"/>
+              <path d="M85,240 L260,280 L435,240 L435,280 L260,320 L85,280 Z"/>
+              <path d="M260,200 L435,240 L260,280 L85,240 Z"/>
             </clipPath>
             <clipPath id="ishClip3">
-              <path d="M85,290 L260,330 L435,290 L435,308 L260,348 L85,308 Z"/>
-              <path d="M260,250 L435,290 L260,330 L85,290 Z"/>
+              <path d="M85,400 L260,440 L435,400 L435,440 L260,480 L85,440 Z"/>
+              <path d="M260,360 L435,400 L260,440 L85,400 Z"/>
             </clipPath>
             <clipPath id="ishClip4">
-              <path d="M85,395 L260,435 L435,395 L435,413 L260,453 L85,413 Z"/>
-              <path d="M260,355 L435,395 L260,435 L85,395 Z"/>
+              <path d="M85,560 L260,600 L435,560 L435,600 L260,640 L85,600 Z"/>
+              <path d="M260,520 L435,560 L260,600 L85,560 Z"/>
             </clipPath>
           </defs>
 
           <!-- vertical rails threading the layers together -->
           <g class="ish-rails" stroke-linecap="round">
-            <line class="ish-rail-line" x1="85"  y1="98"  x2="85"  y2="185"/>
-            <line class="ish-rail-line" x1="85"  y1="203" x2="85"  y2="290"/>
-            <line class="ish-rail-line" x1="85"  y1="308" x2="85"  y2="395"/>
-            <line class="ish-rail-line" x1="435" y1="98"  x2="435" y2="185"/>
-            <line class="ish-rail-line" x1="435" y1="203" x2="435" y2="290"/>
-            <line class="ish-rail-line" x1="435" y1="308" x2="435" y2="395"/>
+            <line class="ish-rail-line" x1="85"  y1="130" x2="85"  y2="240"/>
+            <line class="ish-rail-line" x1="85"  y1="290" x2="85"  y2="400"/>
+            <line class="ish-rail-line" x1="85"  y1="450" x2="85"  y2="560"/>
+            <line class="ish-rail-line" x1="435" y1="130" x2="435" y2="240"/>
+            <line class="ish-rail-line" x1="435" y1="290" x2="435" y2="400"/>
+            <line class="ish-rail-line" x1="435" y1="450" x2="435" y2="560"/>
           </g>
 
-          <!-- layer 1 — End User Computing — masked photo: office employees using laptops -->
+          <!-- layer 1 — End User Computing — cap is the same hexagon as the side face,
+               continued immediately below it, so the layer sits flush on its own base -->
           <g class="ish-layer">
-            <image class="ish-photo" href="images/practice-cx.jpg" x="85" y="40" width="350" height="98" preserveAspectRatio="xMidYMid slice" clip-path="url(#ishClip1)"/>
-            <path class="ish-side" d="M85,80 L260,120 L435,80 L435,98 L260,138 L85,98 Z"/>
+            <image class="ish-photo" href="images/End-User%20Computing.png" x="85" y="40" width="350" height="120" preserveAspectRatio="xMidYMid slice" clip-path="url(#ishClip1)"/>
+            <path class="ish-side" d="M85,80 L260,120 L435,80 L435,120 L260,160 L85,120 Z"/>
             <path class="ish-top"  d="M260,40 L435,80 L260,120 L85,80 Z"/>
+            <path class="ish-cap-side" d="M85,120 L260,160 L435,120 L435,130 L260,170 L85,130 Z"/>
           </g>
-          <!-- layer 2 — Cloud &amp; Virtualization — masked photo: cloud server racks -->
+          <!-- layer 2 — Cloud &amp; Virtualization -->
           <g class="ish-layer">
-            <image class="ish-photo" href="images/practice-managed-services.jpg" x="85" y="145" width="350" height="98" preserveAspectRatio="xMidYMid slice" clip-path="url(#ishClip2)"/>
-            <path class="ish-side" d="M85,185 L260,225 L435,185 L435,203 L260,243 L85,203 Z"/>
-            <path class="ish-top"  d="M260,145 L435,185 L260,225 L85,185 Z"/>
+            <image class="ish-photo" href="images/Cloud%20Computing.png" x="85" y="200" width="350" height="120" preserveAspectRatio="xMidYMid slice" clip-path="url(#ishClip2)"/>
+            <path class="ish-side" d="M85,240 L260,280 L435,240 L435,280 L260,320 L85,280 Z"/>
+            <path class="ish-top"  d="M260,200 L435,240 L260,280 L85,240 Z"/>
+            <path class="ish-cap-side" d="M85,280 L260,320 L435,280 L435,290 L260,330 L85,290 Z"/>
           </g>
-          <!-- layer 3 — Compute &amp; Data Centre — masked photo: real data centre -->
+          <!-- layer 3 — Compute &amp; Data Centre -->
           <g class="ish-layer">
-            <image class="ish-photo" href="images/practice-infrastructure-2.jpg" x="85" y="250" width="350" height="98" preserveAspectRatio="xMidYMid slice" clip-path="url(#ishClip3)"/>
-            <path class="ish-side" d="M85,290 L260,330 L435,290 L435,308 L260,348 L85,308 Z"/>
-            <path class="ish-top"  d="M260,250 L435,290 L260,330 L85,290 Z"/>
+            <image class="ish-photo" href="images/Compute%20and%20Data%20Centre.png" x="85" y="360" width="350" height="120" preserveAspectRatio="xMidYMid slice" clip-path="url(#ishClip3)"/>
+            <path class="ish-side" d="M85,400 L260,440 L435,400 L435,440 L260,480 L85,440 Z"/>
+            <path class="ish-top"  d="M260,360 L435,400 L260,440 L85,400 Z"/>
+            <path class="ish-cap-side" d="M85,440 L260,480 L435,440 L435,450 L260,490 L85,450 Z"/>
           </g>
-          <!-- layer 4 — Network Infrastructure (the foundation) — masked photo: switches &amp; fiber -->
+          <!-- layer 4 — Network Infrastructure (the foundation) -->
           <g class="ish-layer">
-            <image class="ish-photo" href="images/practice-infrastructure.jpg" x="85" y="355" width="350" height="98" preserveAspectRatio="xMidYMid slice" clip-path="url(#ishClip4)"/>
-            <path class="ish-side" d="M85,395 L260,435 L435,395 L435,413 L260,453 L85,413 Z"/>
-            <path class="ish-top"  d="M260,355 L435,395 L260,435 L85,395 Z"/>
+            <image class="ish-photo" href="images/IT%20Infra.png" x="85" y="520" width="350" height="120" preserveAspectRatio="xMidYMid slice" clip-path="url(#ishClip4)"/>
+            <path class="ish-side" d="M85,560 L260,600 L435,560 L435,600 L260,640 L85,600 Z"/>
+            <path class="ish-top"  d="M260,520 L435,560 L260,600 L85,560 Z"/>
+            <path class="ish-cap-side" d="M85,600 L260,640 L435,600 L435,610 L260,650 L85,610 Z"/>
           </g>
+
+          <!-- soft ground shadow beneath the last layer's base -->
+          <ellipse cx="260" cy="665" rx="190" ry="16" fill="url(#ishBaseShadow)"/>
         </svg>
 
         <span class="ish-label ish-l1">
@@ -193,6 +206,7 @@
 
 <!-- ============ INTRO ============ -->
 <section class="section sol-intro sol-intro--dark">
+  <div class="si-wave" aria-hidden="true"></div>
   <div class="wrap">
     <div class="si-grid">
       <div class="si-head reveal">
