@@ -5,7 +5,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Enterprise Infrastructure Solutions — Trident MEA Technologies</title>
 <meta name="description" content="Enterprise infrastructure solutions from Trident MEA — networking, data centre, cloud and virtualization, business continuity, end user computing, and infrastructure modernization across on-premises, hybrid, and cloud environments.">
-<link rel="stylesheet" href="styles-v2.css?v=224">
+<link rel="stylesheet" href="styles-v2.css?v=232">
 </head>
 <body>
 
@@ -108,6 +108,25 @@
           <span></span><span></span><span></span>
         </div>
         <svg viewBox="0 0 520 470" fill="none">
+          <defs>
+            <clipPath id="ishClip1">
+              <path d="M85,80 L260,120 L435,80 L435,98 L260,138 L85,98 Z"/>
+              <path d="M260,40 L435,80 L260,120 L85,80 Z"/>
+            </clipPath>
+            <clipPath id="ishClip2">
+              <path d="M85,185 L260,225 L435,185 L435,203 L260,243 L85,203 Z"/>
+              <path d="M260,145 L435,185 L260,225 L85,185 Z"/>
+            </clipPath>
+            <clipPath id="ishClip3">
+              <path d="M85,290 L260,330 L435,290 L435,308 L260,348 L85,308 Z"/>
+              <path d="M260,250 L435,290 L260,330 L85,290 Z"/>
+            </clipPath>
+            <clipPath id="ishClip4">
+              <path d="M85,395 L260,435 L435,395 L435,413 L260,453 L85,413 Z"/>
+              <path d="M260,355 L435,395 L260,435 L85,395 Z"/>
+            </clipPath>
+          </defs>
+
           <!-- vertical rails threading the layers together -->
           <g class="ish-rails" stroke-linecap="round">
             <line class="ish-rail-line" x1="85"  y1="98"  x2="85"  y2="185"/>
@@ -118,23 +137,27 @@
             <line class="ish-rail-line" x1="435" y1="308" x2="435" y2="395"/>
           </g>
 
-          <!-- layer 1 — End User Computing -->
+          <!-- layer 1 — End User Computing — masked photo: office employees using laptops -->
           <g class="ish-layer">
+            <image class="ish-photo" href="images/practice-cx.jpg" x="85" y="40" width="350" height="98" preserveAspectRatio="xMidYMid slice" clip-path="url(#ishClip1)"/>
             <path class="ish-side" d="M85,80 L260,120 L435,80 L435,98 L260,138 L85,98 Z"/>
             <path class="ish-top"  d="M260,40 L435,80 L260,120 L85,80 Z"/>
           </g>
-          <!-- layer 2 — Cloud &amp; Virtualization -->
+          <!-- layer 2 — Cloud &amp; Virtualization — masked photo: cloud server racks -->
           <g class="ish-layer">
+            <image class="ish-photo" href="images/practice-managed-services.jpg" x="85" y="145" width="350" height="98" preserveAspectRatio="xMidYMid slice" clip-path="url(#ishClip2)"/>
             <path class="ish-side" d="M85,185 L260,225 L435,185 L435,203 L260,243 L85,203 Z"/>
             <path class="ish-top"  d="M260,145 L435,185 L260,225 L85,185 Z"/>
           </g>
-          <!-- layer 3 — Compute &amp; Data Centre -->
+          <!-- layer 3 — Compute &amp; Data Centre — masked photo: real data centre -->
           <g class="ish-layer">
+            <image class="ish-photo" href="images/practice-infrastructure-2.jpg" x="85" y="250" width="350" height="98" preserveAspectRatio="xMidYMid slice" clip-path="url(#ishClip3)"/>
             <path class="ish-side" d="M85,290 L260,330 L435,290 L435,308 L260,348 L85,308 Z"/>
             <path class="ish-top"  d="M260,250 L435,290 L260,330 L85,290 Z"/>
           </g>
-          <!-- layer 4 — Network Infrastructure (the foundation) -->
+          <!-- layer 4 — Network Infrastructure (the foundation) — masked photo: switches &amp; fiber -->
           <g class="ish-layer">
+            <image class="ish-photo" href="images/practice-infrastructure.jpg" x="85" y="355" width="350" height="98" preserveAspectRatio="xMidYMid slice" clip-path="url(#ishClip4)"/>
             <path class="ish-side" d="M85,395 L260,435 L435,395 L435,413 L260,453 L85,413 Z"/>
             <path class="ish-top"  d="M260,355 L435,395 L260,435 L85,395 Z"/>
           </g>
@@ -169,7 +192,7 @@
 </section>
 
 <!-- ============ INTRO ============ -->
-<section class="section sol-intro">
+<section class="section sol-intro sol-intro--dark">
   <div class="wrap">
     <div class="si-grid">
       <div class="si-head reveal">
@@ -198,88 +221,106 @@
       <p class="lead">Six connected capability areas that together form a secure, high-performance foundation for everything your business runs on.</p>
     </div>
 
-    <div class="sol-grid">
+    <div class="sol-grid sol-grid--photo">
 
       <!-- Network Infrastructure -->
-      <article class="sol-card reveal" id="network-infrastructure">
-        <div class="dm-ic" data-ic="infra"></div>
-        <h3>Network Infrastructure</h3>
-        <p>Build a secure, high-performance network that keeps your business connected.</p>
-        <span class="sc-foc">Key Focus Areas</span>
-        <ul>
-          <li><svg viewBox="0 0 24 24" fill="none"><circle cx="12" cy="12" r="9" stroke="currentColor" stroke-width="1.6"/><path d="M8.5 12l2.3 2.3L15.5 9.5" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg><span>Enterprise Networking</span></li>
-          <li><svg viewBox="0 0 24 24" fill="none"><circle cx="12" cy="12" r="9" stroke="currentColor" stroke-width="1.6"/><path d="M8.5 12l2.3 2.3L15.5 9.5" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg><span>Wireless Infrastructure</span></li>
-          <li><svg viewBox="0 0 24 24" fill="none"><circle cx="12" cy="12" r="9" stroke="currentColor" stroke-width="1.6"/><path d="M8.5 12l2.3 2.3L15.5 9.5" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg><span>Network Design &amp; Implementation</span></li>
-          <li><svg viewBox="0 0 24 24" fill="none"><circle cx="12" cy="12" r="9" stroke="currentColor" stroke-width="1.6"/><path d="M8.5 12l2.3 2.3L15.5 9.5" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg><span>Infrastructure Monitoring</span></li>
-        </ul>
+      <article class="sol-card sol-card--photo reveal" id="network-infrastructure">
+        <div class="pc-photo"><img src="images/practice-infrastructure.jpg" alt="Network Infrastructure" loading="lazy"></div>
+        <div class="pc-badge"><svg viewBox="0 0 24 24" fill="none"><rect x="3" y="4" width="18" height="6" rx="1.5" stroke="currentColor" stroke-width="1.6"/><rect x="3" y="14" width="18" height="6" rx="1.5" stroke="currentColor" stroke-width="1.6"/><path d="M7 7h.01M7 17h.01" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg></div>
+        <div class="sol-card-copy">
+          <h3>Network Infrastructure</h3>
+          <p>Build a secure, high-performance network that keeps your business connected.</p>
+          <span class="sc-foc">Key Focus Areas</span>
+          <ul>
+            <li><svg viewBox="0 0 24 24" fill="none"><circle cx="12" cy="12" r="9" stroke="currentColor" stroke-width="1.6"/><path d="M8.5 12l2.3 2.3L15.5 9.5" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg><span>Enterprise Networking</span></li>
+            <li><svg viewBox="0 0 24 24" fill="none"><circle cx="12" cy="12" r="9" stroke="currentColor" stroke-width="1.6"/><path d="M8.5 12l2.3 2.3L15.5 9.5" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg><span>Wireless Infrastructure</span></li>
+            <li><svg viewBox="0 0 24 24" fill="none"><circle cx="12" cy="12" r="9" stroke="currentColor" stroke-width="1.6"/><path d="M8.5 12l2.3 2.3L15.5 9.5" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg><span>Network Design &amp; Implementation</span></li>
+            <li><svg viewBox="0 0 24 24" fill="none"><circle cx="12" cy="12" r="9" stroke="currentColor" stroke-width="1.6"/><path d="M8.5 12l2.3 2.3L15.5 9.5" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg><span>Infrastructure Monitoring</span></li>
+          </ul>
+        </div>
       </article>
 
       <!-- Compute & Data Centre -->
-      <article class="sol-card reveal d1" id="compute-datacentre">
-        <div class="dm-ic" data-ic="uc"></div>
-        <h3>Compute &amp; Data Centre</h3>
-        <p>Power mission-critical workloads with scalable compute and storage solutions.</p>
-        <span class="sc-foc">Key Focus Areas</span>
-        <ul>
-          <li><svg viewBox="0 0 24 24" fill="none"><circle cx="12" cy="12" r="9" stroke="currentColor" stroke-width="1.6"/><path d="M8.5 12l2.3 2.3L15.5 9.5" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg><span>Servers</span></li>
-          <li><svg viewBox="0 0 24 24" fill="none"><circle cx="12" cy="12" r="9" stroke="currentColor" stroke-width="1.6"/><path d="M8.5 12l2.3 2.3L15.5 9.5" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg><span>Enterprise Storage</span></li>
-          <li><svg viewBox="0 0 24 24" fill="none"><circle cx="12" cy="12" r="9" stroke="currentColor" stroke-width="1.6"/><path d="M8.5 12l2.3 2.3L15.5 9.5" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg><span>Hyper-Converged Infrastructure (HCI)</span></li>
-          <li><svg viewBox="0 0 24 24" fill="none"><circle cx="12" cy="12" r="9" stroke="currentColor" stroke-width="1.6"/><path d="M8.5 12l2.3 2.3L15.5 9.5" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg><span>Data Centre Solutions</span></li>
-        </ul>
+      <article class="sol-card sol-card--photo reveal d1" id="compute-datacentre">
+        <div class="pc-photo"><img src="images/practice-infrastructure-2.jpg" alt="Compute & Data Centre" loading="lazy"></div>
+        <div class="pc-badge"><svg viewBox="0 0 24 24" fill="none"><path d="M12 2c2.8 0 5 2.2 5 5s-2.2 5-5 5-5-2.2-5-5 2.2-5 5-5ZM17 13c1.5 0 2.8.8 3.5 2M7 15c-.7-1.2-2-2-3.5-2M21 20c0-3-2.7-5-6-5s-6 2-6 5M3 20c0-3 2.7-5 6-5" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
+        <div class="sol-card-copy">
+          <h3>Compute &amp; Data Centre</h3>
+          <p>Power mission-critical workloads with scalable compute and storage solutions.</p>
+          <span class="sc-foc">Key Focus Areas</span>
+          <ul>
+            <li><svg viewBox="0 0 24 24" fill="none"><circle cx="12" cy="12" r="9" stroke="currentColor" stroke-width="1.6"/><path d="M8.5 12l2.3 2.3L15.5 9.5" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg><span>Servers</span></li>
+            <li><svg viewBox="0 0 24 24" fill="none"><circle cx="12" cy="12" r="9" stroke="currentColor" stroke-width="1.6"/><path d="M8.5 12l2.3 2.3L15.5 9.5" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg><span>Enterprise Storage</span></li>
+            <li><svg viewBox="0 0 24 24" fill="none"><circle cx="12" cy="12" r="9" stroke="currentColor" stroke-width="1.6"/><path d="M8.5 12l2.3 2.3L15.5 9.5" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg><span>Hyper-Converged Infrastructure (HCI)</span></li>
+            <li><svg viewBox="0 0 24 24" fill="none"><circle cx="12" cy="12" r="9" stroke="currentColor" stroke-width="1.6"/><path d="M8.5 12l2.3 2.3L15.5 9.5" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg><span>Data Centre Solutions</span></li>
+          </ul>
+        </div>
       </article>
 
       <!-- Cloud & Virtualization -->
-      <article class="sol-card reveal" id="cloud-virtualization">
-        <div class="dm-ic" data-ic="software"></div>
-        <h3>Cloud &amp; Virtualization</h3>
-        <p>Modernize your infrastructure with flexible cloud technologies.</p>
-        <span class="sc-foc">Key Focus Areas</span>
-        <ul>
-          <li><svg viewBox="0 0 24 24" fill="none"><circle cx="12" cy="12" r="9" stroke="currentColor" stroke-width="1.6"/><path d="M8.5 12l2.3 2.3L15.5 9.5" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg><span>Cloud Solutions</span></li>
-          <li><svg viewBox="0 0 24 24" fill="none"><circle cx="12" cy="12" r="9" stroke="currentColor" stroke-width="1.6"/><path d="M8.5 12l2.3 2.3L15.5 9.5" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg><span>Hybrid Cloud</span></li>
-          <li><svg viewBox="0 0 24 24" fill="none"><circle cx="12" cy="12" r="9" stroke="currentColor" stroke-width="1.6"/><path d="M8.5 12l2.3 2.3L15.5 9.5" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg><span>Virtualization</span></li>
-          <li><svg viewBox="0 0 24 24" fill="none"><circle cx="12" cy="12" r="9" stroke="currentColor" stroke-width="1.6"/><path d="M8.5 12l2.3 2.3L15.5 9.5" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg><span>Cloud Migration</span></li>
-        </ul>
+      <article class="sol-card sol-card--photo reveal" id="cloud-virtualization">
+        <div class="pc-photo"><img src="images/practice-managed-services.jpg" alt="Cloud & Virtualization" loading="lazy"></div>
+        <div class="pc-badge"><svg viewBox="0 0 24 24" fill="none"><path d="M7 12c0 2.8 1.3 5.3 3.3 7M7 12c0-2.8 1.3-5.3 3.3-7M17 12c0 2.8-1.3 5.3-3.3 7M17 12c0-2.8-1.3-5.3-3.3-7M12 3c-1.5 0-2.8 1.3-2.8 2.8M12 18.2c1.5 0 2.8 1.3 2.8 2.8" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/><circle cx="12" cy="12" r="1.6" fill="currentColor"/></svg></div>
+        <div class="sol-card-copy">
+          <h3>Cloud &amp; Virtualization</h3>
+          <p>Modernize your infrastructure with flexible cloud technologies.</p>
+          <span class="sc-foc">Key Focus Areas</span>
+          <ul>
+            <li><svg viewBox="0 0 24 24" fill="none"><circle cx="12" cy="12" r="9" stroke="currentColor" stroke-width="1.6"/><path d="M8.5 12l2.3 2.3L15.5 9.5" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg><span>Cloud Solutions</span></li>
+            <li><svg viewBox="0 0 24 24" fill="none"><circle cx="12" cy="12" r="9" stroke="currentColor" stroke-width="1.6"/><path d="M8.5 12l2.3 2.3L15.5 9.5" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg><span>Hybrid Cloud</span></li>
+            <li><svg viewBox="0 0 24 24" fill="none"><circle cx="12" cy="12" r="9" stroke="currentColor" stroke-width="1.6"/><path d="M8.5 12l2.3 2.3L15.5 9.5" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg><span>Virtualization</span></li>
+            <li><svg viewBox="0 0 24 24" fill="none"><circle cx="12" cy="12" r="9" stroke="currentColor" stroke-width="1.6"/><path d="M8.5 12l2.3 2.3L15.5 9.5" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg><span>Cloud Migration</span></li>
+          </ul>
+        </div>
       </article>
 
       <!-- Business Continuity & Resilience -->
-      <article class="sol-card reveal d1" id="business-continuity">
-        <div class="dm-ic" data-ic="security"></div>
-        <h3>Business Continuity &amp; Resilience</h3>
-        <p>Protect your business with resilient infrastructure designed for maximum availability.</p>
-        <span class="sc-foc">Key Focus Areas</span>
-        <ul>
-          <li><svg viewBox="0 0 24 24" fill="none"><circle cx="12" cy="12" r="9" stroke="currentColor" stroke-width="1.6"/><path d="M8.5 12l2.3 2.3L15.5 9.5" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg><span>Backup &amp; Disaster Recovery</span></li>
-          <li><svg viewBox="0 0 24 24" fill="none"><circle cx="12" cy="12" r="9" stroke="currentColor" stroke-width="1.6"/><path d="M8.5 12l2.3 2.3L15.5 9.5" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg><span>Business Continuity Planning</span></li>
-          <li><svg viewBox="0 0 24 24" fill="none"><circle cx="12" cy="12" r="9" stroke="currentColor" stroke-width="1.6"/><path d="M8.5 12l2.3 2.3L15.5 9.5" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg><span>High Availability Solutions</span></li>
-        </ul>
+      <article class="sol-card sol-card--photo reveal d1" id="business-continuity">
+        <div class="pc-photo"><img src="images/practice-managed-services-2.jpg" alt="Business Continuity & Resilience" loading="lazy"></div>
+        <div class="pc-badge"><svg viewBox="0 0 24 24" fill="none"><path d="M12 3l8 4v5c0 4.5-3.4 7.6-8 9-4.6-1.4-8-4.5-8-9V7l8-4Z" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"/><path d="M9 12l2 2 4-4" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
+        <div class="sol-card-copy">
+          <h3>Business Continuity &amp; Resilience</h3>
+          <p>Protect your business with resilient infrastructure designed for maximum availability.</p>
+          <span class="sc-foc">Key Focus Areas</span>
+          <ul>
+            <li><svg viewBox="0 0 24 24" fill="none"><circle cx="12" cy="12" r="9" stroke="currentColor" stroke-width="1.6"/><path d="M8.5 12l2.3 2.3L15.5 9.5" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg><span>Backup &amp; Disaster Recovery</span></li>
+            <li><svg viewBox="0 0 24 24" fill="none"><circle cx="12" cy="12" r="9" stroke="currentColor" stroke-width="1.6"/><path d="M8.5 12l2.3 2.3L15.5 9.5" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg><span>Business Continuity Planning</span></li>
+            <li><svg viewBox="0 0 24 24" fill="none"><circle cx="12" cy="12" r="9" stroke="currentColor" stroke-width="1.6"/><path d="M8.5 12l2.3 2.3L15.5 9.5" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg><span>High Availability Solutions</span></li>
+          </ul>
+        </div>
       </article>
 
       <!-- End User Computing -->
-      <article class="sol-card reveal" id="end-user-computing">
-        <div class="dm-ic" data-ic="av"></div>
-        <h3>End User Computing</h3>
-        <p>Enable a productive workforce with secure and reliable endpoint solutions.</p>
-        <span class="sc-foc">Key Focus Areas</span>
-        <ul>
-          <li><svg viewBox="0 0 24 24" fill="none"><circle cx="12" cy="12" r="9" stroke="currentColor" stroke-width="1.6"/><path d="M8.5 12l2.3 2.3L15.5 9.5" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg><span>Business Laptops &amp; Workstations</span></li>
-          <li><svg viewBox="0 0 24 24" fill="none"><circle cx="12" cy="12" r="9" stroke="currentColor" stroke-width="1.6"/><path d="M8.5 12l2.3 2.3L15.5 9.5" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg><span>Virtual Desktop Infrastructure (VDI)</span></li>
-          <li><svg viewBox="0 0 24 24" fill="none"><circle cx="12" cy="12" r="9" stroke="currentColor" stroke-width="1.6"/><path d="M8.5 12l2.3 2.3L15.5 9.5" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg><span>Endpoint Deployment &amp; Lifecycle Management</span></li>
-        </ul>
+      <article class="sol-card sol-card--photo reveal" id="end-user-computing">
+        <div class="pc-photo"><img src="images/practice-cx.jpg" alt="End User Computing" loading="lazy"></div>
+        <div class="pc-badge"><svg viewBox="0 0 24 24" fill="none"><rect x="2" y="4" width="20" height="14" rx="2" stroke="currentColor" stroke-width="1.6"/><path d="M9 8l6 4-6 4Z" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"/><path d="M8 21h8" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></svg></div>
+        <div class="sol-card-copy">
+          <h3>End User Computing</h3>
+          <p>Enable a productive workforce with secure and reliable endpoint solutions.</p>
+          <span class="sc-foc">Key Focus Areas</span>
+          <ul>
+            <li><svg viewBox="0 0 24 24" fill="none"><circle cx="12" cy="12" r="9" stroke="currentColor" stroke-width="1.6"/><path d="M8.5 12l2.3 2.3L15.5 9.5" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg><span>Business Laptops &amp; Workstations</span></li>
+            <li><svg viewBox="0 0 24 24" fill="none"><circle cx="12" cy="12" r="9" stroke="currentColor" stroke-width="1.6"/><path d="M8.5 12l2.3 2.3L15.5 9.5" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg><span>Virtual Desktop Infrastructure (VDI)</span></li>
+            <li><svg viewBox="0 0 24 24" fill="none"><circle cx="12" cy="12" r="9" stroke="currentColor" stroke-width="1.6"/><path d="M8.5 12l2.3 2.3L15.5 9.5" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg><span>Endpoint Deployment &amp; Lifecycle Management</span></li>
+          </ul>
+        </div>
       </article>
 
       <!-- IT Infrastructure Modernization -->
-      <article class="sol-card reveal d1" id="infrastructure-modernization">
-        <div class="dm-ic" data-ic="elv"></div>
-        <h3>IT Infrastructure Modernization</h3>
-        <p>Transform legacy infrastructure into agile, future-ready environments.</p>
-        <span class="sc-foc">Key Focus Areas</span>
-        <ul>
-          <li><svg viewBox="0 0 24 24" fill="none"><circle cx="12" cy="12" r="9" stroke="currentColor" stroke-width="1.6"/><path d="M8.5 12l2.3 2.3L15.5 9.5" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg><span>Infrastructure Modernization</span></li>
-          <li><svg viewBox="0 0 24 24" fill="none"><circle cx="12" cy="12" r="9" stroke="currentColor" stroke-width="1.6"/><path d="M8.5 12l2.3 2.3L15.5 9.5" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg><span>Technology Refresh</span></li>
-          <li><svg viewBox="0 0 24 24" fill="none"><circle cx="12" cy="12" r="9" stroke="currentColor" stroke-width="1.6"/><path d="M8.5 12l2.3 2.3L15.5 9.5" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg><span>Performance Optimization</span></li>
-          <li><svg viewBox="0 0 24 24" fill="none"><circle cx="12" cy="12" r="9" stroke="currentColor" stroke-width="1.6"/><path d="M8.5 12l2.3 2.3L15.5 9.5" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg><span>Infrastructure Health Assessment</span></li>
-        </ul>
+      <article class="sol-card sol-card--photo reveal d1" id="infrastructure-modernization">
+        <div class="pc-photo"><img src="images/practice-cx-2.jpg" alt="IT Infrastructure Modernization" loading="lazy"></div>
+        <div class="pc-badge"><svg viewBox="0 0 24 24" fill="none"><path d="M7 3h10a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H7a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2Z" stroke="currentColor" stroke-width="1.6"/><path d="M10 11h4M10 16h4" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></svg></div>
+        <div class="sol-card-copy">
+          <h3>IT Infrastructure Modernization</h3>
+          <p>Transform legacy infrastructure into agile, future-ready environments.</p>
+          <span class="sc-foc">Key Focus Areas</span>
+          <ul>
+            <li><svg viewBox="0 0 24 24" fill="none"><circle cx="12" cy="12" r="9" stroke="currentColor" stroke-width="1.6"/><path d="M8.5 12l2.3 2.3L15.5 9.5" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg><span>Infrastructure Modernization</span></li>
+            <li><svg viewBox="0 0 24 24" fill="none"><circle cx="12" cy="12" r="9" stroke="currentColor" stroke-width="1.6"/><path d="M8.5 12l2.3 2.3L15.5 9.5" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg><span>Technology Refresh</span></li>
+            <li><svg viewBox="0 0 24 24" fill="none"><circle cx="12" cy="12" r="9" stroke="currentColor" stroke-width="1.6"/><path d="M8.5 12l2.3 2.3L15.5 9.5" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg><span>Performance Optimization</span></li>
+            <li><svg viewBox="0 0 24 24" fill="none"><circle cx="12" cy="12" r="9" stroke="currentColor" stroke-width="1.6"/><path d="M8.5 12l2.3 2.3L15.5 9.5" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg><span>Infrastructure Health Assessment</span></li>
+          </ul>
+        </div>
       </article>
 
     </div>
