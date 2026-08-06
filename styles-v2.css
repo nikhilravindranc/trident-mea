@@ -1013,6 +1013,12 @@ body.menu-open .mobile-panel { transform: none; visibility: visible; }
   .sol-grid--photo { grid-template-columns: 1fr; }
 }
 
+/* 5-card variant — Customer Experience page */
+.sol-grid--photo-5 { grid-template-columns: repeat(5,1fr); }
+@media (max-width: 1200px) { .sol-grid--photo-5 { grid-template-columns: repeat(3,1fr); } }
+@media (max-width: 700px) { .sol-grid--photo-5 { grid-template-columns: repeat(2,1fr); } }
+@media (max-width: 480px) { .sol-grid--photo-5 { grid-template-columns: 1fr; } }
+
 /* core capabilities (7 line-icon tiles) */
 .caps { background: #fff; }
 .caps-grid { display: grid; grid-template-columns: repeat(3,1fr); gap: 20px; margin-top: clamp(44px,5vw,60px); }
