@@ -394,4 +394,27 @@
 
     render();
   }
+
+  /* ---------- Solution cards: collapse long lists to 4 items with a Show more/less toggle ---------- */
+  var VISIBLE_COUNT = 4;
+  document.querySelectorAll(".sol-card-copy > ul").forEach(function (ul) {
+    var items = Array.prototype.slice.call(ul.children).filter(function (el) { return el.tagName === "LI"; });
+    if (items.length <= VISIBLE_COUNT) return;
+
+    var hiddenCount = items.length - VISIBLE_COUNT;
+    items.forEach(function (li, i) { if (i >= VISIBLE_COUNT) li.classList.add("sc-li-hidden"); });
+
+    var btn = document.createElement("button");
+    btn.type = "button";
+    btn.className = "sc-toggle";
+    btn.innerHTML = '<span class="sc-toggle-label">Show ' + hiddenCount + ' more</span>' +
+      '<svg viewBox="0 0 24 24" fill="none"><path d="M6 9l6 6 6-6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>';
+    ul.insertAdjacentElement("afterend", btn);
+
+    btn.addEventListener("click", function () {
+      var open = btn.classList.toggle("is-open");
+      items.forEach(function (li, i) { if (i >= VISIBLE_COUNT) li.classList.toggle("sc-li-hidden", !open); });
+      btn.querySelector(".sc-toggle-label").textContent = open ? "Show less" : "Show " + hiddenCount + " more";
+    });
+  });
 })();

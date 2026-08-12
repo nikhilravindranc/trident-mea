@@ -492,14 +492,28 @@ body.menu-open .mobile-panel { transform: none; visibility: visible; }
 /* why trident */
 .whyx { background: var(--bg-soft); }
 .why-grid { display: grid; grid-template-columns: repeat(6,1fr); gap: 16px; margin-top: clamp(40px,5vw,56px); }
-.why-card { background: #fff; border: 1px solid var(--hair); border-radius: 16px; padding: 22px 18px;
+.why-card { position: relative; overflow: hidden; background: #fff; border: 1px solid var(--hair); border-radius: 16px; padding: 22px 18px;
   box-shadow: 0 8px 24px rgba(0,48,96,.05); transition: transform .3s var(--ease), box-shadow .3s var(--ease); }
 .why-card:hover { transform: translateY(-4px); box-shadow: 0 16px 36px rgba(0,48,96,.1); }
+/* subtle corner dot-grid pattern, faded out toward the card center so text stays fully readable */
+.why-card::before { content: ""; position: absolute; top: 0; right: 0; width: 130px; height: 130px; z-index: 0; pointer-events: none;
+  background-image: radial-gradient(circle, rgba(0,156,217,.32) 1.4px, transparent 1.6px);
+  background-size: 12px 12px;
+  -webkit-mask-image: radial-gradient(circle at 100% 0%, #000 0%, transparent 72%);
+  mask-image: radial-gradient(circle at 100% 0%, #000 0%, transparent 72%); }
+/* soft ambient blob in the opposite corner for a touch of depth */
+.why-card::after { content: ""; position: absolute; left: -34px; bottom: -34px; width: 110px; height: 110px; border-radius: 50%; z-index: 0; pointer-events: none;
+  background: radial-gradient(circle, rgba(0,156,217,.12), transparent 72%); }
+.why-card:hover::before { background-image: radial-gradient(circle, rgba(0,156,217,.48) 1.4px, transparent 1.6px); }
+.why-ic, .why-card h4, .why-card p { position: relative; z-index: 1; }
 .why-ic { display: inline-flex; align-items: center; justify-content: center; width: 40px; height: 40px; border-radius: 12px;
   background: var(--cyan-12); color: var(--cyan); margin-bottom: 14px; }
 .why-ic svg { width: 20px; height: 20px; }
 .why-card h4 { font-size: 14.5px; color: var(--ink); margin-bottom: 7px; }
 .why-card p { font-size: 12.5px; color: var(--muted); line-height: 1.5; }
+@media (max-width: 560px) {
+  .why-card::before, .why-card::after { width: 90px; height: 90px; }
+}
 
 /* industries tweaks */
 .sectors-grid.cols3 { grid-template-columns: repeat(3,1fr); }
@@ -987,13 +1001,20 @@ body.menu-open .mobile-panel { transform: none; visibility: visible; }
 .sol-card--photo .pc-badge { position: relative; z-index: 2; flex: 0 0 auto; margin: -16px 0 6px 12px; width: 34px; height: 34px; border-radius: 50%;
   background: var(--pc-color); color: #fff; display: grid; place-items: center; box-shadow: 0 8px 18px rgba(0,0,0,.22); }
 .sol-card--photo .pc-badge svg { width: 16px; height: 16px; }
-.sol-card--photo .sol-card-copy { padding: 0 13px 16px; }
-.sol-card--photo .sol-card-copy h3 { font-size: 14.5px; line-height: 1.3; margin-bottom: 7px; min-height: 38px; }
-.sol-card--photo .sol-card-copy > p { color: var(--muted); font-size: 11.5px; line-height: 1.45; margin-bottom: 11px; min-height: 51px; }
-.sol-card--photo .sol-card-copy .sc-foc { font-size: 9px; font-weight: 700; letter-spacing: 1px; text-transform: uppercase; color: var(--ink-soft); margin-bottom: 8px; }
-.sol-card--photo .sol-card-copy ul { display: grid; gap: 7px; margin-bottom: 0; }
-.sol-card--photo .sol-card-copy li { display: flex; align-items: flex-start; gap: 6px; font-size: 10.5px; line-height: 1.35; color: var(--body); }
-.sol-card--photo .sol-card-copy li svg { width: 13px; height: 13px; color: var(--cyan); flex-shrink: 0; margin-top: 1px; }
+.sol-card--photo .sol-card-copy { padding: 0 16px 20px; }
+.sol-card--photo .sol-card-copy h3 { font-size: clamp(15.5px,1.3vw,17.5px); line-height: 1.3; margin-bottom: 8px; }
+.sol-card--photo .sol-card-copy > p { color: var(--muted); font-size: clamp(13px,1.05vw,14.5px); line-height: 1.55; margin-bottom: 13px; }
+.sol-card--photo .sol-card-copy .sc-foc { font-size: 10.5px; font-weight: 700; letter-spacing: 1.1px; text-transform: uppercase; color: var(--ink-soft); margin-bottom: 9px; }
+.sol-card--photo .sol-card-copy ul { display: grid; gap: 9px; margin-bottom: 0; }
+.sol-card--photo .sol-card-copy li { display: flex; align-items: flex-start; gap: 8px; font-size: clamp(12.5px,1vw,13.5px); line-height: 1.45; color: var(--body); }
+.sol-card--photo .sol-card-copy li svg { width: 15px; height: 15px; color: var(--cyan); flex-shrink: 0; margin-top: 1px; }
+/* items beyond the first 4 stay hidden until "Show more" is toggled by script-v2.js */
+.sol-card--photo .sol-card-copy li.sc-li-hidden { display: none; }
+.sc-toggle { display: inline-flex; align-items: center; gap: 6px; margin-top: 12px; padding: 0; border: 0; background: none;
+  font-size: 12px; font-weight: 700; color: var(--cyan); cursor: pointer; transition: color .2s var(--ease); }
+.sc-toggle:hover { color: var(--primary-blue); }
+.sc-toggle svg { width: 13px; height: 13px; transition: transform .25s var(--ease); }
+.sc-toggle.is-open svg { transform: rotate(180deg); }
 
 @media (max-width: 1040px) {
   .sol-grid--photo { grid-template-columns: repeat(3,1fr); gap: clamp(16px,2vw,24px); }
@@ -1001,12 +1022,14 @@ body.menu-open .mobile-panel { transform: none; visibility: visible; }
   .sol-card--photo .pc-badge { width: 44px; height: 44px; margin: -20px 0 8px 24px; }
   .sol-card--photo .pc-badge svg { width: 21px; height: 21px; }
   .sol-card--photo .sol-card-copy { padding: 0 24px 26px; }
-  .sol-card--photo .sol-card-copy h3 { font-size: clamp(18px,1.9vw,21px); margin-bottom: 10px; min-height: 54px; }
-  .sol-card--photo .sol-card-copy > p { font-size: 14.5px; line-height: 1.55; margin-bottom: 18px; min-height: 67px; }
-  .sol-card--photo .sol-card-copy .sc-foc { font-size: 11.5px; letter-spacing: 1.2px; margin-bottom: 12px; }
-  .sol-card--photo .sol-card-copy ul { gap: 10px; }
-  .sol-card--photo .sol-card-copy li { gap: 10px; font-size: 13.5px; line-height: 1.4; }
+  .sol-card--photo .sol-card-copy h3 { font-size: clamp(18px,1.9vw,21px); margin-bottom: 10px; }
+  .sol-card--photo .sol-card-copy > p { font-size: 15px; line-height: 1.6; margin-bottom: 18px; }
+  .sol-card--photo .sol-card-copy .sc-foc { font-size: 12px; letter-spacing: 1.2px; margin-bottom: 12px; }
+  .sol-card--photo .sol-card-copy ul { gap: 11px; }
+  .sol-card--photo .sol-card-copy li { gap: 10px; font-size: 14px; line-height: 1.45; }
   .sol-card--photo .sol-card-copy li svg { width: 17px; height: 17px; }
+  .sc-toggle { font-size: 13px; margin-top: 14px; }
+  .sc-toggle svg { width: 15px; height: 15px; }
 }
 @media (max-width: 700px) {
   .sol-grid--photo { grid-template-columns: repeat(2,1fr); }
@@ -1045,12 +1068,15 @@ body.menu-open .mobile-panel { transform: none; visibility: visible; }
 /* dark-blue variant — leaders section on Cybersecurity page reuses sol-intro--dark background */
 .leaders.sol-intro--dark .section-head h2 { color: #fff; }
 .leaders.sol-intro--dark .section-head .lead { color: rgba(255,255,255,.75); }
-.leaders.sol-intro--dark .leader-card { background: rgba(255,255,255,.06); border-color: rgba(255,255,255,.14); backdrop-filter: blur(10px); -webkit-backdrop-filter: blur(10px); }
-.leaders.sol-intro--dark .leader-card:hover { background: rgba(255,255,255,.1); border-color: rgba(0,156,217,.55); box-shadow: 0 24px 50px rgba(0,20,45,.35); }
-.leaders.sol-intro--dark .leader-role { color: #fff; background: rgba(255,255,255,.12); }
+.leaders.sol-intro--dark .leader-card { background: linear-gradient(160deg, rgba(255,255,255,.14), rgba(255,255,255,.05));
+  border-color: rgba(255,255,255,.26); box-shadow: 0 22px 50px rgba(0,10,28,.4), inset 0 1px 0 rgba(255,255,255,.1);
+  backdrop-filter: blur(10px); -webkit-backdrop-filter: blur(10px); }
+.leaders.sol-intro--dark .leader-card:hover { background: linear-gradient(160deg, rgba(255,255,255,.2), rgba(255,255,255,.07));
+  border-color: rgba(0,156,217,.6); box-shadow: 0 26px 56px rgba(0,10,28,.48), inset 0 1px 0 rgba(255,255,255,.14); }
+.leaders.sol-intro--dark .leader-role { color: #fff; background: rgba(255,255,255,.18); }
 .leaders.sol-intro--dark .leader-card h3 { color: #fff; }
-.leaders.sol-intro--dark .leader-card li { color: rgba(255,255,255,.8); }
-.leaders.sol-intro--dark .leader-outcome { background: rgba(255,255,255,.08); border-left-color: var(--cyan); color: rgba(255,255,255,.82); }
+.leaders.sol-intro--dark .leader-card li { color: rgba(255,255,255,.85); }
+.leaders.sol-intro--dark .leader-outcome { background: rgba(0,12,30,.32); border-left-color: var(--cyan); color: rgba(255,255,255,.85); }
 .leaders.sol-intro--dark .leader-outcome b { color: #fff; }
 
 /* core capabilities (7 line-icon tiles) */
@@ -2203,4 +2229,54 @@ body.job-modal-lock { overflow: hidden; }
   .jobs-list .job-card-apply { width: 100%; }
   .jobs-list .job-apply-btn { width: 100%; justify-content: center; }
   .job-modal-left, .job-modal-right { padding: 28px 22px; }
+}
+
+/* ============================================================
+   ABOUT HERO — split copy + single photo banner (distinct from
+   the solution-page collage hero and the plain deco page-hero)
+============================================================ */
+.about-hero { text-align: left; padding-top: 130px; padding-bottom: 50px; }
+.about-hero .abh-grid { display: grid; grid-template-columns: minmax(0,700px) 1fr; gap: clamp(32px,4.5vw,56px); align-items: center; }
+.about-hero .crumbs { justify-content: flex-start; }
+.about-hero h1, .about-hero .lead { text-align: left; margin-left: 0; margin-right: 0; max-width: 640px; }
+.abh-facts { display: flex; flex-wrap: wrap; gap: clamp(20px,2.6vw,34px); margin: 26px 0 30px; padding-top: 22px; border-top: 1px solid var(--hair-2); }
+.abh-fact { display: flex; flex-direction: column; gap: 4px; }
+.abh-fact b { font-size: clamp(20px,2.2vw,26px); font-weight: 300; color: var(--ink); letter-spacing: -.5px; line-height: 1; }
+.abh-fact span { font-size: 11px; font-weight: 700; letter-spacing: .5px; text-transform: uppercase; color: var(--muted); }
+.abh-media { position: relative; width: 100%; }
+.abh-photo { position: relative; width: 100%; height: 300px; border-radius: 22px; background-size: cover; background-position: center;
+  box-shadow: 0 24px 54px rgba(0,48,96,.16); overflow: hidden; }
+.abh-photo::after { content: ""; position: absolute; inset: 0; background: linear-gradient(180deg, rgba(0,20,45,0) 42%, rgba(0,20,45,.55) 100%); }
+.abh-badge { position: absolute; left: 24px; bottom: -20px; z-index: 2; display: flex; align-items: center; gap: 11px;
+  background: #fff; border-radius: 14px; padding: 12px 16px; box-shadow: 0 16px 38px rgba(0,48,96,.16); border: 1px solid var(--hair); max-width: 260px; }
+.abh-badge-ic { width: 34px; height: 34px; border-radius: 10px; flex-shrink: 0; display: grid; place-items: center;
+  background: linear-gradient(135deg, var(--cyan), var(--primary-blue)); color: #fff; }
+.abh-badge-ic svg { width: 16px; height: 16px; }
+.abh-badge-text b { display: block; font-size: 13px; color: var(--ink); }
+.abh-badge-text span { display: block; font-size: 11.5px; color: var(--muted); margin-top: 2px; }
+@media (max-width: 1040px) {
+  .about-hero .abh-grid { grid-template-columns: 1fr; }
+  .abh-media { order: -1; margin-bottom: 8px; }
+  .abh-photo { height: 280px; }
+  .about-hero h1, .about-hero .lead { max-width: 100%; }
+}
+@media (max-width: 560px) {
+  .about-hero { padding-top: 110px; }
+  .abh-facts { gap: 18px; }
+  .abh-photo { height: 220px; }
+  .abh-badge { left: 12px; bottom: -16px; padding: 10px 12px; max-width: calc(100% - 24px); }
+}
+
+/* ============================================================
+   MARKETS WE SERVE — compact industry icon grid (replaces heavy photo tiles)
+============================================================ */
+.ind-icons { display: grid; grid-template-columns: repeat(3,1fr); gap: 18px 14px; margin-top: 30px; }
+.ind-item { display: flex; align-items: center; gap: 11px; font-size: 13.5px; font-weight: 600; color: rgba(255,255,255,.9); }
+.ind-ic { width: 38px; height: 38px; border-radius: 11px; flex-shrink: 0; display: grid; place-items: center;
+  background: rgba(255,255,255,.08); border: 1px solid rgba(255,255,255,.18); color: var(--cyan);
+  transition: background .25s var(--ease), border-color .25s var(--ease); }
+.ind-ic svg { width: 18px; height: 18px; }
+.ind-item:hover .ind-ic { background: rgba(255,255,255,.16); border-color: rgba(0,156,217,.55); }
+@media (max-width: 560px) {
+  .ind-icons { grid-template-columns: repeat(2,1fr); }
 }
