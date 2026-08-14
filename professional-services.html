@@ -5,7 +5,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Professional &amp; Managed Services — Trident MEA Technologies</title>
 <meta name="description" content="Professional and managed services from Trident MEA — technology consulting, deployment and integration, training and enablement, on-site support, managed services, and infrastructure optimization across the Middle East, Africa, and South Asia.">
-<link rel="stylesheet" href="styles-v2.css?v=296">
+<link rel="stylesheet" href="styles-v2.css?v=307">
 </head>
 <body>
 
@@ -23,24 +23,26 @@
             <svg class="caret" width="13" height="13" viewBox="0 0 24 24" fill="none"><path d="M6 9l6 6 6-6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
           </button>
           <div class="dropdown" role="menu">
-            <a class="drop-item" href="about.html" role="menuitem">
-              <span><h5>About</h5><p>Learn about Trident MEA and our mission.</p></span>
-            </a>
-            <a class="drop-item" href="clients.html" role="menuitem">
-              <span><h5>Clients</h5><p>See the organizations we work with.</p></span>
-            </a>
-            <a class="drop-item" href="careers.html" role="menuitem">
-              <span><h5>Careers</h5><p>Join our talented team of technology experts.</p></span>
-            </a>
+            <a class="drop-item" href="about.html" role="menuitem">About</a>
+            <a class="drop-item" href="clients.html" role="menuitem">Clients</a>
           </div>
         </li>
-        <li><a href="enterprise-infrastructure-solutions.html">Enterprise Digital Infrastructure</a></li>
-        <li><a href="customer-experience.html">Customer Experience</a></li>
+        <li class="has-drop" id="solDrop">
+          <button type="button" aria-haspopup="true" aria-expanded="false">Practices
+            <svg class="caret" width="13" height="13" viewBox="0 0 24 24" fill="none"><path d="M6 9l6 6 6-6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          </button>
+          <div class="dropdown" role="menu">
+            <a class="drop-item" href="enterprise-infrastructure-solutions.html" role="menuitem">Enterprise Digital Infrastructure</a>
+            <a class="drop-item" href="customer-experience.html" role="menuitem">Customer Experience</a>
+            <a class="drop-item" href="cyber-security-solutions.html" role="menuitem">Cybersecurity</a>
+            <a class="drop-item" href="professional-services.html" role="menuitem">Professional &amp; Managed Services</a>
+            <a class="drop-item" href="ai-automation-digital-innovation.html" role="menuitem">AI, Automation &amp; Digital Innovation</a>
+          </div>
+        </li>
         <li><a href="healthcare-solutions.html">Healthcare &amp; Biomedical</a></li>
-        <li><a href="cyber-security-solutions.html">Cybersecurity</a></li>
-        <li><a href="professional-services.html">Professional &amp; Managed Services</a></li>
-        <li><a href="ai-automation-digital-innovation.html">AI, Automation &amp; Digital Innovation</a></li>
         <li><a href="partners.html">Partners</a></li>
+        <li><a href="careers.html">Careers</a></li>
+        <li><a href="contact.html">Contact Us</a></li>
         <li class="nav-cta"><a class="btn btn-primary" href="contact.html">Talk to an Expert</a></li>
       </ul>
     </nav>
@@ -51,20 +53,26 @@
 
 <div class="mobile-panel" id="mobilePanel">
   <div class="mp-group" id="mpAbout">
-    <button type="button">About <svg class="caret" width="18" height="18" viewBox="0 0 24 24" fill="none"><path d="M6 9l6 6 6-6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></button>
+    <button type="button">Company <svg class="caret" width="18" height="18" viewBox="0 0 24 24" fill="none"><path d="M6 9l6 6 6-6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></button>
     <div class="mp-sub">
-      <a href="about.html">Company</a>
+      <a href="about.html">About</a>
       <a href="clients.html">Clients</a>
-      <a href="careers.html">Careers</a>
     </div>
   </div>
-  <a href="enterprise-infrastructure-solutions.html">Enterprise Digital Infrastructure</a>
-  <a href="customer-experience.html">Customer Experience</a>
+  <div class="mp-group" id="mpSol">
+    <button type="button">Practices <svg class="caret" width="18" height="18" viewBox="0 0 24 24" fill="none"><path d="M6 9l6 6 6-6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></button>
+    <div class="mp-sub">
+      <a href="enterprise-infrastructure-solutions.html">Enterprise Digital Infrastructure</a>
+      <a href="customer-experience.html">Customer Experience</a>
+      <a href="cyber-security-solutions.html">Cybersecurity</a>
+      <a href="professional-services.html">Professional &amp; Managed Services</a>
+      <a href="ai-automation-digital-innovation.html">AI, Automation &amp; Digital Innovation</a>
+    </div>
+  </div>
   <a href="healthcare-solutions.html">Healthcare &amp; Biomedical</a>
-  <a href="cyber-security-solutions.html">Cybersecurity</a>
-  <a href="professional-services.html">Professional &amp; Managed Services</a>
-  <a href="ai-automation-digital-innovation.html">AI, Automation &amp; Digital Innovation</a>
   <a href="partners.html">Partners</a>
+  <a href="careers.html">Careers</a>
+  <a href="contact.html">Contact Us</a>
   <a class="btn btn-primary" href="contact.html">Talk to an Expert</a>
 </div>
 
@@ -249,6 +257,69 @@
         </div>
       </article>
 
+    </div>
+  </div>
+</section>
+
+<!-- ============ BUSINESS BENEFITS ============ -->
+<section class="section" id="benefits">
+  <div class="wrap">
+    <div class="section-head center reveal">
+      <span class="eyebrow">Business Benefits</span>
+      <h2>Measurable Operational Improvements</h2>
+      <p class="lead">Our Professional &amp; Managed Services help organizations achieve measurable operational improvements.</p>
+    </div>
+    <div class="why-grid why-grid--5">
+      <div class="why-card reveal">
+        <span class="why-ic"><svg viewBox="0 0 24 24" fill="none"><path d="M13 2 3 14h7l-1 8 10-12h-7l1-8Z" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"/></svg></span>
+        <h4>Faster Project Delivery</h4>
+        <p>Accelerate time-to-value with proven delivery methodologies.</p>
+      </div>
+      <div class="why-card reveal d1">
+        <span class="why-ic"><svg viewBox="0 0 24 24" fill="none"><path d="M12 2.5 4 5.8v6.1c0 5.4 3.4 9.9 8 11.3 4.6-1.4 8-5.9 8-11.3V5.8L12 2.5Z" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"/><path d="M8.7 12.2l2.3 2.3 4.3-4.7" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
+        <h4>Reduced Project Risk</h4>
+        <p>Minimize disruption with experienced, structured project execution.</p>
+      </div>
+      <div class="why-card reveal d2">
+        <span class="why-ic"><svg viewBox="0 0 24 24" fill="none"><circle cx="12" cy="12" r="9" stroke="currentColor" stroke-width="1.6"/><path d="M8.5 12l2.3 2.3L15.5 9.5" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
+        <h4>Improved System Availability</h4>
+        <p>Keep critical systems running with proactive monitoring and support.</p>
+      </div>
+      <div class="why-card reveal">
+        <span class="why-ic"><svg viewBox="0 0 24 24" fill="none"><circle cx="12" cy="12" r="3.4" stroke="currentColor" stroke-width="1.6"/><path d="M12 4v2.4M12 17.6V20M4 12h2.4M17.6 12H20M6.5 6.5l1.7 1.7M15.8 15.8l1.7 1.7M17.5 6.5l-1.7 1.7M8.2 15.8l-1.7 1.7" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></svg></span>
+        <h4>Increased Operational Efficiency</h4>
+        <p>Streamline operations and free internal teams to focus on strategic work.</p>
+      </div>
+      <div class="why-card reveal d1">
+        <span class="why-ic"><svg viewBox="0 0 24 24" fill="none"><circle cx="9" cy="7" r="3.2" stroke="currentColor" stroke-width="1.6"/><path d="M3 20c1-3.6 3.4-5.6 6-5.6s5 2 6 5.6" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/><path d="M16 5.3a3.2 3.2 0 0 1 0 6.2M18.5 20c-.6-2.3-1.8-4-3.4-5" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></svg></span>
+        <h4>Enhanced User Adoption</h4>
+        <p>Drive stronger adoption through training and change management.</p>
+      </div>
+      <div class="why-card reveal d2">
+        <span class="why-ic"><svg viewBox="0 0 24 24" fill="none"><circle cx="12" cy="12" r="9" stroke="currentColor" stroke-width="1.6"/><path d="M12 6.5v11M9 15.3c0 1.2 1.3 2.2 3 2.2s3-.9 3-2.1c0-3-6-1.7-6-4.5 0-1.2 1.3-2.1 3-2.1s3 .9 3 2.1" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
+        <h4>Lower Total Cost of Ownership</h4>
+        <p>Optimize spend across the full technology lifecycle.</p>
+      </div>
+      <div class="why-card reveal">
+        <span class="why-ic"><svg viewBox="0 0 24 24" fill="none"><path d="M4 10.5a8 8 0 0116 0V16a2 2 0 01-2 2h-1" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/><rect x="3" y="10.5" width="4" height="6" rx="1.6" stroke="currentColor" stroke-width="1.6"/><rect x="17" y="10.5" width="4" height="6" rx="1.6" stroke="currentColor" stroke-width="1.6"/></svg></span>
+        <h4>Proactive Support &amp; Maintenance</h4>
+        <p>Catch and resolve issues before they impact your business.</p>
+      </div>
+      <div class="why-card reveal d1">
+        <span class="why-ic"><svg viewBox="0 0 24 24" fill="none"><path d="M4 12a8 8 0 0 1 13.9-5.4M20 12a8 8 0 0 1-13.9 5.4" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/><path d="M17.5 3v4h-4M6.5 21v-4h4" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
+        <h4>Improved Business Continuity</h4>
+        <p>Keep operations running through disruptions and outages.</p>
+      </div>
+      <div class="why-card reveal d2">
+        <span class="why-ic"><svg viewBox="0 0 24 24" fill="none"><path d="M8 12H4.5a2 2 0 0 1-2-2V7a2 2 0 0 1 2-2h3.7M16 12h3.5a2 2 0 0 0 2-2V7a2 2 0 0 0-2-2h-3.7" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/><path d="M8 12a4 4 0 0 0 8 0" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/><path d="M12 16v4M9 20h6" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></svg></span>
+        <h4>Long-Term Technology Partnership</h4>
+        <p>Build a lasting relationship with a partner invested in your success.</p>
+      </div>
+      <div class="why-card reveal">
+        <span class="why-ic"><svg viewBox="0 0 24 24" fill="none"><path d="M4 19V9M10 19V5M16 19v-7M20 19H4" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/><path d="M15 4h5v5" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/><path d="M20 4 12 12l-3-3-5 5" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
+        <h4>Maximized Return on Investment</h4>
+        <p>Get more value from every technology investment you make.</p>
+      </div>
     </div>
   </div>
 </section>
