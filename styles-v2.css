@@ -1060,38 +1060,55 @@ body.menu-open .mobile-panel { transform: none; visibility: visible; }
 .leader-card--ceo { --leader-accent: #a78bfa; --leader-accent-soft: rgba(167,139,250,.18); --leader-accent-glow: rgba(167,139,250,.4); }
 
 .leader-content { flex: 1 1 auto; min-width: 0; display: flex; flex-direction: column; position: relative; z-index: 1;
-  padding: clamp(28px,3vw,36px); }
+  padding: clamp(32px,3.4vw,42px); }
 /* faint corner dot-grid texture for depth, fades toward card center */
 .leader-content::before { content: ""; position: absolute; top: 0; right: 0; width: 140px; height: 140px; z-index: 0; pointer-events: none;
-  background-image: radial-gradient(circle, rgba(255,255,255,.5) 1.2px, transparent 1.4px);
+  background-image: radial-gradient(circle, rgba(0,20,50,.08) 1.2px, transparent 1.4px);
   background-size: 13px 13px;
   -webkit-mask-image: radial-gradient(circle at 100% 0%, #000 0%, transparent 68%);
   mask-image: radial-gradient(circle at 100% 0%, #000 0%, transparent 68%); }
-.leader-role, .leader-ic, .leader-card h3, .leader-underline, .leader-card ul, .leader-outcome { position: relative; z-index: 1; }
-.leader-role { display: inline-flex; align-items: center; gap: 6px; align-self: flex-start; font-size: 10.5px; font-weight: 700; letter-spacing: 1.3px; text-transform: uppercase;
-  color: var(--leader-accent); background: var(--leader-accent-soft); border: 1px solid var(--leader-accent-glow);
-  padding: 6px 14px; border-radius: 999px; margin-bottom: 20px; }
-.leader-role::before { content: ""; width: 5px; height: 5px; border-radius: 50%; background: var(--leader-accent); flex-shrink: 0; }
-.leader-ic { width: 58px; height: 58px; border-radius: 50%; display: grid; place-items: center; margin-bottom: 20px;
-  background: linear-gradient(150deg, var(--leader-accent-soft), transparent 75%);
-  border: 1.5px solid var(--leader-accent); color: var(--leader-accent); position: relative;
-  box-shadow: 0 0 0 5px var(--leader-accent-soft), 0 10px 24px rgba(0,10,25,.3); }
-.leader-ic::before { content: ""; position: absolute; inset: -7px; border-radius: 50%; border: 1px dashed var(--leader-accent-soft); }
+.leader-role, .leader-card h3, .leader-underline, .leader-card ul, .leader-outcome { position: relative; z-index: 1; }
+/* plain, larger label — reads as a proper lead-in line, not a small pill or eyebrow */
+.leader-role { display: block; font-size: 17px; font-weight: 700; letter-spacing: -.1px; color: #c9963c; margin-bottom: 10px; }
+/* icon badge kept only for the About page's Vision & Mission cards (see .vm-card overrides below) */
+.leader-ic { width: 60px; height: 60px; border-radius: 18px; display: grid; place-items: center; flex-shrink: 0;
+  background: linear-gradient(150deg, var(--leader-accent-soft) 0%, rgba(255,255,255,.4) 100%);
+  border: 1px solid var(--leader-accent-glow); color: var(--leader-accent); position: relative;
+  box-shadow: 0 0 0 1px rgba(255,255,255,.5) inset, 0 14px 30px -10px var(--leader-accent-glow); }
+.leader-ic::before { content: ""; position: absolute; z-index: -1; inset: -14px; border-radius: 28px;
+  background: radial-gradient(circle, var(--leader-accent-soft), transparent 70%); opacity: .9; filter: blur(2px); }
 .leader-ic svg { width: 25px; height: 25px; }
-.leader-card h3 { font-size: clamp(18px,1.9vw,22px); margin-bottom: 12px; line-height: 1.3; font-weight: 700; }
-.leader-h3-accent { color: var(--leader-accent); }
-.leader-underline { display: block; width: 40px; height: 3px; background: linear-gradient(90deg, var(--leader-accent), transparent); border-radius: 2px; margin-bottom: 20px; }
-.leader-card ul { display: grid; gap: 11px; margin-bottom: 20px; }
-.leader-card li { display: flex; align-items: flex-start; gap: 10px; font-size: 13.5px; line-height: 1.45; color: var(--body); }
-.leader-card li svg { width: 18px; height: 18px; color: var(--leader-accent); flex-shrink: 0; margin-top: 1px; }
-.leader-outcome { margin-top: auto; display: flex; align-items: flex-start; gap: 11px;
-  padding: 14px; border-radius: 12px; background: var(--bg-soft2); border-left: 3px solid var(--leader-accent);
-  font-size: 12.5px; line-height: 1.5; color: var(--ink-soft); }
+.leader-card h3 { font-size: clamp(19px,2vw,23px); margin-bottom: 14px; line-height: 1.28; font-weight: 700; letter-spacing: -.2px; color: var(--ink); }
+.leader-h3-accent { color: var(--cyan); }
+.leader-underline { display: block; width: 40px; height: 3px; background: linear-gradient(90deg, var(--leader-accent), transparent); border-radius: 2px; margin-bottom: 24px; }
+.leader-card ul { display: grid; gap: 13px; margin-bottom: 24px; }
+.leader-card li { display: flex; align-items: flex-start; gap: 12px; font-size: 13.5px; line-height: 1.5; color: var(--body); }
+.leader-card li .li-ic { width: 22px; height: 22px; border-radius: 50%; flex-shrink: 0; margin-top: 1px; display: grid; place-items: center;
+  background: var(--leader-accent-soft); border: 1px solid var(--leader-accent-glow); }
+.leader-card li .li-ic svg { width: 12px; height: 12px; color: var(--leader-accent); }
+/* outcome panel — soft accent-tinted panel on the white card */
+.leader-outcome { margin-top: auto; display: flex; align-items: flex-start; gap: 12px;
+  padding: 16px; border-radius: 14px; background: var(--bg-soft2);
+  border: 1px solid var(--hair); font-size: 12.5px; line-height: 1.55; color: var(--ink-soft); }
 .leader-outcome b { color: var(--ink); font-weight: 700; }
-.lo-ic { width: 30px; height: 30px; border-radius: 50%; flex-shrink: 0; display: grid; place-items: center;
-  background: var(--leader-accent-soft); color: var(--leader-accent); }
-.lo-ic svg { width: 16px; height: 16px; }
+.lo-ic { width: 32px; height: 32px; border-radius: 10px; flex-shrink: 0; display: grid; place-items: center;
+  background: var(--leader-accent); color: #fff; box-shadow: 0 8px 16px -4px var(--leader-accent-glow); }
+.lo-ic svg { width: 17px; height: 17px; }
 @media (max-width: 1040px) { .leaders-grid { grid-template-columns: 1fr; } }
+@media (max-width: 480px) { .leader-role { font-size: 15px; } }
+
+/* Vision & Mission cards (About page) — restore solid square icon badge instead of the outlined circle */
+.vm-card .leader-ic { width: 46px; height: 46px; border-radius: 13px; margin-bottom: 0;
+  background: linear-gradient(135deg, var(--leader-accent), var(--primary-blue)); color: #fff;
+  border: none; box-shadow: 0 10px 22px var(--leader-accent-glow); }
+.vm-card .leader-ic::before { display: none; }
+.vm-card .leader-ic svg { width: 22px; height: 22px; }
+/* Icon + eyebrow label header row, then a bold title with accent underline — replaces the small pill badge */
+.vm-head { display: flex; align-items: center; gap: 14px; margin-bottom: 22px; }
+.vm-label { font-size: 12.5px; font-weight: 700; letter-spacing: 1.4px; text-transform: uppercase; color: var(--leader-accent); }
+.vm-card h3 { position: relative; padding-bottom: 16px; margin-bottom: 14px; }
+.vm-card h3::after { content: ""; position: absolute; left: 0; bottom: 0; width: 42px; height: 3px; border-radius: 2px;
+  background: linear-gradient(90deg, var(--leader-accent), transparent); }
 
 /* trust strip below leader cards */
 .leaders-trust-strip { display: grid; grid-template-columns: repeat(4,1fr); gap: 0; margin-top: clamp(28px,3.2vw,40px);
@@ -1128,16 +1145,11 @@ body.menu-open .mobile-panel { transform: none; visibility: visible; }
   filter: blur(10px); }
 .leaders.sol-intro--dark .section-head h2 { color: #fff; }
 .leaders.sol-intro--dark .section-head .lead { color: rgba(255,255,255,.75); }
-/* true glassmorphism — translucent frosted panel, dark navy shows through the blur rather than an opaque fill */
-.leaders.sol-intro--dark .leader-card { background: linear-gradient(165deg, rgba(255,255,255,.14), rgba(255,255,255,.04));
-  border-color: rgba(255,255,255,.22); box-shadow: 0 30px 60px rgba(0,10,28,.4), inset 0 1px 0 rgba(255,255,255,.3), inset 0 0 40px rgba(255,255,255,.03);
-  backdrop-filter: blur(28px) saturate(140%); -webkit-backdrop-filter: blur(28px) saturate(140%); }
-.leaders.sol-intro--dark .leader-card:hover { background: linear-gradient(165deg, rgba(255,255,255,.2), rgba(255,255,255,.06));
-  border-color: var(--leader-accent-glow); box-shadow: 0 36px 72px rgba(0,10,28,.48), 0 0 0 1px var(--leader-accent-glow), inset 0 1px 0 rgba(255,255,255,.4); }
-.leaders.sol-intro--dark .leader-card h3 { color: #fff; }
-.leaders.sol-intro--dark .leader-card li { color: rgba(255,255,255,.82); }
-.leaders.sol-intro--dark .leader-outcome { background: rgba(255,255,255,.07); border-left-color: var(--leader-accent); color: rgba(255,255,255,.8); }
-.leaders.sol-intro--dark .leader-outcome b { color: #fff; }
+/* near-white cards floating on the dark section — a touch of translucency so it still reads as glass, not a flat opaque panel */
+.leaders.sol-intro--dark .leader-card { background: rgba(255,255,255,.94); border-color: rgba(255,255,255,.14);
+  box-shadow: 0 30px 60px rgba(0,10,28,.4); backdrop-filter: blur(20px); -webkit-backdrop-filter: blur(20px); }
+.leaders.sol-intro--dark .leader-card:hover { background: rgba(255,255,255,.97); border-color: var(--leader-accent);
+  box-shadow: 0 36px 72px rgba(0,10,28,.48), 0 0 0 1px var(--leader-accent-glow); }
 
 /* core capabilities (7 line-icon tiles) */
 .caps { background: #fff; }
@@ -1555,7 +1567,7 @@ body.menu-open .mobile-panel { transform: none; visibility: visible; }
 .hcta-hex-accent svg { width: 20px; height: 20px; }
 .hcta-dots { position: absolute; z-index: 0; bottom: -18px; left: -18px; width: 58px; height: 48px; color: var(--cyan); pointer-events: none; opacity: .8; }
 
-.hcta-excellence-card { position: absolute; z-index: 4; top: -22px; right: -14px; width: 168px;
+.hcta-excellence-card { position: absolute; z-index: 4; top: -132px; right: 10px; width: 168px;
   display: flex; flex-direction: column; align-items: flex-start; gap: 5px;
   padding: 18px 18px 16px; border-radius: 14px;
   background: linear-gradient(160deg, #143a5c 0%, #0b2947 60%, #081f38 100%);
@@ -2003,7 +2015,7 @@ a.proj-card { color: inherit; }
   .hcta-grid { grid-template-columns: 1fr; }
   .hcta-visual { max-width: 420px; margin-inline: auto; order: -1; margin-bottom: 12px; }
   .hcta-image { aspect-ratio: 16/9; }
-  .hcta-excellence-card { width: 140px; padding: 14px 14px 12px; top: -16px; right: -8px; }
+  .hcta-excellence-card { width: 140px; padding: 14px 14px 12px; top: -108px; right: 6px; }
   .hcta-excellence-card b { font-size: 12px; }
   .hec-line { font-size: 10px; }
   .hcta-copy p { max-width: none; }
