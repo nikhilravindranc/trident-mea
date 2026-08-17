@@ -1414,6 +1414,21 @@ body.menu-open .mobile-panel { transform: none; visibility: visible; }
   filter: blur(20px); }
 .hcta-head { margin-inline: auto; margin-bottom: clamp(32px,4vw,48px); max-width: 1200px; }
 .hcta-head h2 { font-size: 38px; }
+.hcta-gold-eyebrow { display: flex; align-items: center; justify-content: center; gap: 12px;
+  font-size: 13px; font-weight: 700; letter-spacing: .14em; text-transform: uppercase; color: #b8860f;
+  margin-bottom: 16px; }
+.hcta-gold-eyebrow svg { width: 20px; height: 20px; flex-shrink: 0; color: var(--primary-blue); }
+.hge-line { display: inline-block; width: 40px; height: 1.5px; background: linear-gradient(90deg, transparent, #c9971f); }
+.hge-line:last-child { background: linear-gradient(90deg, #c9971f, transparent); }
+.hcta-head-tags { display: flex; flex-wrap: wrap; align-items: center; justify-content: center; gap: 8px 10px;
+  font-size: clamp(15px,1.6vw,17px); margin-bottom: 22px !important; }
+.hht-a { color: var(--cyan); font-weight: 600; }
+.hht-b { color: var(--muted); font-weight: 500; }
+.hht-dot { color: var(--hair); font-size: 12px; }
+.hcta-head-pill { display: inline-flex; align-items: center; gap: 10px; background: #fff; border: 1px solid var(--hair);
+  border-radius: 30px; padding: 12px 22px; font-size: 13.5px; font-weight: 600; color: var(--ink-soft);
+  box-shadow: 0 8px 20px rgba(0,48,96,.06); }
+.hcta-head-pill svg { width: 18px; height: 18px; color: var(--cyan); flex-shrink: 0; }
 .hcta-inner { position: relative; overflow: hidden; border-radius: 26px; --hcta-pad: clamp(32px,4vw,48px); padding: var(--hcta-pad);
   background: linear-gradient(135deg, #00274d 0%, #003060 55%, #002a54 100%); border: 1px solid rgba(255,255,255,.08);
   max-width: 1200px; margin: 0 auto; box-shadow: 0 30px 70px rgba(0,20,45,.28); }
@@ -1443,14 +1458,21 @@ body.menu-open .mobile-panel { transform: none; visibility: visible; }
 .hcta-copy h2 { color: #fff; font-size: 38px; line-height: 1.18; margin: 0; font-weight: 800; }
 .hcta-h2-accent { color: var(--cyan); }
 .hcta-divider { display: block; width: 56px; height: 3px; background: var(--cyan); border-radius: 2px; margin: 18px 0 20px; }
+.hcta-gold-divider { display: flex; align-items: center; gap: 10px; margin: 16px 0 20px;
+  font-size: 12px; font-weight: 700; letter-spacing: .08em; text-transform: uppercase; color: #f4c542; }
+.hgd-dash { display: inline-block; width: 24px; height: 2px; background: #f4c542; border-radius: 2px; flex-shrink: 0; }
 .hcta-copy p { color: rgba(255,255,255,.78); font-size: 15px; line-height: 1.65; margin-bottom: 28px; max-width: 560px; font-weight: 500; }
 .hcta-copy .btn-primary { padding: 14px 28px; font-size: 14px; font-weight: 600; transition: all .3s var(--ease); }
 .hcta-copy .btn-primary:hover { transform: translateY(-4px) translateX(4px); box-shadow: 0 12px 32px rgba(0,156,217,.35), inset 0 -2px 8px rgba(0,156,217,.15); }
 .hcta-cta-row { display: flex; flex-wrap: wrap; align-items: center; gap: 14px; align-self: flex-start; }
 .hcta-cta-row .btn-outline { padding: 14px 28px; font-size: 14px; color: #fff; border-color: rgba(255,255,255,.35); }
 .hcta-cta-row .btn-outline:hover { border-color: var(--cyan); color: #fff; background: var(--cyan); transform: translateY(-2px); }
+.hcta-cta-row .btn-outline--gold { border-color: #f4c542; color: #f4c542; }
+.hcta-cta-row .btn-outline--gold:hover { border-color: #f4c542; color: #00274d; background: #f4c542; }
 
-.hcta-trust { display: grid; grid-template-columns: repeat(4,1fr); gap: 20px 24px; margin-top: 32px; padding-top: 26px; border-top: 1px solid rgba(255,255,255,.14); }
+.hcta-trust-label { display: block; font-size: 11px; font-weight: 700; letter-spacing: .12em; text-transform: uppercase;
+  color: rgba(255,255,255,.5); margin-top: 32px; padding-top: 22px; border-top: 1px solid rgba(255,255,255,.14); }
+.hcta-trust { display: grid; grid-template-columns: repeat(4,1fr); gap: 20px 24px; margin-top: 18px; }
 .hcta-trust-item { position: relative; display: flex; flex-direction: column; gap: 8px; }
 .hcta-trust-item::before { content: ""; position: absolute; left: -12px; top: 3px; bottom: 3px; width: 1px; background: rgba(255,255,255,.16); }
 .hcta-trust-item:first-child::before { display: none; }
