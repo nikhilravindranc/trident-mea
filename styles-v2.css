@@ -2240,10 +2240,14 @@ body.job-modal-lock { overflow: hidden; }
 .about-hero .abh-grid { display: grid; grid-template-columns: minmax(0,700px) 1fr; gap: clamp(32px,4.5vw,56px); align-items: center; }
 .about-hero .crumbs { justify-content: flex-start; }
 .about-hero h1, .about-hero .lead { text-align: left; margin-left: 0; margin-right: 0; max-width: 640px; }
-.abh-facts { display: flex; flex-wrap: wrap; gap: clamp(20px,2.6vw,34px); margin: 26px 0 30px; padding-top: 22px; border-top: 1px solid var(--hair-2); }
-.abh-fact { display: flex; flex-direction: column; gap: 4px; }
-.abh-fact b { font-size: clamp(20px,2.2vw,26px); font-weight: 300; color: var(--ink); letter-spacing: -.5px; line-height: 1; }
-.abh-fact span { font-size: 11px; font-weight: 700; letter-spacing: .5px; text-transform: uppercase; color: var(--muted); }
+.abh-facts { display: grid; grid-template-columns: repeat(4,1fr); gap: clamp(16px,2vw,26px); margin: 26px 0 30px; padding-top: 26px; border-top: 1px solid var(--hair-2); }
+.abh-fact { display: flex; flex-direction: column; gap: 12px; padding-right: clamp(10px,1.4vw,20px); border-right: 1px solid var(--hair-2); }
+.abh-fact:last-child { border-right: none; padding-right: 0; }
+.abh-fact-ic { width: 48px; height: 48px; border-radius: 50%; flex-shrink: 0; display: grid; place-items: center;
+  background: var(--bg-soft2); color: var(--primary-blue); }
+.abh-fact-ic svg { width: 22px; height: 22px; }
+.abh-fact b { font-size: 15.5px; font-weight: 700; color: var(--ink); line-height: 1.25; }
+.abh-fact span { font-size: 10.5px; font-weight: 700; letter-spacing: .5px; text-transform: uppercase; color: var(--muted); }
 .abh-media { position: relative; width: 100%; }
 /* offset three-photo collage — distinct from both the homepage's circular
    pie-slice hero and the solution pages' flat 2x2 tile grid */
@@ -2254,9 +2258,21 @@ body.job-modal-lock { overflow: hidden; }
 .abh-c-accent { position: absolute; left: 0; bottom: -18px; width: 46%; height: 56%; border-radius: 16px;
   background-size: cover; background-position: center; box-shadow: 0 18px 38px rgba(0,48,96,.2);
   border: 4px solid #fff; z-index: 2; animation: abhFloatB 8s ease-in-out infinite; animation-delay: .6s; }
+.abh-accent-ic { position: absolute; left: -10px; bottom: -10px; width: 34px; height: 34px; border-radius: 10px;
+  display: grid; place-items: center; background: linear-gradient(135deg, var(--cyan), var(--primary-blue)); color: #fff;
+  box-shadow: 0 8px 18px rgba(0,48,96,.28); }
+.abh-accent-ic svg { width: 17px; height: 17px; }
 .abh-c-chip { position: absolute; left: 4%; top: -18px; width: 72px; height: 72px; border-radius: 16px;
   background-size: cover; background-position: center; box-shadow: 0 14px 28px rgba(0,48,96,.22);
   border: 3px solid #fff; z-index: 3; animation: abhFloatC 6s ease-in-out infinite; animation-delay: 1.2s; }
+.abh-c-chip--card { width: auto; max-width: 180px; height: auto; padding: 14px 16px; border: none;
+  display: flex; align-items: center; gap: 10px; background: var(--primary-blue);
+  box-shadow: 0 16px 32px rgba(0,48,96,.3); }
+.abh-chip-ic { width: 32px; height: 32px; border-radius: 9px; flex-shrink: 0; display: grid; place-items: center;
+  background: rgba(255,255,255,.12); color: #f4c542; }
+.abh-chip-ic svg { width: 17px; height: 17px; }
+.abh-chip-text b { display: block; font-size: 12.5px; font-weight: 700; color: #f4c542; line-height: 1.25; }
+.abh-chip-text span { display: block; font-size: 10.5px; color: rgba(255,255,255,.78); margin-top: 3px; line-height: 1.3; }
 .abh-c-ring { position: absolute; top: -22px; right: 10%; width: 84px; height: 84px; border-radius: 50%;
   border: 1.5px dashed rgba(0,156,217,.4); z-index: 0; pointer-events: none; animation: abhRingSpin 24s linear infinite; }
 .abh-c-dots { position: absolute; bottom: 8%; right: -10px; width: 60px; height: 60px; z-index: 0; pointer-events: none;
@@ -2281,12 +2297,18 @@ body.job-modal-lock { overflow: hidden; }
   .abh-media { order: -1; margin-bottom: 8px; max-width: 420px; margin-inline: auto; }
   .about-hero h1, .about-hero .lead { max-width: 100%; }
 }
+@media (max-width: 640px) {
+  .abh-facts { grid-template-columns: repeat(2,1fr); }
+  .abh-fact:nth-child(2) { border-right: none; padding-right: 0; }
+  .abh-fact:nth-child(3), .abh-fact:nth-child(4) { border-right: none; padding-right: 0; }
+}
 @media (max-width: 560px) {
   .about-hero { padding-top: 110px; }
   .abh-facts { gap: 18px; }
   .abh-media { max-width: 300px; }
   .abh-collage { height: 260px; margin: 20px 0 30px; }
-  .abh-c-chip { width: 56px; height: 56px; }
+  .abh-c-chip:not(.abh-c-chip--card) { width: 56px; height: 56px; }
+  .abh-c-chip--card { width: auto; height: auto; max-width: 150px; padding: 10px 12px; }
   .abh-badge { right: 4px; bottom: -18px; padding: 10px 12px; max-width: calc(100% - 8px); }
 }
 
