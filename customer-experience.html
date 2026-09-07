@@ -5,7 +5,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Customer Experience Solutions — Trident MEA Technologies</title>
 <meta name="description" content="Customer experience solutions from Trident MEA — unified communications, contact centre solutions, conversational AI, digital engagement channels, and customer experience analytics across the Middle East, Africa, and South Asia.">
-<link rel="stylesheet" href="styles-v2.css?v=307">
+<link rel="stylesheet" href="styles-v2.css?v=330">
 </head>
 <body>
 
@@ -43,7 +43,7 @@
         <li><a href="partners.html">Partners</a></li>
         <li><a href="careers.html">Careers</a></li>
         <li><a href="contact.html">Contact Us</a></li>
-        <li class="nav-cta"><a class="btn btn-primary" href="contact.html">Talk to an Expert</a></li>
+        <li class="nav-cta"><a class="btn btn-primary js-expert-cta" href="contact.html">Talk to an Expert</a></li>
       </ul>
     </nav>
 
@@ -73,7 +73,7 @@
   <a href="partners.html">Partners</a>
   <a href="careers.html">Careers</a>
   <a href="contact.html">Contact Us</a>
-  <a class="btn btn-primary" href="contact.html">Talk to an Expert</a>
+  <a class="btn btn-primary js-expert-cta" href="contact.html">Talk to an Expert</a>
 </div>
 
 <main id="top">
@@ -385,6 +385,65 @@
   </div>
 </footer>
 
-<script src="script-v2.js?v=16"></script>
+<!-- ============ TALK TO AN EXPERT — MODAL ============ -->
+<div class="expert-modal-overlay" id="expertModalOverlay" aria-hidden="true">
+  <div class="expert-modal" role="dialog" aria-modal="true" aria-labelledby="expertModalTitle">
+    <button type="button" class="expert-modal-close" id="expertModalClose" aria-label="Close">
+      <svg viewBox="0 0 24 24" fill="none"><path d="M6 6l12 12M18 6L6 18" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
+    </button>
+    <div class="expert-modal-head">
+      <span class="eyebrow">Free Consultation</span>
+      <h3 id="expertModalTitle">Talk to an Expert</h3>
+      <p>Share a few details about your goals, and the right specialist from our team will reach out to guide you — no obligation, just clear advice.</p>
+    </div>
+    <form id="expertForm" novalidate>
+      <div class="form-row">
+        <div class="form-group">
+          <label for="expFullName">Full Name</label>
+          <input type="text" id="expFullName" name="fullName" required>
+        </div>
+        <div class="form-group">
+          <label for="expCompanyName">Company Name</label>
+          <input type="text" id="expCompanyName" name="companyName">
+        </div>
+      </div>
+      <div class="form-row">
+        <div class="form-group">
+          <label for="expEmail">Email Address</label>
+          <input type="email" id="expEmail" name="email" required>
+        </div>
+        <div class="form-group">
+          <label for="expPhone">Phone Number</label>
+          <input type="tel" id="expPhone" name="phone">
+        </div>
+      </div>
+      <div class="form-group">
+        <label for="expArea">What would you like to discuss?</label>
+        <select id="expArea" name="area">
+          <option value="">Not sure yet — point me in the right direction</option>
+          <option value="cybersecurity">Cybersecurity Solutions</option>
+          <option value="healthcare">Healthcare &amp; Biomedical</option>
+          <option value="infrastructure">Enterprise Digital Infrastructure</option>
+          <option value="cx">Customer Experience Solutions</option>
+          <option value="managed-services">Professional &amp; Managed Services</option>
+          <option value="ai-automation">AI, Automation &amp; Digital Innovation</option>
+        </select>
+      </div>
+      <div class="form-group">
+        <label for="expMessage">Tell us a bit about your requirement</label>
+        <textarea id="expMessage" name="message" rows="4" required></textarea>
+      </div>
+      <button type="submit" class="btn btn-primary form-submit">Request a Callback
+        <svg width="17" height="17" viewBox="0 0 24 24" fill="none"><path d="M5 12h14M13 6l6 6-6 6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+      </button>
+      <p class="form-helper">A specialist will connect with you within one business day.</p>
+      <p class="form-privacy">
+        <svg viewBox="0 0 24 24" fill="none"><rect x="5" y="11" width="14" height="9" rx="2" stroke="currentColor" stroke-width="1.6"/><path d="M8 11V7a4 4 0 0 1 8 0v4" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></svg>
+        All information is kept confidential.
+      </p>
+    </form>
+  </div>
+</div>
+<script src="script-v2.js?v=20"></script>
 </body>
 </html>

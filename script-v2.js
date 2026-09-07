@@ -417,4 +417,55 @@
       btn.querySelector(".sc-toggle-label").textContent = open ? "Show less" : "Show " + hiddenCount + " more";
     });
   });
+
+  /* ---------- "Talk to an Expert" modal ---------- */
+  var expOverlay = document.getElementById("expertModalOverlay");
+  if (expOverlay) {
+    var expModal = expOverlay.querySelector(".expert-modal");
+    var expClose = document.getElementById("expertModalClose");
+    var expForm = document.getElementById("expertForm");
+    var expLastFocus = null;
+
+    function openExpertModal(e) {
+      if (e) e.preventDefault();
+      expLastFocus = document.activeElement;
+      expOverlay.classList.add("open");
+      expOverlay.setAttribute("aria-hidden", "false");
+      document.body.classList.add("modal-open");
+      var firstField = expModal.querySelector("input, select, textarea");
+      if (firstField) firstField.focus();
+    }
+
+    function closeExpertModal() {
+      expOverlay.classList.remove("open");
+      expOverlay.setAttribute("aria-hidden", "true");
+      document.body.classList.remove("modal-open");
+      if (expLastFocus) expLastFocus.focus();
+    }
+
+    document.querySelectorAll(".js-expert-cta").forEach(function (el) {
+      el.addEventListener("click", openExpertModal);
+    });
+
+    expClose.addEventListener("click", closeExpertModal);
+    expOverlay.addEventListener("click", function (e) { if (e.target === expOverlay) closeExpertModal(); });
+    document.addEventListener("keydown", function (e) {
+      if (e.key === "Escape" && expOverlay.classList.contains("open")) closeExpertModal();
+    });
+
+    if (expForm) expForm.addEventListener("submit", function (e) {
+      e.preventDefault();
+      var btn = expForm.querySelector(".form-submit");
+      btn.textContent = "Request Sent";
+      btn.disabled = true;
+      setTimeout(function () {
+        closeExpertModal();
+        setTimeout(function () {
+          expForm.reset();
+          btn.innerHTML = 'Request a Callback<svg width="17" height="17" viewBox="0 0 24 24" fill="none"><path d="M5 12h14M13 6l6 6-6 6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>';
+          btn.disabled = false;
+        }, 400);
+      }, 1200);
+    });
+  }
 })();
