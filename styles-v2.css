@@ -2635,7 +2635,9 @@ body.modal-open { overflow: hidden; }
    so its natural height stays close to this box's own 3:2 image ratio at every desktop
    width — "cover" then only ever needs a small, even crop, never the aggressive one-sided
    crop that used to hide the cards, and never needs a letterboxed fallback colour either. */
-.hh2-media { position: relative; z-index: 1; overflow: hidden; background: #06213f; }
+/* fallback tone matches the photo's own light palette so the brief moment before the
+   (now-preloaded, much smaller) image paints doesn't flash a mismatched dark colour */
+.hh2-media { position: relative; z-index: 1; overflow: hidden; background: #dceefa; }
 .hh2-media-bg { position: absolute; inset: 0; background-position: center center; background-size: cover; background-repeat: no-repeat; }
 /* soft white seam so the image blends into the copy column instead of a hard edge */
 .hh2-media-fade { position: absolute; inset: 0; pointer-events: none;
